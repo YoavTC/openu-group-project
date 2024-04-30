@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float decelerationRate, maxSpeed;
+    [SerializeField] private float decelerationRate, airDecelerationRateMultiplier, maxSpeed;
     private float moveInput;
     
     [Header("Jumping")]
@@ -43,35 +43,35 @@ public class PlayerMovement : MonoBehaviour
        
         
         //Jumping
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetButtonDown("Jump"))
         {
             Jump();
         }
         
         //Wall jumping
-        if (!isGrounded && Input.GetKeyDown(KeyCode.Space) && (mountedRightWall || mountedLeftWall))
+        if (!isGrounded && Input.GetButtonDown("Jump") && (mountedRightWall || mountedLeftWall))
         {
             Jump();
             rb.velocity = Vector2.zero;
             isWallJumping = true;
             
-            if (mountedRightWall)
-            {
-                Debug.Log("Wall jumping left");
-                rb.velocity = new Vector2(-1 * wallJumpForce, 0);
-            }
-            if (mountedLeftWall)
-            {
-                Debug.Log("Wall jumping right");
-                rb.velocity = new Vector2(wallJumpForce, 0);
-            }
+            if (mountedRightWall) rb.velocity = new Vector2(-1 * wallJumpForce, 0);
+            if (mountedLeftWall) rb.velocity = new Vector2(wallJumpForce, 0);
+        }
+        
+        //Sliding
+        if (isGrounded && Input.GetButtonDown("Slide"))
+        {
+            //Implement slide state
         }
 
+        //Testing death event
         if (transform.position.y < -7) Respawn();
     }
 
     private void FixedUpdate()
     {
+        //Checks
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
         
         Vector3 transformPosition = transform.position;
@@ -82,18 +82,16 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.OverlapPoint(transformPosition + new Vector3(-0.25f, 0f, 0f), wallGroundLayer);
 
         if (isGrounded) isWallJumping = false;
-        //if (!isGrounded && isWallJumping) return;
-        
-        //Horizontal movement
-        rb.velocity += new Vector2(moveInput * (moveSpeed), 0);
-
         if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
         
+        //Apply horizontal movement
+        rb.velocity += new Vector2(moveInput * (moveSpeed), 0);
+        
+        //Apply deceleration
         if (moveInput == 0 && !isWallJumping)
         {
-            //Apply decelerationRate
             float deceleration = decelerationRate;
-            if (!isGrounded) deceleration = decelerationRate * 0.1f;
+            if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
             rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
         }
 
