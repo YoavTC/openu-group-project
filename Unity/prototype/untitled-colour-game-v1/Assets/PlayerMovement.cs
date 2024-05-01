@@ -1,6 +1,8 @@
 using System;
 using NaughtyAttributes;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,6 +29,37 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpForce;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
 
+    #region Value Testing
+    public void SetDecelRate(float newValue) => decelerationRate = newValue;
+    public void SetAirDecelRate(float newValue) => airDecelerationRateMultiplier = newValue;
+    public void SetMaxSpeed(float newValue) => maxSpeed = newValue;
+    public void SetJumpForce(float newValue) => jumpForce = newValue;
+    public void SetWallJumpForce(float newValue) => wallJumpForce = newValue;
+
+    [SerializeField] private TMP_Text statsDisplay;
+    
+    private void UpdateStatsDisplay()
+    {
+        statsDisplay.text = "decel rate: " + decelerationRate
+                                           + "\nair decel rate: " + airDecelerationRateMultiplier
+                                           + "\nmax speed: " + maxSpeed
+                                           + "\njump force: " + jumpForce
+                                           + "\nwall jump force: " + wallJumpForce;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            GUIUtility.systemCopyBuffer = statsDisplay.text;
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            transform.position = new Vector3(50, 6, 0);
+        }
+    }
+    #endregion
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        UpdateStatsDisplay();
+        
         //Horizontal movement
         if (transform.position.x < 56.8f)
         {
