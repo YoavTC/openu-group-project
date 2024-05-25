@@ -46,11 +46,10 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Horizontal movement
-        if (transform.position.x < 56.8f && !isSliding)
+        if (!isSliding)
         {
             moveInput = Input.GetAxisRaw("Horizontal");
-        }
-        else moveInput = 0;
+        } else moveInput = 0;
        
         
         //Jumping
@@ -84,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Testing death event
-        if (transform.position.y < -7) Respawn();
+        if (transform.position.y < -15) Respawn();
     }
 
     private void FixedUpdate()
@@ -126,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     private void Respawn()
     {
         rb.velocity = Vector2.zero;
-        transform.position = new Vector3(-7f, 1f, 0f);
+        transform.position = new Vector3(-22f, -5f, 0f);
     }
 
     private IEnumerator Slide()
