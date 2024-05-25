@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/_Unity/prototype/untitled-colour-game-v1/[Ll]ibrary/
-/_Unity/prototype/untitled-colour-game-v1/[Tt]emp/
-/_Unity/prototype/untitled-colour-game-v1/[Oo]bj/
-/_Unity/prototype/untitled-colour-game-v1/[Bb]uild/
-/_Unity/prototype/untitled-colour-game-v1/[Bb]uilds/
-/_Unity/prototype/untitled-colour-game-v1/[Ll]ogs/
-/_Unity/prototype/untitled-colour-game-v1/[Uu]ser[Ss]ettings/
+/_Unity/MVP/redacted-game-v2/[Ll]ibrary/
+/_Unity/MVP/uredacted-game-v2/[Tt]emp/
+/_Unity/MVP/redacted-game-v2/[Oo]bj/
+/_Unity/MVP/redacted-game-v2/[Bb]uild/
+/_Unity/MVP/redacted-game-v2/[Bb]uilds/
+/_Unity/MVP/redacted-game-v2/[Ll]ogs/
+/_Unity/MVP/redacted-game-v2/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
