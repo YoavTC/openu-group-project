@@ -10,12 +10,11 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Layers")]
     [SerializeField] private LayerMask wallGroundLayer;
-    [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private LayerMask groundLayer;
     
     [Header("Components")]
     private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform collidersParent;
     
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -40,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Start()
     {
+        startPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -117,19 +117,16 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(Mathf.Clamp(x, -maxSpeed, maxSpeed), rb.velocity.y);
     }
 
+    #region Movement
+
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
     }
-
-    private void Respawn()
-    {
-        rb.velocity = Vector2.zero;
-        transform.position = new Vector3(-22f, -5f, 0f);
-    }
-
+    
     private IEnumerator Slide()
     {
+        UpdateColliderState(ColliderState.SLIDE);
         canGetUp = false;
         isSliding = true;
         float timeDiff = slideDurationMax - slideDurationMin;
@@ -144,9 +141,34 @@ public class PlayerMovement : MonoBehaviour
     private void GetUpFromSlide()
     {
         StopCoroutine(slideCoroutine);
+        UpdateColliderState(ColliderState.DEFAULT);
         canGetUp = false;
         isSliding = false;
         transform.GetChild(1).GetComponent<SpriteRenderer>().color = Color.white;
-        //transform.DORotate(Vector3.zero, 0.1f);
     }
+
+    #endregion
+
+    private void UpdateColliderState(ColliderState newColliderState)
+    {
+        for (int i = 0; i < collidersParent.childCount; i++)
+        {
+            collidersParent.GetChild(i).gameObject.SetActive(false);
+        }
+        collidersParent.GetChild((int) newColliderState).gameObject.SetActive(true);
+    }
+
+    private Vector3 startPosition;
+
+    private void Respawn()
+    {
+        rb.velocity = Vector2.zero;
+        transform.position = startPosition;
+    }
+
+}
+
+enum ColliderState
+{
+    DEFAULT, CROUCH, SLIDE
 }
