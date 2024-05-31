@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Components")]
     private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private Transform collidersParent;
+    [SerializeField] private Animator animator;
     
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Wall Jumps")] 
     [SerializeField] private float wallJumpForce;
+    [SerializeField] private Transform rightWallPoint, leftWallPoint;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
 
     [Header("Sliding")] 
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
         //Horizontal movement
         if (!isSliding)
         {
@@ -71,10 +73,8 @@ public class PlayerMovement : MonoBehaviour
         
         //Sliding
         if (isGrounded && Input.GetButtonDown("Slide") && !isSliding)
-        { ;
+        { 
             slideCoroutine = StartCoroutine(Slide());
-            transform.GetChild(1).GetComponent<SpriteRenderer>().color = Color.red;
-            //transform.DORotate(new Vector3(0, 0, 70), 0.1f);
         }
 
         if (!Input.GetButton("Slide") && isSliding && canGetUp)
@@ -91,9 +91,8 @@ public class PlayerMovement : MonoBehaviour
         //Checks
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
         
-        Vector3 transformPosition = transform.position;
-        mountedRightWall = Physics2D.OverlapPoint(transformPosition + new Vector3(0.25f, 0f, 0f), wallGroundLayer);
-        mountedLeftWall = Physics2D.OverlapPoint(transformPosition + new Vector3(-0.25f, 0f, 0f), wallGroundLayer);
+        mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
+        mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
 
         if (isGrounded) isWallJumping = false;
         if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
@@ -126,7 +125,9 @@ public class PlayerMovement : MonoBehaviour
     
     private IEnumerator Slide()
     {
-        UpdateColliderState(ColliderState.SLIDE);
+        //Animation
+        animator.SetTrigger("slide");
+        
         canGetUp = false;
         isSliding = true;
         float timeDiff = slideDurationMax - slideDurationMin;
@@ -140,24 +141,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetUpFromSlide()
     {
+        //Animation
+        animator.SetTrigger("run");
+        
         StopCoroutine(slideCoroutine);
-        UpdateColliderState(ColliderState.DEFAULT);
         canGetUp = false;
         isSliding = false;
-        transform.GetChild(1).GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     #endregion
-
-    private void UpdateColliderState(ColliderState newColliderState)
-    {
-        for (int i = 0; i < collidersParent.childCount; i++)
-        {
-            collidersParent.GetChild(i).gameObject.SetActive(false);
-        }
-        collidersParent.GetChild((int) newColliderState).gameObject.SetActive(true);
-    }
-
+    
     private Vector3 startPosition;
 
     private void Respawn()
@@ -166,9 +159,4 @@ public class PlayerMovement : MonoBehaviour
         transform.position = startPosition;
     }
 
-}
-
-enum ColliderState
-{
-    DEFAULT, CROUCH, SLIDE
 }
