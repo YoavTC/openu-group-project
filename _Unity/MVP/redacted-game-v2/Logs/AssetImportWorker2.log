@@ -1,0 +1,1241 @@
+Using pre-set license
+Built from '2022.3/staging' branch; Version is '2022.3.26f1 (ec6cd8118806) revision 15494360'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 24438 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Unity/MVP/redacted-game-v2
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+60082
+Successfully changed project path to: C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Unity/MVP/redacted-game-v2
+C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Unity/MVP/redacted-game-v2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [20592] Host "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2095087387 [EditorId] 2095087387 [Version] 1048832 [Id] WindowsEditor(7,i7-gamer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [20592] Host "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2095087387 [EditorId] 2095087387 [Version] 1048832 [Id] WindowsEditor(7,i7-gamer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 15.98 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.26f1 (ec6cd8118806)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Unity/MVP/redacted-game-v2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 (ID=0x2184)
+    Vendor:   NVIDIA
+    VRAM:     5981 MB
+    Driver:   31.0.15.4601
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009115 seconds.
+- Loaded All Assemblies, in  0.358 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.286 seconds
+Domain Reload Profiling: 642ms
+	BeginReloadAssembly (110ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (141ms)
+		LoadAssemblies (108ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (139ms)
+			TypeCache.Refresh (138ms)
+				TypeCache.ScanAssembly (123ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (286ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (226ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.687 seconds
+Refreshing native plugins compatible for Editor in 6.84 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.642 seconds
+Domain Reload Profiling: 1324ms
+	BeginReloadAssembly (146ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (448ms)
+		LoadAssemblies (350ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (183ms)
+			TypeCache.Refresh (151ms)
+				TypeCache.ScanAssembly (136ms)
+			ScanForSourceGeneratedMonoScriptInfo (23ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (643ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (484ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (354ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 6.91 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4363 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 100 unused Assets / (1.0 MB). Loaded Objects now: 4805.
+Memory consumption went from 154.5 MB to 153.5 MB.
+Total: 3.825900 ms (FindLiveObjects: 0.287000 ms CreateObjectMapping: 0.212000 ms MarkObjects: 2.896000 ms  DeleteObjects: 0.430300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 592946.831662 seconds.
+  path: Assets/Animations/Player Animator.controller
+  artifactKey: Guid(000af926cf45ac74c8cc7f8c812215e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Animations/Player Animator.controller using Guid(000af926cf45ac74c8cc7f8c812215e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ec6b7aadddc5f1c9942f051801e7c8bd') in 0.110934 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Environment/building-corner3.png
+  artifactKey: Guid(c792df10b5f28f54fa2cb22a6d990c83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/building-corner3.png using Guid(c792df10b5f28f54fa2cb22a6d990c83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8d713765990606824d32862bb445fe87') in 0.079836 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMPro.cginc
+  artifactKey: Guid(407bc68d299748449bbf7f48ee690f8d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMPro.cginc using Guid(407bc68d299748449bbf7f48ee690f8d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '914c09aad876a6da904ae0bc1b57157d') in 0.014226 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Materials/_Trail Material.mat
+  artifactKey: Guid(0fef167d5a66c404cb4409338fb90168) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Materials/_Trail Material.mat using Guid(0fef167d5a66c404cb4409338fb90168) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4c07af58e96c464f3716d8a425dbaa8d') in 0.053624 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprites/Environment/guidlines.png
+  artifactKey: Guid(54c0d1d4001b67c43b5059b8105e7fdd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/guidlines.png using Guid(54c0d1d4001b67c43b5059b8105e7fdd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '972b710c5221f4d1cd5cd729ac0a9498') in 0.026312 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Changelog.txt
+  artifactKey: Guid(c02f3bc3e81b36242a368268f078ebe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Changelog.txt using Guid(c02f3bc3e81b36242a368268f078ebe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4d893e64de860a9e44307ce618cc3371') in 0.015507 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Editor/Plugins.Baedrick.ColoredHeaderCreator.Editor.asmdef
+  artifactKey: Guid(456b5f74cc1b2fc4981e3d34528b6963) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Editor/Plugins.Baedrick.ColoredHeaderCreator.Editor.asmdef using Guid(456b5f74cc1b2fc4981e3d34528b6963) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0185ca4680e3d1f2737dd7db7009fffe') in 0.020444 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Environment/building-corner4.png
+  artifactKey: Guid(1a596b85f252b374c8c5e96685393e8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/building-corner4.png using Guid(1a596b85f252b374c8c5e96685393e8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '51d15482571ea48259f5b9360bb99458') in 0.024450 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader
+  artifactKey: Guid(48bb5f55d8670e349b6e614913f9d910) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader using Guid(48bb5f55d8670e349b6e614913f9d910) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0c9262ad0f3ad72a72c9ff106ff3e23e') in 0.017460 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/_Scenes/Movement Testing Scene.unity
+  artifactKey: Guid(7cca8b77a036a9d4d84fd947383a4d7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/_Scenes/Movement Testing Scene.unity using Guid(7cca8b77a036a9d4d84fd947383a4d7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e4cfdf00fcbfe5a357190eca0aee78a9') in 0.013168 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Environment/roof.png
+  artifactKey: Guid(20ff4d029ba69bf40be575e4e1069918) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/roof.png using Guid(20ff4d029ba69bf40be575e4e1069918) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '3e4e230f04825371a776d0634f2cc9f9') in 0.023489 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/External Packages/DOTween/Modules/DOTweenModuleAudio.cs
+  artifactKey: Guid(e226835a159be5a4e97155a60a8c4eca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Modules/DOTweenModuleAudio.cs using Guid(e226835a159be5a4e97155a60a8c4eca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5ac6392c6938d3ec4b2fa354dab82229') in 0.014057 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Environment/solar-panel.png
+  artifactKey: Guid(040bced4f424aa24c8d14784ea85299a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/solar-panel.png using Guid(040bced4f424aa24c8d14784ea85299a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bed5205ab06342f753ff348c8fceb8e1') in 0.029764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Environment/jump.png
+  artifactKey: Guid(c956c016c5458604094a6ad3c7cce683) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/jump.png using Guid(c956c016c5458604094a6ad3c7cce683) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd16cc014f2bcf25dfb9dc522a3e4d40e') in 0.035851 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/External Packages/DOTween/Modules/DOTweenModuleEPOOutline.cs
+  artifactKey: Guid(9616f7b1fb3622845a312cf7488f233c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Modules/DOTweenModuleEPOOutline.cs using Guid(9616f7b1fb3622845a312cf7488f233c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c1fb2bf720145e5997fd7a93037a1190') in 0.010572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/Environment/bg-backcity4.png
+  artifactKey: Guid(e5058c5242638e2499e74d2a32971dfd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/bg-backcity4.png using Guid(e5058c5242638e2499e74d2a32971dfd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '40d826a89784e0463413d597a1fc8c6b') in 0.025345 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Tools/HelperFunctions.cs
+  artifactKey: Guid(0e4bb583645546daa6fe4e556ce47d05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Tools/HelperFunctions.cs using Guid(0e4bb583645546daa6fe4e556ce47d05) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '31a9cea9f485b1ff0c2a79eb9575fbe2') in 0.014530 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/External Packages/TextMesh Pro/Sprites/EmojiOne.json
+  artifactKey: Guid(8f05276190cf498a8153f6cbe761d4e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Sprites/EmojiOne.json using Guid(8f05276190cf498a8153f6cbe761d4e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd3de3703168e842191bf7c755663cb49') in 0.017271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Character/run/P0001.png
+  artifactKey: Guid(9c14288c60d0e4f41b5267af2161a37f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/run/P0001.png using Guid(9c14288c60d0e4f41b5267af2161a37f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6cec70840c3877e433e3956d42565e99') in 0.021606 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/BoxGroupTest.cs
+  artifactKey: Guid(3920f5ea384951b4990e4d9e8032d12e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/BoxGroupTest.cs using Guid(3920f5ea384951b4990e4d9e8032d12e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dcda85471ee7886c495c0c0a97d98b74') in 0.014302 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprites/Character/slide (temporary)/slide2.png
+  artifactKey: Guid(35681f275f130a948b93f1124b422b83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/slide (temporary)/slide2.png using Guid(35681f275f130a948b93f1124b422b83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2ac15ed94a5fd3469f08cb839520c01d') in 0.026748 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/Character/slide (temporary)/slide0.png
+  artifactKey: Guid(5bb378baedc8a0843a2c88910748657a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/slide (temporary)/slide0.png using Guid(5bb378baedc8a0843a2c88910748657a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6350943886ff254cf38574632620b8cf') in 0.021980 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprites/Character/run/P0004.png
+  artifactKey: Guid(2f13866d20acb4a44a861db68242cce6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/run/P0004.png using Guid(2f13866d20acb4a44a861db68242cce6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0d207f80997a562c95811e9afeeee6e4') in 0.022180 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/DOTween/Editor/Imgs/Header.jpg
+  artifactKey: Guid(75a3fc05f14df384b8888198c383d5cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Editor/Imgs/Header.jpg using Guid(75a3fc05f14df384b8888198c383d5cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '78fdccd6b3fe11df42e9d5851ec07030') in 0.029969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMP_Sprite.shader
+  artifactKey: Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMP_Sprite.shader using Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '444e6335dcaa1443b5c95b0cc29b1f6f') in 0.012289 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/TextMesh Pro/Sprites/EmojiOne Attribution.txt
+  artifactKey: Guid(381dcb09d5029d14897e55f98031fca5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Sprites/EmojiOne Attribution.txt using Guid(381dcb09d5029d14897e55f98031fca5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a18b3ae2306b4ab844a334f67ca284ad') in 0.016449 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Editor/EditorHelper.cs
+  artifactKey: Guid(888e8f7eb9e64e2f9c7b45e21251ecd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Editor/EditorHelper.cs using Guid(888e8f7eb9e64e2f9c7b45e21251ecd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e773fbab18a15a3ae82188e1bbb80590') in 0.009993 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Meta/intro video.mp4
+  artifactKey: Guid(22e018f045a21494fb91e6cc4b958e48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Meta/intro video.mp4 using Guid(22e018f045a21494fb91e6cc4b958e48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bb9b79ffba9288bcc8822da8223236be') in 0.032433 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprites/Environment/corporation-logo-white.png
+  artifactKey: Guid(61fdb0798e6b9344cb1b3a58f558276f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/corporation-logo-white.png using Guid(61fdb0798e6b9344cb1b3a58f558276f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4fee3d4d05afd44e76927494ec7f4108') in 0.034264 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/External Packages/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0df4e0a939ee3bfd277684d03a573da3') in 0.023099 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Environment/IMG_6690.JPEG
+  artifactKey: Guid(57919123ba720cf478fd2363c9d95a4f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/IMG_6690.JPEG using Guid(57919123ba720cf478fd2363c9d95a4f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'be4e8081e66f7e85353c0c10e2b4b3a1') in 0.036039 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/Environment/map.png
+  artifactKey: Guid(7c38de84708cce04ebdcd7f06575137d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/map.png using Guid(7c38de84708cce04ebdcd7f06575137d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f3e8319dbaac1552b029860e707980b1') in 0.066525 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/Environment/lab-exit.png
+  artifactKey: Guid(a8459b5ea07ba74479314ca86d9b6704) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/lab-exit.png using Guid(a8459b5ea07ba74479314ca86d9b6704) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '109be317f8249679633d5abb301ae892') in 0.027702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+  artifactKey: Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMP_SDF Overlay.shader using Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ba39972b5489ffb33033355bb58a9e24') in 0.017027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Environment/corp-banner2.png
+  artifactKey: Guid(46708f66db99938498eff193304dc742) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/corp-banner2.png using Guid(46708f66db99938498eff193304dc742) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5c791ae45d1c52cdece40d83fb88dfb0') in 0.028150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Character/slide (temporary)/slide4.png
+  artifactKey: Guid(9e8ad323b2a8c914aab49a4070b0ef15) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/slide (temporary)/slide4.png using Guid(9e8ad323b2a8c914aab49a4070b0ef15) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ba244de5f8fcac152c0e5438d6dd6315') in 0.023921 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Sprites/Character/run/P0010.png
+  artifactKey: Guid(dc42aae52a4b26041bc77670eb3b6ff9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/run/P0010.png using Guid(dc42aae52a4b26041bc77670eb3b6ff9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b264cb05ec84b6a5370c2c9cd8dd8d7f') in 0.027075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/SceneTest.cs
+  artifactKey: Guid(281a85803caf74a459439020a0840fa4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/SceneTest.cs using Guid(281a85803caf74a459439020a0840fa4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '28ee5276e11f9659d10a5cc62b60fc78') in 0.014369 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/ShowAssetPreviewTest.cs
+  artifactKey: Guid(705c14aa9ecaa274289972381f471367) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/ShowAssetPreviewTest.cs using Guid(705c14aa9ecaa274289972381f471367) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '43e97f633bf1333d9a049d10bca6de20') in 0.015374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/CurveRangeTest.cs
+  artifactKey: Guid(6587b100d001e7e46b9aaae7f1180b40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/CurveRangeTest.cs using Guid(6587b100d001e7e46b9aaae7f1180b40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1f660f32fd8c7fc152f2885a5dfa58ea') in 0.015091 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/EnableIfTest.cs
+  artifactKey: Guid(bed506d8be3a10f45bec4bf2237bec87) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/EnableIfTest.cs using Guid(bed506d8be3a10f45bec4bf2237bec87) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2260d5bf62734e749717a5116d5e9bf5') in 0.010232 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/InputAxisTest.cs
+  artifactKey: Guid(e0cc8a31c22090847b75538c0ed2d2fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/InputAxisTest.cs using Guid(e0cc8a31c22090847b75538c0ed2d2fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e4030e9b3b67b8043121e9850a991147') in 0.012970 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/ValidateInputTest.cs
+  artifactKey: Guid(94adafcfe59aa344c9b5596b2cc6ecd0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/ValidateInputTest.cs using Guid(94adafcfe59aa344c9b5596b2cc6ecd0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1d19d56fb872db50b640b403b68980c1') in 0.012785 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/InfoBoxTest.cs
+  artifactKey: Guid(0dcb08e489c17644e9eacaa1ec5fe781) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/InfoBoxTest.cs using Guid(0dcb08e489c17644e9eacaa1ec5fe781) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2afde26d2bbcae4bcab888f87e180db4') in 0.013113 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/ShowNonSerializedFieldTest.cs
+  artifactKey: Guid(913d67a695253f744bdc776625b9b948) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/ShowNonSerializedFieldTest.cs using Guid(913d67a695253f744bdc776625b9b948) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1cf843dc8d59172a5c36bf824a81e3d8') in 0.016466 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/HorizontalLineTest.cs
+  artifactKey: Guid(5cc6d3f8d4a53374887b3d620a6972e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/HorizontalLineTest.cs using Guid(5cc6d3f8d4a53374887b3d620a6972e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '978b56b80c0fb9ac0672e4300f51bf63') in 0.015364 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/_NaughtyComponent.cs
+  artifactKey: Guid(9c928ea15ae74a44089beb2e534c1a35) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/_NaughtyComponent.cs using Guid(9c928ea15ae74a44089beb2e534c1a35) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '86968f4baea8b28d3e455db28d6d77ab') in 0.013967 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader
+  artifactKey: Guid(c8d12adcee749c344b8117cf7c7eb912) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader using Guid(c8d12adcee749c344b8117cf7c7eb912) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a7b1f4f85663bbdd2980d370820b47db') in 0.015732 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/TextMesh Pro/Resources/TMP Settings.asset
+  artifactKey: Guid(3f5b5dff67a942289a9defa416b206f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Resources/TMP Settings.asset using Guid(3f5b5dff67a942289a9defa416b206f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd35ebbe0f5e74a6dc0ea182b3de62323') in 0.079919 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Scripts/IAssetsStickedEventsListener.cs
+  artifactKey: Guid(1a3414342ec8dda4d8b6e33d5e301a6e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Scripts/IAssetsStickedEventsListener.cs using Guid(1a3414342ec8dda4d8b6e33d5e301a6e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8fc73da46c9d5f55b768e17779258864') in 0.014335 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scripts/PlayerMovement.cs
+  artifactKey: Guid(8e818ee9cecb14047b4e1bdb1ad08330) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scripts/PlayerMovement.cs using Guid(8e818ee9cecb14047b4e1bdb1ad08330) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '73bafd68990387ca32a0319c7faca847') in 0.011312 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/DOTween/Modules/DOTweenModuleUtils.cs
+  artifactKey: Guid(77c4ece8dfa9db14c87f24808937df84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Modules/DOTweenModuleUtils.cs using Guid(77c4ece8dfa9db14c87f24808937df84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '47fa43e771be0ed7593eaf63def27357') in 0.012261 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Presets/Default Header Preset.asset
+  artifactKey: Guid(31a699ca6be72de4aae2b1da8cfe954e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Presets/Default Header Preset.asset using Guid(31a699ca6be72de4aae2b1da8cfe954e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5d9798c0771ddff845010d2a125602de') in 0.013997 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMP_SDF SSD.shader
+  artifactKey: Guid(14eb328de4b8eb245bb7cea29e4ac00b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMP_SDF SSD.shader using Guid(14eb328de4b8eb245bb7cea29e4ac00b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '2a6d1f162be3eb6af5f6c84233990eb4') in 0.016496 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Environment/building-corner2.png
+  artifactKey: Guid(a1ccf278ea0e3164da37c00b0cccd048) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/building-corner2.png using Guid(a1ccf278ea0e3164da37c00b0cccd048) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f0acc2f7857badb91e10b320f078a4f2') in 0.029401 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/Character/run/P0013.png
+  artifactKey: Guid(2b87138d1113f7a4b91f8ca473a64028) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/run/P0013.png using Guid(2b87138d1113f7a4b91f8ca473a64028) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6bd15b178f89b5c3c5553c90c15bbb1e') in 0.027608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Plugins.Baedrick.ColoredHeaderCreator.asmdef
+  artifactKey: Guid(9da6497914269f54c8fa247ce173f4a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Plugins.Baedrick.ColoredHeaderCreator.asmdef using Guid(9da6497914269f54c8fa247ce173f4a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '456f6220f222eeb098a497a219612a35') in 0.015608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/External Packages/NaughtyAttributes/package.json
+  artifactKey: Guid(db9a5ca20403b0344ae64015de8f8c86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/package.json using Guid(db9a5ca20403b0344ae64015de8f8c86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '234faf6ad0ae7a5b9a3094ab371393ab') in 0.017317 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/ColoredHeaderPreset.cs
+  artifactKey: Guid(78acf52f470b4b208edf3a39c0dfd5f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/ColoredHeaderPreset.cs using Guid(78acf52f470b4b208edf3a39c0dfd5f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9d440eee5d9f9f0f16b2444a961ff188') in 0.009988 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/Character/run/P0008.png
+  artifactKey: Guid(d23652aee98ffe24cb39b80667e5c1b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/run/P0008.png using Guid(d23652aee98ffe24cb39b80667e5c1b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a70f83ac603eb36707a26136bb3ff698') in 0.029513 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Editor/ColoredHeaderGUI.cs
+  artifactKey: Guid(2bd056ead3ad9a84dbd2f80323e78ab1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Editor/ColoredHeaderGUI.cs using Guid(2bd056ead3ad9a84dbd2f80323e78ab1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8748418952fd4082904e4c11f8af392b') in 0.012497 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/NaughtyInspector.cs
+  artifactKey: Guid(1b9b53879f7c93b42835c3ad9e0d0a66) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/NaughtyInspector.cs using Guid(1b9b53879f7c93b42835c3ad9e0d0a66) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '512f21230707f0c7eac05e4875db377b') in 0.012203 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/External Packages/DOTween/Editor/Imgs/DOTweenIcon.png
+  artifactKey: Guid(522d5e51aba9e3f46b5ffd1923061cbe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Editor/Imgs/DOTweenIcon.png using Guid(522d5e51aba9e3f46b5ffd1923061cbe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7e626607c1f8a5116d1f261171828672') in 0.031711 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Meta/Intro Texture.renderTexture
+  artifactKey: Guid(0f95e45f8de04db459cb6d2aab2a74a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Meta/Intro Texture.renderTexture using Guid(0f95e45f8de04db459cb6d2aab2a74a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7b6439f01239c955b01d388f37f02e77') in 0.028031 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
+  artifactKey: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '772b98cb76e2dcceb66d4baf20671c43') in 0.032826 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/Expandable.cs
+  artifactKey: Guid(60926d6ca7f9ced469e9248ff1192da6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/Expandable.cs using Guid(60926d6ca7f9ced469e9248ff1192da6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c7116d76c6d33c048f7e977b84c5ad4e') in 0.013123 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNativePropertyAttribute.cs
+  artifactKey: Guid(a8e9b7b71c94a1f459336a24cfe04b1b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNativePropertyAttribute.cs using Guid(a8e9b7b71c94a1f459336a24cfe04b1b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '11b1d5647c838e27ed32c67837516f0f') in 0.011767 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/SceneAttribute.cs
+  artifactKey: Guid(e054de18423364f4688b72a0f2a472b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/SceneAttribute.cs using Guid(e054de18423364f4688b72a0f2a472b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f0b125ec5f81852810d992c1daaba964') in 0.012762 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs
+  artifactKey: Guid(9df37fdebccf65c4da5b0a14f6dad5f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs using Guid(9df37fdebccf65c4da5b0a14f6dad5f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'cefd8bd8d94a4dde392c608d3cfadd86') in 0.012764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/HorizontalLineAttribute.cs
+  artifactKey: Guid(2fdd6f99acca2fd42a4f3162d585ce95) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/HorizontalLineAttribute.cs using Guid(2fdd6f99acca2fd42a4f3162d585ce95) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f4ddc5fda7a978c236390b4a8578072c') in 0.014064 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/AllowNestingAttribute.cs
+  artifactKey: Guid(95b49d3abe880c044adbe7faf6b7b4ec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/AllowNestingAttribute.cs using Guid(95b49d3abe880c044adbe7faf6b7b4ec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ed53c5677045ee5ea443e2e2c10d9655') in 0.015233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/StickyNotes/Implementations/StateMachineBehaviours/StickyNote.cs
+  artifactKey: Guid(39b1349ef40ec4748bf41ecb74c5de8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Implementations/StateMachineBehaviours/StickyNote.cs using Guid(39b1349ef40ec4748bf41ecb74c5de8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd8fc9fa93d3ad3d71d2f6aa93fafd95f') in 0.013119 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/EnumFlagsAttribute.cs
+  artifactKey: Guid(e8b31eb6d7299e54d89dcabc4cad0e6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/EnumFlagsAttribute.cs using Guid(e8b31eb6d7299e54d89dcabc4cad0e6a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f05bbe452b560a004c7c6dabb8037b78') in 0.017233 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/Utility/EConditionOperator.cs
+  artifactKey: Guid(3c227b6c19fc67b46ad294d95818f85a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/Utility/EConditionOperator.cs using Guid(3c227b6c19fc67b46ad294d95818f85a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dff5ba86a917606ee8102b3eba43be88') in 0.014002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Scripts/StickyNotableAssetEditorBase.cs
+  artifactKey: Guid(8b4e29cdb328485448a4e80223f87337) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Scripts/StickyNotableAssetEditorBase.cs using Guid(8b4e29cdb328485448a4e80223f87337) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd6150b41bb0240776eb185cf1a7c0342') in 0.018527 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/External Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
+  artifactKey: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'de6313c55234380a9a935f6f759c92da') in 0.039475 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs
+  artifactKey: Guid(e8fe363a25ec5e24a9dd510bb0b4a0d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs using Guid(e8fe363a25ec5e24a9dd510bb0b4a0d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '37f3e167967087fd10b6be631994daf2') in 0.012992 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/MetaAttributes/DisableIfAttribute.cs
+  artifactKey: Guid(52a0d5c249ac8fd42a4fb4d61bc2f797) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/MetaAttributes/DisableIfAttribute.cs using Guid(52a0d5c249ac8fd42a4fb4d61bc2f797) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '00490d4adef794fdf2425009096e38c6') in 0.018765 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs
+  artifactKey: Guid(56d9a4b795ef4a94d86b94e55fb81240) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs using Guid(56d9a4b795ef4a94d86b94e55fb81240) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '92aca3ce5785a99ed7ce0d776b68fde2') in 0.018668 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/InfoBoxAttribute.cs
+  artifactKey: Guid(afd1d6323740c734893fa8397c53113b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/InfoBoxAttribute.cs using Guid(afd1d6323740c734893fa8397c53113b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '89c49268d212767e91afea6777ada4e4') in 0.012258 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs
+  artifactKey: Guid(b0cdf49d1687849458b1a8d4786553d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs using Guid(b0cdf49d1687849458b1a8d4786553d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f8e0802b12262076cf427220bdc93931') in 0.014752 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs
+  artifactKey: Guid(6c4171d68fb5bc0448d3ac298973e82c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs using Guid(6c4171d68fb5bc0448d3ac298973e82c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6569dad71c9a2429026d50d8a7cdd919') in 0.013196 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/CurveRangeAttribute.cs
+  artifactKey: Guid(bbdf3fb8882c7514c9a01108122cda7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/CurveRangeAttribute.cs using Guid(bbdf3fb8882c7514c9a01108122cda7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '31ba6d189065f640d54f5f7d089385b6') in 0.012487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'aa199e00e3d728132f0acbc2b12a205b') in 0.040014 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 6
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs
+  artifactKey: Guid(a748250af5ccfd7499cfb444aafb8a03) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs using Guid(a748250af5ccfd7499cfb444aafb8a03) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0e4a60f83a564dffa6c2f20a48a51f00') in 0.011210 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/MinMaxSliderTest.cs
+  artifactKey: Guid(fd67fbde6acdd6a44944f12e507067c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/MinMaxSliderTest.cs using Guid(fd67fbde6acdd6a44944f12e507067c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e486a45546a718388ae0a4c17659f8cd') in 0.013411 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs
+  artifactKey: Guid(4aaa73f574deaa54187cb54aae571b24) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs using Guid(4aaa73f574deaa54187cb54aae571b24) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '715e315b85a5ced23387d6f89c43aa08') in 0.010660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+  artifactKey: Guid(c41005c129ba4d66911b75229fd70b45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset using Guid(c41005c129ba4d66911b75229fd70b45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '798675a1c6ca0b11f0c241df1519d266') in 0.017938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/SpecialCaseDrawerAttribute.cs
+  artifactKey: Guid(95a59093f8ed1af48a8be75fa3050a3c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes_SpecialCase/SpecialCaseDrawerAttribute.cs using Guid(95a59093f8ed1af48a8be75fa3050a3c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '285d4dc6d6c3d1a695323a6dd96882bb') in 0.011007 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.004325 seconds.
+  path: Assets/Meta/1STABLEGAMES Logo.png
+  artifactKey: Guid(d14b7e35e5da3904b9769bbe2f44653a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Meta/1STABLEGAMES Logo.png using Guid(d14b7e35e5da3904b9769bbe2f44653a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '11499e8b9c615076c82d46cd0f042e09') in 0.034150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/OnValueChangedTest.cs
+  artifactKey: Guid(ff1df679e5b32f64bb106752c63933fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/OnValueChangedTest.cs using Guid(ff1df679e5b32f64bb106752c63933fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c6efca165ae95ae253e334e07de4ae94') in 0.016518 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/ReadOnlyTest.cs
+  artifactKey: Guid(5443d37a05e188846bda9b05b067184e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/ReadOnlyTest.cs using Guid(5443d37a05e188846bda9b05b067184e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e0638da596022454466ae0520f24eb72') in 0.012106 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/FoldoutTest.cs
+  artifactKey: Guid(3b437215d92efa74ea85ff726ca0dd09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/FoldoutTest.cs using Guid(3b437215d92efa74ea85ff726ca0dd09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a0678751ee8a48b3b900c6d883cbc88f') in 0.012131 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.005836 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/DecoratorDrawers/InfoBoxDecoratorDrawer.cs
+  artifactKey: Guid(e9c18b0e698717442b7631c5066d667f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/DecoratorDrawers/InfoBoxDecoratorDrawer.cs using Guid(e9c18b0e698717442b7631c5066d667f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7d828c8a3543b8217dfc39ce541e9d12') in 0.013568 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers_SpecialCase/SpecialCasePropertyDrawerBase.cs
+  artifactKey: Guid(771776453ad34b045a41dea54856fa12) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers_SpecialCase/SpecialCasePropertyDrawerBase.cs using Guid(771776453ad34b045a41dea54856fa12) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6310848411d6785f6b90f36340ba2205') in 0.010764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyValidators/PropertyValidatorBase.cs
+  artifactKey: Guid(f332c8e1c3627d742aa9158af7b02ccc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyValidators/PropertyValidatorBase.cs using Guid(f332c8e1c3627d742aa9158af7b02ccc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ed862672822e2ffc5eebc530b8059502') in 0.012648 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/StickyNotes/Implementations/StateMachineBehaviours/Editor/StickyNoteEditor.cs
+  artifactKey: Guid(e5b7c81591ba7b44f9008d79f76ee889) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Implementations/StateMachineBehaviours/Editor/StickyNoteEditor.cs using Guid(e5b7c81591ba7b44f9008d79f76ee889) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6881bd4a3b17c666ec3e572afb57280e') in 0.013263 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/External Packages/StickyNotes/Implementations/ScriptableObjects/Editor/StickyNoteEditor.cs
+  artifactKey: Guid(57e7e7df3e0a72749871c3b35945d455) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Implementations/ScriptableObjects/Editor/StickyNoteEditor.cs using Guid(57e7e7df3e0a72749871c3b35945d455) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '604a42dac749d8c032c3b7eec6277214') in 0.010690 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs
+  artifactKey: Guid(3a7e657ea45f6414682b5f41be9541b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs using Guid(3a7e657ea45f6414682b5f41be9541b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '5bc7832718cf3872f8e607ac6c5618d4') in 0.010969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs
+  artifactKey: Guid(1d86c581f02a55f458e36bf7e81e3084) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs using Guid(1d86c581f02a55f458e36bf7e81e3084) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '6cb5a6f170576d624e6a3ab9235406df') in 0.012793 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Scripts/StandartStickyNotableAssets/StickyNotableAnimatorControllerEditor.cs
+  artifactKey: Guid(05441dcc55f88974fb0124482e76882e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Scripts/StandartStickyNotableAssets/StickyNotableAnimatorControllerEditor.cs using Guid(05441dcc55f88974fb0124482e76882e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'a0ff957b9108f30409bdecaf8983a1b8') in 0.012478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/External Packages/StickyNotes/Implementations/MonoBehaviours/Editor/StickyNoteEditor.cs
+  artifactKey: Guid(508713354eb7cdb4d870b3f479835e0b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Implementations/MonoBehaviours/Editor/StickyNoteEditor.cs using Guid(508713354eb7cdb4d870b3f479835e0b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bf1533b9b48f9b228b5ab3fcec2e0f79') in 0.010133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Resources/Vis/StickyNotes/Fonts/TeXGyreSchola/texgyreschola-regular.otf
+  artifactKey: Guid(31fcfa1d495dec344ad30d3ed2a9bdcd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Resources/Vis/StickyNotes/Fonts/TeXGyreSchola/texgyreschola-regular.otf using Guid(31fcfa1d495dec344ad30d3ed2a9bdcd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8b85732281a78d155907867d559c2bd7') in 0.021948 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs
+  artifactKey: Guid(6e27ffd9a96b58c46bb74cc93de3e06f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs using Guid(6e27ffd9a96b58c46bb74cc93de3e06f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'db98479d1b8b50659c7e7e9b3caf3853') in 0.011945 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/AnimatorParamPropertyDrawer.cs
+  artifactKey: Guid(98ff8cb1bcefae740a68d9a5c5ee3563) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/AnimatorParamPropertyDrawer.cs using Guid(98ff8cb1bcefae740a68d9a5c5ee3563) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1c453ff430357be108e9149a7200da3c') in 0.013453 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs
+  artifactKey: Guid(24dee3fc91cfe94438de1e3c158f187f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs using Guid(24dee3fc91cfe94438de1e3c158f187f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c389ba5e6b94c182f664053ed092399b') in 0.013728 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Resources/Vis/StickyNotes/StickyNoteGuiSkin.guiskin
+  artifactKey: Guid(a057454fe355fec419c98c6a449ec85a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Resources/Vis/StickyNotes/StickyNoteGuiSkin.guiskin using Guid(a057454fe355fec419c98c6a449ec85a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'b7d6886b9794713e58443ff6310c784e') in 0.077300 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs
+  artifactKey: Guid(3df4c068c970ab6498df7a60efbde311) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs using Guid(3df4c068c970ab6498df7a60efbde311) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'e62169d73c9d1d516a27408c4fe2fabb') in 0.011425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs
+  artifactKey: Guid(5f6adf84ed53a7840a456e8b4dce38d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs using Guid(5f6adf84ed53a7840a456e8b4dce38d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '047420b5caba04dc86cb25154e2d1ea6') in 0.011473 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ExpandablePropertyDrawer.cs
+  artifactKey: Guid(d1ddb7194615bdc4e8b2088c8d165d8b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ExpandablePropertyDrawer.cs using Guid(d1ddb7194615bdc4e8b2088c8d165d8b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f0a52272fcb2767313f118e8f43b62c5') in 0.012459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs
+  artifactKey: Guid(dd080b36769bcd94d909fc0431cf25e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs using Guid(dd080b36769bcd94d909fc0431cf25e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'bcb57017404677e8ecae9640f9a4f099') in 0.010529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/External Packages/DOTween/Editor/DOTweenEditor.XML
+  artifactKey: Guid(3340dbe2e942fd345961b7f7aba87b61) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Editor/DOTweenEditor.XML using Guid(3340dbe2e942fd345961b7f7aba87b61) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '8faebb9166ca2f7e0ac2c3d163b580b8') in 0.015177 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Scripts/MultipleStickyNotesEditorBase.cs
+  artifactKey: Guid(8fa9afc2b78d4474aacd6639d1587bd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Scripts/MultipleStickyNotesEditorBase.cs using Guid(8fa9afc2b78d4474aacd6639d1587bd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'c6f89309604e095385a7d4ab01cdd345') in 0.015426 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/InputAxisAttribute.cs
+  artifactKey: Guid(85033978c18810f46af271bbe94cf4aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/DrawerAttributes/InputAxisAttribute.cs using Guid(85033978c18810f46af271bbe94cf4aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '9ffbc2f16a695bb1ca7051913c62a90f') in 0.011816 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs
+  artifactKey: Guid(0f3c43bed2dbc5249b6c6ec7859c2020) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs using Guid(0f3c43bed2dbc5249b6c6ec7859c2020) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7266847949e1bbaf2e769e104e61f421') in 0.012290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/Environment/bg.png
+  artifactKey: Guid(5af1cc9f81334ec43aab17675b5175ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Environment/bg.png using Guid(5af1cc9f81334ec43aab17675b5175ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '4b57ae8211a477099e06555d05cfa231') in 0.028017 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/Utility/ButtonUtility.cs
+  artifactKey: Guid(a273f81125ec52d4cb5dec2228afda0e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/Utility/ButtonUtility.cs using Guid(a273f81125ec52d4cb5dec2228afda0e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '33f3c6acd38bc3139dcc70516613732a') in 0.010714 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/External Packages/DOTween/Editor/Imgs/Footer_dark.png
+  artifactKey: Guid(4070746e0d32fcf4fa2d747b2b14f4ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/DOTween/Editor/Imgs/Footer_dark.png using Guid(4070746e0d32fcf4fa2d747b2b14f4ca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd4ab737e3715188954f2b99feb3edecc') in 0.029935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/TextMesh Pro/Shaders/TMPro_Properties.cginc
+  artifactKey: Guid(3997e2241185407d80309a82f9148466) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/TextMesh Pro/Shaders/TMPro_Properties.cginc using Guid(3997e2241185407d80309a82f9148466) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '08511202804dc34fface80399537ea4d') in 0.015063 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/External Packages/StickyNotes/Editor/Resources/Vis/StickyNotes/Fonts/TeXGyreSchola/texgyreschola-italic.otf
+  artifactKey: Guid(5bb1851e938c0a94493169fe28020d38) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/StickyNotes/Editor/Resources/Vis/StickyNotes/Fonts/TeXGyreSchola/texgyreschola-italic.otf using Guid(5bb1851e938c0a94493169fe28020d38) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'd1cd1d37be99b5a742a14686fcc415fd') in 0.021389 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Character/run/P0007.png
+  artifactKey: Guid(781081c2e8a341149aefe939084cac53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprites/Character/run/P0007.png using Guid(781081c2e8a341149aefe939084cac53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1d8f3644aa33d6abb33e6ce5e9605b80') in 0.024695 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/Utility/EColor.cs
+  artifactKey: Guid(059f8674a8065924ea9c678298b5cd63) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/Utility/EColor.cs using Guid(059f8674a8065924ea9c678298b5cd63) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'fd6f427631c966e00729dd127f78d7b8') in 0.011005 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/LayerTest.cs
+  artifactKey: Guid(460459d6ac76acd4d872f94cf444e6fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/LayerTest.cs using Guid(460459d6ac76acd4d872f94cf444e6fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '0fd1bc9f9b3e6e5f1ef581e560d384e0') in 0.013239 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ScenePropertyDrawer.cs
+  artifactKey: Guid(7f5ed440d4f429e42a5da7bc5df48fd8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/ScenePropertyDrawer.cs using Guid(7f5ed440d4f429e42a5da7bc5df48fd8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7def67a6dcd3aac99dcbf471a07f662e') in 0.012850 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/EnumFlagsPropertyDrawer.cs
+  artifactKey: Guid(b750e1461c1126d4399459b90b31e75e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Editor/PropertyDrawers/EnumFlagsPropertyDrawer.cs using Guid(b750e1461c1126d4399459b90b31e75e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '33d9ec3d0ccdff13ace8be490a319d9e') in 0.012742 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/MinMaxValueTest.cs
+  artifactKey: Guid(450a05787c54e6b4fa88ffe223bcee87) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/MinMaxValueTest.cs using Guid(450a05787c54e6b4fa88ffe223bcee87) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'f25fe7f3d49502462f769c1c4bb1363f') in 0.012253 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefabs/Environment/BuildingStart.prefab
+  artifactKey: Guid(e1dc61d4dbc3e7d468c58e742ea77ee3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Prefabs/Environment/BuildingStart.prefab using Guid(e1dc61d4dbc3e7d468c58e742ea77ee3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'dd8baf5b106d47bd0d410ce4c1dd76a4') in 0.038637 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/ProgressBarTest.cs
+  artifactKey: Guid(96ca4c27fc649764b9d1625f1740cb9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/ProgressBarTest.cs using Guid(96ca4c27fc649764b9d1625f1740cb9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '7d5391984287b79201df985a5df30730') in 0.010805 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Core/MetaAttributes/LabelAttribute.cs
+  artifactKey: Guid(79e0e0c0a7c25ea4fbe8eecaa4d559a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Core/MetaAttributes/LabelAttribute.cs using Guid(79e0e0c0a7c25ea4fbe8eecaa4d559a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: 'ae0ed87a6a1fd00d4a402ee867a340fd') in 0.010631 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/NaughtyAttributes/Scripts/Test/_NaughtyScriptableObject.cs
+  artifactKey: Guid(753bdb918c6038142acddbd7aae6958f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/NaughtyAttributes/Scripts/Test/_NaughtyScriptableObject.cs using Guid(753bdb918c6038142acddbd7aae6958f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '1ae804c2a505b0b7c54c556d74fb4697') in 0.013924 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/Editor/OnPostProcessScene.cs
+  artifactKey: Guid(71ed8346dd00e7b44994b5781ce2a6a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/Editor/OnPostProcessScene.cs using Guid(71ed8346dd00e7b44994b5781ce2a6a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '89f04cd348e1d00a433d03ed7e6fe71d') in 0.010998 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/External Packages/ColoredHeaderCreator/ColoredHeaderSettings.cs
+  artifactKey: Guid(e9bd6f9e299e9b24b9524c0bb7cb3fa3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/External Packages/ColoredHeaderCreator/ColoredHeaderSettings.cs using Guid(e9bd6f9e299e9b24b9524c0bb7cb3fa3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)  -> (artifact id: '716d0fe2251106e6c74f6825eea3c8e3') in 0.012856 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

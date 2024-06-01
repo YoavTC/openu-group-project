@@ -115,7 +115,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.10126495
+        value: 0.57562804
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -192,6 +192,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   groundCheck: {fileID: 1025698732870067518}
+  animator: {fileID: 3342444204449865603}
   moveSpeed: 1
   decelerationRate: 0.35
   airDecelerationRateMultiplier: 0.2
@@ -200,8 +201,8 @@ MonoBehaviour:
   isGrounded: 1
   groundCheckRadius: 0.2
   wallJumpForce: 8
-  rightWallPoint: {fileID: 0}
-  leftWallPoint: {fileID: 0}
+  rightWallPoint: {fileID: 97199744522446005}
+  leftWallPoint: {fileID: 4472520153321668441}
   mountedRightWall: 0
   mountedLeftWall: 0
   isWallJumping: 0
@@ -237,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 2799450286227759386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -342,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 4103594396920742565}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.74, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -373,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 4319861875452292365}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.92, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -443,7 +444,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.78858256}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -454,7 +455,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.17, y: 12.7}
+  m_Size: {x: 13.17, y: 11.122835}
   m_EdgeRadius: 0
 --- !u!1 &7135412592566593777
 GameObject:
@@ -481,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 7135412592566593777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.98, z: 0}
+  m_LocalPosition: {x: 0, y: -2.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

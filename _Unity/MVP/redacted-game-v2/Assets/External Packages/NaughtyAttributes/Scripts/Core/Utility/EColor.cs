@@ -49,7 +49,7 @@ namespace NaughtyAttributes
                 case EColor.Violet:
                     return new Color32(128, 0, 255, 255);
                 default:
-                    return new Color32(0, 0, 0, 255);
+                    return new Color32(31, 31, 31, 255);
             }
         }
     }
