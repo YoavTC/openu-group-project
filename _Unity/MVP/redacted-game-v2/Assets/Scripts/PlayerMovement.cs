@@ -12,10 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask wallGroundLayer;
     
     [Header("Components")]
-    private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Animator animator;
+    private Rigidbody2D rb;
     
+    [HorizontalLine]
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float decelerationRate, airDecelerationRateMultiplier, maxSpeed;
@@ -32,10 +33,10 @@ public class PlayerMovement : MonoBehaviour
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
 
     [Header("Sliding")] 
-    [ReadOnly] [SerializeField] private bool isSliding;
-    [ReadOnly] [SerializeField] private bool canGetUp;
     [SerializeField] private float slidingDecelerationRateMultiplier;
     [SerializeField] private float slideDurationMax, slideDurationMin;
+    [ReadOnly] [SerializeField] private bool isSliding;
+    [ReadOnly] [SerializeField] private bool canGetUp;
     private Coroutine slideCoroutine;
     
     private void Start()
