@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.Baedrick.ColoredHea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.Baedrick.ColoredHeaderCreator", "Plugins.Baedrick.ColoredHeaderCreator.csproj", "{3374beb6-6e05-1d28-3f07-be055befea39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udar.SceneManager", "Udar.SceneManager.csproj", "{115e259c-2a75-76a5-9a76-a9bdd54777d2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,8 @@ Global
 		{2bd21a01-49f6-eb32-dcb0-6984d91baae9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3374beb6-6e05-1d28-3f07-be055befea39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3374beb6-6e05-1d28-3f07-be055befea39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115e259c-2a75-76a5-9a76-a9bdd54777d2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115e259c-2a75-76a5-9a76-a9bdd54777d2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -206,11 +206,11 @@ MonoBehaviour:
   mountedRightWall: 0
   mountedLeftWall: 0
   isWallJumping: 0
-  isSliding: 0
-  canGetUp: 0
-  slidingDecelerationRateMultiplier: 0.05
+  slidingDecelerationRateMultiplier: 0.005
   slideDurationMax: 1.5
   slideDurationMin: 0.3
+  isSliding: 0
+  canGetUp: 0
 --- !u!1 &2799450286227759386
 GameObject:
   m_ObjectHideFlags: 0
