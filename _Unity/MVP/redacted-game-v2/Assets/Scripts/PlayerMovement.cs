@@ -8,6 +8,12 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Debug Options")] 
+    [SerializeField] private bool doVoidDeath;
+    [EnableIf("doVoidDeath")]
+    [SerializeField] private float voidDeathLevel;
+    
+    [HorizontalLine]
     [Header("Layers")]
     [SerializeField] private LayerMask wallGroundLayer;
     
@@ -84,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Testing death event
-        if (transform.position.y < -15) Respawn();
+        if (doVoidDeath && transform.position.y < voidDeathLevel) Respawn();
     }
 
     private void FixedUpdate()
