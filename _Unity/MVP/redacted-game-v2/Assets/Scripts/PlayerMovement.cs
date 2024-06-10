@@ -38,8 +38,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform rightWallPoint, leftWallPoint;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
 
-    [Header("Sliding")] 
-    [SerializeField] private float slidingDecelerationRateMultiplier;
+    [Header("Sliding")]
+    [SerializeField] private Transform slideBlockPoint;
+    [SerializeField] private float slideBlockRaycastDistance;
     [SerializeField] private float slideDurationMax, slideDurationMin;
     [ReadOnly] [SerializeField] private bool isSliding;
     [ReadOnly] [SerializeField] private bool canGetUp;
@@ -53,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        
         //Horizontal movement
         if (!isSliding)
         {
@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
             float deceleration = decelerationRate;
             
             if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
-            if (isGrounded && isSliding) deceleration = decelerationRate * slidingDecelerationRateMultiplier;
+            if (isSliding) deceleration = 0;
             
             rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
         }
@@ -148,6 +148,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetUpFromSlide()
     {
+        //bool forceSlide = Physics2D.OverlapPoint(upWallPoint.position, wallGroundLayer);
+        bool forceSlide = Physics2D.Raycast(slideBlockPoint.position, Vector2.up, slideBlockRaycastDistance, wallGroundLayer);
+        Debug.DrawRay(slideBlockPoint.position, Vector2.up * slideBlockRaycastDistance, Color.red ,0.5f);
+        
+        if (forceSlide)
+        {
+            return;
+        }
+        // while (forceSlide)
+        // {
+        //     forceSlide = Physics2D.OverlapPoint(upWallPoint.position, wallGroundLayer);
+        //     yield return HelperFunctions.GetWait(0.1f);
+        //     Debug.Log("stuck!");
+        // }
         //Animation
         animator.SetTrigger("run");
         
