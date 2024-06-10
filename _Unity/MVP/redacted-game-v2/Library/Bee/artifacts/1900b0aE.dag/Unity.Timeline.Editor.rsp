@@ -120,6 +120,8 @@
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
+-r:"Assets/External Packages/CastVisualizer/Editor/HarmonyLib/0Harmony_3.5.dll"
+-r:"Assets/External Packages/CastVisualizer/Editor/HarmonyLib/0Harmony_4.5.dll"
 -r:"Assets/External Packages/DOTween/DOTween.dll"
 -r:"Assets/External Packages/DOTween/Editor/DOTweenEditor.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/Managed/UnityEditor.Graphs.dll"

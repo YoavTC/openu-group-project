@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sliding")]
     [SerializeField] private Transform slideBlockPoint;
     [SerializeField] private float slideBlockRaycastDistance;
+    [SerializeField] private Vector2 slideBlockRadius;
     [SerializeField] private float slideDurationMax, slideDurationMin;
     [ReadOnly] [SerializeField] private bool isSliding;
     [ReadOnly] [SerializeField] private bool canGetUp;
@@ -148,20 +149,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetUpFromSlide()
     {
-        //bool forceSlide = Physics2D.OverlapPoint(upWallPoint.position, wallGroundLayer);
-        bool forceSlide = Physics2D.Raycast(slideBlockPoint.position, Vector2.up, slideBlockRaycastDistance, wallGroundLayer);
-        Debug.DrawRay(slideBlockPoint.position, Vector2.up * slideBlockRaycastDistance, Color.red ,0.5f);
+        //If under object and cannot exit slide
+        if (Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer)) { return; }
         
-        if (forceSlide)
-        {
-            return;
-        }
-        // while (forceSlide)
-        // {
-        //     forceSlide = Physics2D.OverlapPoint(upWallPoint.position, wallGroundLayer);
-        //     yield return HelperFunctions.GetWait(0.1f);
-        //     Debug.Log("stuck!");
-        // }
         //Animation
         animator.SetTrigger("run");
         
