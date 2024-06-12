@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43
+  controlID: 107
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,7 +299,7 @@ MonoBehaviour:
     x: 436
     y: 73
     width: 1094
-    height: 575
+    height: 574
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 985, y: 554}
+  m_TargetSize: {x: 983, y: 553}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -331,19 +331,19 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -492.5
-    m_HBaseRangeMax: 492.5
-    m_VBaseRangeMin: -277
-    m_VBaseRangeMax: 277
+    m_HBaseRangeMin: -491.5
+    m_HBaseRangeMax: 491.5
+    m_VBaseRangeMin: -276.5
+    m_VBaseRangeMax: 276.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 1
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -353,9 +353,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1094
-      height: 554
+      height: 553
     m_Scale: {x: 1.0513904, y: 1.0513904}
-    m_Translation: {x: 547, y: 268.30167}
+    m_Translation: {x: 547, y: 267.80167}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -363,12 +363,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -520.2634
-      y: -255.18748
+      y: -254.71191
       width: 1040.5269
-      height: 526.9213
+      height: 525.97015
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1094, y: 575}
+  m_LastWindowPixelSize: {x: 1094, y: 574}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -410,26 +410,26 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 23}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 10f4ffff7ef7ffff446800005a6800009e680000b6680000
+      m_ExpandedIDs: 6a3cffff92d6ffff12e6fffffcf1fffffef1ffffd8fafffff0fafffffefaffff8a640000a0640000fc640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: EventSystem
-        m_OriginalName: EventSystem
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 26132
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -806,9 +806,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 111.79758, y: 0.20159161, z: -0.6401457}
+    m_Target: {x: 13.924772, y: 5.243958, z: -1.8521161}
     speed: 2
-    m_Value: {x: 109.56417, y: 1.7137933, z: -0.60827315}
+    m_Value: {x: 13.103502, y: 4.4274354, z: -1.8391086}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -858,9 +858,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 74.015114
+    m_Target: 30.206059
     speed: 2
-    m_Value: 70.82786
+    m_Value: 28.90532
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scenes
+    - Assets/Prefabs/Environment/Buildings
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -938,16 +938,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/_Scenes
+  - Assets/Prefabs/Environment/Buildings
   m_LastFoldersGridSize: 16
   m_LastProjectPath: "C:\\Users\\bluee\\OneDrive\\\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD\\GitHub\\ZeClone\\openu-group-project\\_Unity\\MVP\\redacted-game-v2"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: a4670000
-    m_LastClickedID: 26532
-    m_ExpandedIDs: 000000008467000086670000886700008a6700008c6700008e67000000ca9a3b
+    scrollPos: {x: 0, y: 293}
+    m_SelectedIDs: 4c750000
+    m_LastClickedID: 30028
+    m_ExpandedIDs: 000000006a6600006e660000706600007266000074660000a2660000e26a00005c6c00005e6c0000606c0000626c0000646c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -975,7 +975,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008467000086670000886700008a6700008c6700008e670000
+    m_ExpandedIDs: 000000006a6600006c6600006e660000706600007266000074660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1003,7 +1003,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000
+    m_ExpandedInstanceIDs: c62300000000000064650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
