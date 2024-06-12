@@ -12,13 +12,13 @@ public class VersionDisplayer : MonoBehaviour
     [SerializeField] private string prefix;
     void Start()
     {
-        string version = GetCommitCount() + "_d" + DateTime.Today.DayOfYear;
+        string version = GetLastShortCommitId() + "_d" + DateTime.Today.DayOfYear;
         GetComponent<TMP_Text>().text = prefix + version;
     }
 
-    private int GetCommitCount()
+    private string GetLastShortCommitId()
     {
-        ProcessStartInfo processStartInfo = new ProcessStartInfo("git", "rev-list --count HEAD")
+        ProcessStartInfo processStartInfo = new ProcessStartInfo("git", "rev-parse --short HEAD")
         {
             RedirectStandardOutput = true,
             UseShellExecute = false,
@@ -37,12 +37,11 @@ public class VersionDisplayer : MonoBehaviour
         process.WaitForExit();
         process.Close();
 
-        int commitCount = 0;
-        if (int.TryParse(output.Trim(), out commitCount))
+        if (!string.IsNullOrEmpty(output))
         {
-            return commitCount;
+            return output.Trim();
         }
-        Debug.Log("Failed to parse commit count.");
-        return -1;
+        Debug.Log("Failed to retrieve last short commit ID.");
+        return "unknown";
     }
 }

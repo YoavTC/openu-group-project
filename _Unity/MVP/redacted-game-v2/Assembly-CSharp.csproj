@@ -718,59 +718,23 @@
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Common.Path.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Common">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Editor">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="PsdPlugin">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
+    <Reference Include="Unity.Burst">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    <Reference Include="Unity.2D.Common.Path.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -796,14 +760,32 @@
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Common">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEngineBridge.001">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
@@ -811,17 +793,29 @@
     <Reference Include="Unity.Timeline">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    <Reference Include="Unity.Collections">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -829,8 +823,14 @@
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Editor">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
@@ -852,6 +852,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Plugins.Baedrick.ColoredHeaderCreator.csproj">
+      <Project>{3374beb6-6e05-1d28-3f07-be055befea39}</Project>
+      <Name>Plugins.Baedrick.ColoredHeaderCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="NaughtyAttributes.Core.csproj">
+      <Project>{b4853568-974c-a3cf-ff83-653164e83b42}</Project>
+      <Name>NaughtyAttributes.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.CastVisualizer.Editor.csproj">
+      <Project>{9b5864a6-b550-1bbe-5b2f-b302cfe86364}</Project>
+      <Name>Unity.CastVisualizer.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.CastVisualizer.Runtime.csproj">
       <Project>{34596b3d-3a29-0d7a-fda2-554bb717f0f4}</Project>
       <Name>Unity.CastVisualizer.Runtime</Name>
@@ -871,18 +883,6 @@
     <ProjectReference Include="Unity.CastVisualizer.Samples.SampleScenes.csproj">
       <Project>{7c5a9f54-2aee-9f37-79a7-9d342a094e89}</Project>
       <Name>Unity.CastVisualizer.Samples.SampleScenes</Name>
-    </ProjectReference>
-    <ProjectReference Include="Plugins.Baedrick.ColoredHeaderCreator.csproj">
-      <Project>{3374beb6-6e05-1d28-3f07-be055befea39}</Project>
-      <Name>Plugins.Baedrick.ColoredHeaderCreator</Name>
-    </ProjectReference>
-    <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{b4853568-974c-a3cf-ff83-653164e83b42}</Project>
-      <Name>NaughtyAttributes.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.CastVisualizer.Editor.csproj">
-      <Project>{9b5864a6-b550-1bbe-5b2f-b302cfe86364}</Project>
-      <Name>Unity.CastVisualizer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{46a88ab3-28fc-b4e4-923c-21016cc8cde5}</Project>

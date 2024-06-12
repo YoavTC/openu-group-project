@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_Scenes/Level Design Scene Ptototype [SIZE ADJUSTED].unity
+- path: Assets/_Scenes/Movement Testing Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

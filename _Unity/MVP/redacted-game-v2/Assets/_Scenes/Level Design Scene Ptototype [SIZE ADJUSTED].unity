@@ -527,11 +527,6 @@ RectTransform:
   m_AnchoredPosition: {x: 110.329025, y: -15.665455}
   m_SizeDelta: {x: 5.6755, y: 1.5574}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!4 &479467433 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1025698732870067518, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-  m_PrefabInstance: {fileID: 6915684923689712507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &479973491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,37 +3801,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2116725751
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2116725752}
-  m_Layer: 0
-  m_Name: Slide block point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2116725752
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116725751}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 479467433}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142807065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4048,30 +4012,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: upWallPoint
-      value: 
-      objectReference: {fileID: 2116725752}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: slideBlockPoint
-      value: 
-      objectReference: {fileID: 2116725752}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: slideDurationMin
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: slideBlockRadius.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: slideBlockRadius.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: slideBlockRaycastDistance
-      value: 1.2
-      objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.4
@@ -4114,10 +4054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1025698732870067518, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2116725752}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
 --- !u!1660057539 &9223372036854775807
