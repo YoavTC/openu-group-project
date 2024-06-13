@@ -15,7 +15,7 @@ C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Un
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-58058
+54997
 Successfully changed project path to: C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Unity/MVP/redacted-game-v2
 C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Unity/MVP/redacted-game-v2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/owner/Dropbox/My PC (i7-gamer)/Documents/GitHub/openu-group-project/_Un
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [14276] Host "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2316950597 [EditorId] 2316950597 [Version] 1048832 [Id] WindowsEditor(7,i7-gamer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12868] Host "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2807998193 [EditorId] 2807998193 [Version] 1048832 [Id] WindowsEditor(7,i7-gamer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [14276] Host "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2316950597 [EditorId] 2316950597 [Version] 1048832 [Id] WindowsEditor(7,i7-gamer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12868] Host "[IP] 192.168.1.25 [Port] 0 [Flags] 2 [Guid] 2807998193 [EditorId] 2807998193 [Version] 1048832 [Id] WindowsEditor(7,i7-gamer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 28.52 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 17.92 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.26f1 (ec6cd8118806)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010796 seconds.
-- Loaded All Assemblies, in  0.469 seconds
+Registered in 0.008643 seconds.
+- Loaded All Assemblies, in  0.375 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.356 seconds
-Domain Reload Profiling: 824ms
-	BeginReloadAssembly (152ms)
+- Finished resetting the current domain, in  0.309 seconds
+Domain Reload Profiling: 682ms
+	BeginReloadAssembly (118ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (79ms)
-	LoadAllAssembliesAndSetupDomain (174ms)
-		LoadAssemblies (148ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (137ms)
+		LoadAssemblies (115ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (172ms)
-			TypeCache.Refresh (168ms)
-				TypeCache.ScanAssembly (154ms)
+		AnalyzeDomain (135ms)
+			TypeCache.Refresh (133ms)
+				TypeCache.ScanAssembly (120ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (357ms)
+	FinalizeReload (309ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (279ms)
+		SetupLoadedEditorAssemblies (240ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (9ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (187ms)
-			ProcessInitializeOnLoadMethodAttributes (70ms)
+			ProcessInitializeOnLoadAttributes (157ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,658 +115,345 @@ Domain Reload Profiling: 824ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Assembly 'Library/ScriptAssemblies/Unity.CastVisualizer.Editor.dll' will not be loaded due to errors:
-Reference has errors 'Unity.CastVisualizer.Runtime'.
-Assembly 'Library/ScriptAssemblies/Unity.CastVisualizer.Runtime.dll' will not be loaded due to errors:
-Unable to resolve reference '0Harmony'. Is the assembly missing or incompatible with the current platform?
-Reference validation can be disabled in the Plugin Inspector.
-- Loaded All Assemblies, in  1.093 seconds
-Refreshing native plugins compatible for Editor in 8.41 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.816 seconds
+Refreshing native plugins compatible for Editor in 6.83 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.033 seconds
-Domain Reload Profiling: 2119ms
-	BeginReloadAssembly (211ms)
+- Finished resetting the current domain, in  1.035 seconds
+Domain Reload Profiling: 1845ms
+	BeginReloadAssembly (174ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (755ms)
-		LoadAssemblies (603ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (534ms)
+		LoadAssemblies (410ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (276ms)
-			TypeCache.Refresh (230ms)
-				TypeCache.ScanAssembly (203ms)
-			ScanForSourceGeneratedMonoScriptInfo (34ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1034ms)
+		AnalyzeDomain (225ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (151ms)
+			ScanForSourceGeneratedMonoScriptInfo (27ms)
+			ResolveRequiredComponents (30ms)
+	FinalizeReload (1036ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (785ms)
+		SetupLoadedEditorAssemblies (850ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
+			InitializePlatformSupportModulesInManaged (8ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (105ms)
-			ProcessInitializeOnLoadAttributes (563ms)
-			ProcessInitializeOnLoadMethodAttributes (90ms)
-			AfterProcessingInitializeOnLoad (16ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (701ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
+			AfterProcessingInitializeOnLoad (13ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (16ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 14.21 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 9.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4377 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 99 unused Assets / (1.0 MB). Loaded Objects now: 4823.
-Memory consumption went from 155.1 MB to 154.1 MB.
-Total: 5.846000 ms (FindLiveObjects: 0.465800 ms CreateObjectMapping: 0.420500 ms MarkObjects: 4.323900 ms  DeleteObjects: 0.634400 ms)
+Unloading 4379 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 101 unused Assets / (1.0 MB). Loaded Objects now: 4823.
+Memory consumption went from 155.3 MB to 154.3 MB.
+Total: 4.773400 ms (FindLiveObjects: 0.301600 ms CreateObjectMapping: 0.291500 ms MarkObjects: 3.699400 ms  DeleteObjects: 0.479700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: 0cdf409b5aa8d4c25876d72b5c6a3b60 -> 
-  custom:scripting/precompiled-assembly-types:Unity.CastVisualizer.Editor: b460e6d731fd56b55e6512d7fe38306f -> 
-  custom:scripting/precompiled-assembly-types:Unity.CastVisualizer.Runtime: bd272a731469504319fabfc0a29693aa -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 41f2621b31031a353d9453626f3aa328 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 6d56cc9ace4a62fdfb0933ac39b8562d -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:scripting/precompiled-assembly-types:0Harmony: a27be801ee65e68f5ac5ee3cdeb40367 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: 87803a2b9abfc0fb58cc4fb3a93c0958 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: 63ef4f6875b05aea8ea116e07ef8728c -> 
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 3fc68dbe8db9a21c0cf12c5d3e69fbda -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 213340.493177 seconds.
-  path: Assets/External Packages/CastVisualizer
-  artifactKey: Guid(611c3d946057f5e46b5c443d0e7e8ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/External Packages/CastVisualizer using Guid(611c3d946057f5e46b5c443d0e7e8ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd99719c59d6b56bd701c44e1d81b10') in 0.002001 seconds
+  Time since last request: 20591.178493 seconds.
+  path: Assets/_Scenes/Movement Testing Scene.unity
+  artifactKey: Guid(7cca8b77a036a9d4d84fd947383a4d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Movement Testing Scene.unity using Guid(7cca8b77a036a9d4d84fd947383a4d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2679792c3454d7f12a6c29ad86debb6d') in 0.002306 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.878 seconds
-Refreshing native plugins compatible for Editor in 51.46 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.669 seconds
+Refreshing native plugins compatible for Editor in 7.76 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.908 seconds
-Domain Reload Profiling: 2773ms
-	BeginReloadAssembly (208ms)
+- Finished resetting the current domain, in  1.687 seconds
+Domain Reload Profiling: 2350ms
+	BeginReloadAssembly (192ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (20ms)
+		DisableScriptedObjects (15ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (47ms)
-	RebuildCommonClasses (54ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (543ms)
-		LoadAssemblies (557ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (380ms)
+		LoadAssemblies (434ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (89ms)
-			TypeCache.Refresh (34ms)
-				TypeCache.ScanAssembly (10ms)
-			ScanForSourceGeneratedMonoScriptInfo (29ms)
-			ResolveRequiredComponents (20ms)
-	FinalizeReload (1909ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (731ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (11ms)
-			SetLoadedEditorAssemblies (7ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (174ms)
-			ProcessInitializeOnLoadAttributes (479ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
-			AfterProcessingInitializeOnLoad (12ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (18ms)
-Refreshing native plugins compatible for Editor in 12.89 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4371 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (1.0 MB). Loaded Objects now: 4840.
-Memory consumption went from 154.1 MB to 153.1 MB.
-Total: 4.656800 ms (FindLiveObjects: 0.352100 ms CreateObjectMapping: 0.441500 ms MarkObjects: 3.322900 ms  DeleteObjects: 0.539100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 66c84ae0ec852ba0739715d9957a1c9e -> 41f2621b31031a353d9453626f3aa328
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 7779c1fc6c5abc90b14bb5d290217e2c -> 6d56cc9ace4a62fdfb0933ac39b8562d
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: ad6828d0e3d7b60252fdc105f1d6850b -> 87803a2b9abfc0fb58cc4fb3a93c0958
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: c06e550ba19a3426c9d1e5546e6e90cb -> 63ef4f6875b05aea8ea116e07ef8728c
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 698a6f06792beb4acbb1aa75f09dce22 -> 3fc68dbe8db9a21c0cf12c5d3e69fbda
-========================================================================
-Received Prepare
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.675 seconds
-Refreshing native plugins compatible for Editor in 8.49 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.306 seconds
-Domain Reload Profiling: 1975ms
-	BeginReloadAssembly (199ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (47ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (361ms)
-		LoadAssemblies (426ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (37ms)
+		AnalyzeDomain (46ms)
 			TypeCache.Refresh (13ms)
 				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1307ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1687ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (523ms)
+		SetupLoadedEditorAssemblies (945ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (112ms)
-			ProcessInitializeOnLoadAttributes (356ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
-			AfterProcessingInitializeOnLoad (11ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Refreshing native plugins compatible for Editor in 7.20 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4372 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (1.0 MB). Loaded Objects now: 4856.
-Memory consumption went from 153.8 MB to 152.8 MB.
-Total: 4.613800 ms (FindLiveObjects: 0.399300 ms CreateObjectMapping: 0.607100 ms MarkObjects: 3.145500 ms  DeleteObjects: 0.460800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 66c84ae0ec852ba0739715d9957a1c9e -> 41f2621b31031a353d9453626f3aa328
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 7779c1fc6c5abc90b14bb5d290217e2c -> 6d56cc9ace4a62fdfb0933ac39b8562d
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: ad6828d0e3d7b60252fdc105f1d6850b -> 87803a2b9abfc0fb58cc4fb3a93c0958
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: c06e550ba19a3426c9d1e5546e6e90cb -> 63ef4f6875b05aea8ea116e07ef8728c
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 698a6f06792beb4acbb1aa75f09dce22 -> 3fc68dbe8db9a21c0cf12c5d3e69fbda
-========================================================================
-Received Prepare
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.747 seconds
-Refreshing native plugins compatible for Editor in 7.48 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.249 seconds
-Domain Reload Profiling: 1990ms
-	BeginReloadAssembly (206ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (50ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (452ms)
-		LoadAssemblies (516ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (32ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (1249ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (492ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (101ms)
-			ProcessInitializeOnLoadAttributes (340ms)
-			ProcessInitializeOnLoadMethodAttributes (32ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (788ms)
+			ProcessInitializeOnLoadMethodAttributes (36ms)
 			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 6.94 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (17ms)
+Refreshing native plugins compatible for Editor in 8.39 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4372 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (1.0 MB). Loaded Objects now: 4872.
-Memory consumption went from 153.8 MB to 152.8 MB.
-Total: 3.886000 ms (FindLiveObjects: 0.409200 ms CreateObjectMapping: 0.348800 ms MarkObjects: 2.677000 ms  DeleteObjects: 0.449700 ms)
+Unloading 61 unused Assets / (1.0 MB). Loaded Objects now: 4840.
+Memory consumption went from 153.5 MB to 152.5 MB.
+Total: 4.154900 ms (FindLiveObjects: 0.330900 ms CreateObjectMapping: 0.289400 ms MarkObjects: 2.996300 ms  DeleteObjects: 0.537200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 66c84ae0ec852ba0739715d9957a1c9e -> 41f2621b31031a353d9453626f3aa328
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 7779c1fc6c5abc90b14bb5d290217e2c -> 6d56cc9ace4a62fdfb0933ac39b8562d
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: ad6828d0e3d7b60252fdc105f1d6850b -> 87803a2b9abfc0fb58cc4fb3a93c0958
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: c06e550ba19a3426c9d1e5546e6e90cb -> 63ef4f6875b05aea8ea116e07ef8728c
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 698a6f06792beb4acbb1aa75f09dce22 -> 3fc68dbe8db9a21c0cf12c5d3e69fbda
 ========================================================================
 Received Prepare
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.721 seconds
-Refreshing native plugins compatible for Editor in 8.86 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.608 seconds
+Refreshing native plugins compatible for Editor in 9.97 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.207 seconds
-Domain Reload Profiling: 1923ms
-	BeginReloadAssembly (186ms)
+- Finished resetting the current domain, in  1.595 seconds
+Domain Reload Profiling: 2198ms
+	BeginReloadAssembly (202ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
+		DisableScriptedObjects (12ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (39ms)
-	RebuildCommonClasses (40ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (32ms)
 	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (437ms)
-		LoadAssemblies (487ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (324ms)
+		LoadAssemblies (386ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (44ms)
-			TypeCache.Refresh (20ms)
-				TypeCache.ScanAssembly (2ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (1207ms)
+		AnalyzeDomain (39ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1596ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (539ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (356ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
-			AfterProcessingInitializeOnLoad (8ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 6.70 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4372 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (1.0 MB). Loaded Objects now: 4888.
-Memory consumption went from 153.8 MB to 152.8 MB.
-Total: 3.239900 ms (FindLiveObjects: 0.305000 ms CreateObjectMapping: 0.224100 ms MarkObjects: 2.315500 ms  DeleteObjects: 0.394700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 66c84ae0ec852ba0739715d9957a1c9e -> 41f2621b31031a353d9453626f3aa328
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 7779c1fc6c5abc90b14bb5d290217e2c -> 6d56cc9ace4a62fdfb0933ac39b8562d
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: ad6828d0e3d7b60252fdc105f1d6850b -> 87803a2b9abfc0fb58cc4fb3a93c0958
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: c06e550ba19a3426c9d1e5546e6e90cb -> 63ef4f6875b05aea8ea116e07ef8728c
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 698a6f06792beb4acbb1aa75f09dce22 -> 3fc68dbe8db9a21c0cf12c5d3e69fbda
-========================================================================
-Received Prepare
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.648 seconds
-Refreshing native plugins compatible for Editor in 8.07 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.214 seconds
-Domain Reload Profiling: 1858ms
-	BeginReloadAssembly (187ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (35ms)
-	LoadAllAssembliesAndSetupDomain (377ms)
-		LoadAssemblies (421ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (48ms)
-			TypeCache.Refresh (18ms)
-				TypeCache.ScanAssembly (2ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1215ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (489ms)
+		SetupLoadedEditorAssemblies (905ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (6ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (103ms)
-			ProcessInitializeOnLoadAttributes (334ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (773ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (10ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 8.16 ms, found 4 plugins.
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 8.32 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4372 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (1.0 MB). Loaded Objects now: 4904.
-Memory consumption went from 153.8 MB to 152.8 MB.
-Total: 3.673800 ms (FindLiveObjects: 0.318700 ms CreateObjectMapping: 0.265300 ms MarkObjects: 2.665100 ms  DeleteObjects: 0.423900 ms)
+Unloading 4373 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 61 unused Assets / (1.0 MB). Loaded Objects now: 4856.
+Memory consumption went from 153.7 MB to 152.8 MB.
+Total: 4.429100 ms (FindLiveObjects: 0.337500 ms CreateObjectMapping: 0.432000 ms MarkObjects: 3.204400 ms  DeleteObjects: 0.454300 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 66c84ae0ec852ba0739715d9957a1c9e -> 41f2621b31031a353d9453626f3aa328
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 7779c1fc6c5abc90b14bb5d290217e2c -> 6d56cc9ace4a62fdfb0933ac39b8562d
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: ad6828d0e3d7b60252fdc105f1d6850b -> 87803a2b9abfc0fb58cc4fb3a93c0958
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: c06e550ba19a3426c9d1e5546e6e90cb -> 63ef4f6875b05aea8ea116e07ef8728c
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 698a6f06792beb4acbb1aa75f09dce22 -> 3fc68dbe8db9a21c0cf12c5d3e69fbda
 ========================================================================
-Received Prepare
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.760 seconds
-Refreshing native plugins compatible for Editor in 11.09 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Runtime' already exists (Assets/External Packages/CastVisualizer/Runtime/Unity.CastVisualizer.Runtime.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/External Packages/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Samples.SampleScenes' already exists (Assets/CastVisualizer/Samples/SampleScenes/Unity.CastVisualizer.Samples.SampleScenes.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/External Packages/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor' already exists (Assets/CastVisualizer/Editor/Unity.CastVisualizer.Editor.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/External Packages/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-Assembly with name 'Unity.CastVisualizer.Editor.HarmonyLib' already exists (Assets/CastVisualizer/Editor/HarmonyLib/Unity.CastVisualizer.Editor.HarmonyLib.asmdef)
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.362 seconds
-Domain Reload Profiling: 2116ms
-	BeginReloadAssembly (177ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (42ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (495ms)
-		LoadAssemblies (483ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (105ms)
-			TypeCache.Refresh (47ms)
-				TypeCache.ScanAssembly (20ms)
-			ScanForSourceGeneratedMonoScriptInfo (40ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (1363ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (568ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (120ms)
-			ProcessInitializeOnLoadAttributes (391ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
-			AfterProcessingInitializeOnLoad (8ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 6.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4372 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (1.0 MB). Loaded Objects now: 4920.
-Memory consumption went from 153.8 MB to 152.9 MB.
-Total: 3.512900 ms (FindLiveObjects: 0.289300 ms CreateObjectMapping: 0.210700 ms MarkObjects: 2.611500 ms  DeleteObjects: 0.400800 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/BaseVisulizer.cs: a53f96815da50de15010b1c479bc70cf -> 0cdf409b5aa8d4c25876d72b5c6a3b60
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderUtil.cs: 66c84ae0ec852ba0739715d9957a1c9e -> 41f2621b31031a353d9453626f3aa328
-  custom:scripting/monoscript/fileName/CastVisualizerEditorWindow.cs: 7779c1fc6c5abc90b14bb5d290217e2c -> 6d56cc9ace4a62fdfb0933ac39b8562d
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:scripting/monoscript/fileName/CastVisualizerManager.cs: ad6828d0e3d7b60252fdc105f1d6850b -> 87803a2b9abfc0fb58cc4fb3a93c0958
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/Physics2DPatches.cs: c06e550ba19a3426c9d1e5546e6e90cb -> 63ef4f6875b05aea8ea116e07ef8728c
-  custom:scripting/monoscript/fileName/PhysicsPatches.cs: 698a6f06792beb4acbb1aa75f09dce22 -> 3fc68dbe8db9a21c0cf12c5d3e69fbda
+Received Import Request.
+  Time since last request: 477.111194 seconds.
+  path: Assets/Sprites/Character/slide (temporary)/slide1.png
+  artifactKey: Guid(cf6c9385fda2f8e4f8b715f82aa29a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide (temporary)/slide1.png using Guid(cf6c9385fda2f8e4f8b715f82aa29a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7625b8454107f59ffce80cef84f9b3') in 0.129389 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 35.411009 seconds.
+  path: Assets/Sprites/Character/slide30fps/0004.png
+  artifactKey: Guid(08a66f54564b0f14bb7f830343e00269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0004.png using Guid(08a66f54564b0f14bb7f830343e00269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '217978edcd794a7ac5bfe11a78d5dcda') in 0.021554 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Character/slide30fps/0023.png
+  artifactKey: Guid(aab9d5f989e64414985e7cc0cdfd16ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0023.png using Guid(aab9d5f989e64414985e7cc0cdfd16ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12b9abcf9cbcf68020538a6fda0d2f17') in 0.020572 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprites/Character/slide30fps/0025.png
+  artifactKey: Guid(00d0859d94cf77049b64f30c9e2f4333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0025.png using Guid(00d0859d94cf77049b64f30c9e2f4333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e46d0efdb025c2c728a46699409c584') in 0.021565 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprites/Character/slide30fps/0021.png
+  artifactKey: Guid(e84c48df5fae13a47a1259ef5f058180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0021.png using Guid(e84c48df5fae13a47a1259ef5f058180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec6e05d76622d5e1d1a9454ba1728922') in 0.021002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Character/slide30fps/0005.png
+  artifactKey: Guid(fbea5b1cc4b0ec94e9c8e0932c4add55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0005.png using Guid(fbea5b1cc4b0ec94e9c8e0932c4add55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d49f46ad50ad115e01f30107a3c74ae') in 0.017042 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Character/slide30fps/0029.png
+  artifactKey: Guid(766f2752a9ed22c49b7fe64b137d932d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0029.png using Guid(766f2752a9ed22c49b7fe64b137d932d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c5a11bfbbc9c6a26b33d0a229b842fb') in 0.019642 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/Character/slide30fps/0008.png
+  artifactKey: Guid(2fc7ca99860ca544bad97e18b2c1c50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0008.png using Guid(2fc7ca99860ca544bad97e18b2c1c50a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '640504f5c98b21314f8fa0986ce78ea8') in 0.020212 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprites/Character/slide30fps/0013.png
+  artifactKey: Guid(cf0430f744576284090446f44b775905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0013.png using Guid(cf0430f744576284090446f44b775905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146f7f87a3d0abbdfb8a5eeada215b20') in 0.016499 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprites/Character/slide30fps/0012.png
+  artifactKey: Guid(e3709c11903d302489fc9f467789948c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0012.png using Guid(e3709c11903d302489fc9f467789948c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dc8bc008ff2830c8ab58fb2b3fe2056') in 0.020070 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Character/slide30fps/0015.png
+  artifactKey: Guid(e706c2a80c454174695a2f31188bf87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0015.png using Guid(e706c2a80c454174695a2f31188bf87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66c9b1fda61e3d45cb1b5f1ff8fa871') in 0.018540 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Character/slide30fps/0033.png
+  artifactKey: Guid(36ddb99e38e64594b816f7255d5e1caf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0033.png using Guid(36ddb99e38e64594b816f7255d5e1caf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '151556390ee38d9e3e719d0f724013a3') in 0.017093 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Character/slide30fps/0035.png
+  artifactKey: Guid(ac7f55e129bc79740892d618f49ee94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/slide30fps/0035.png using Guid(ac7f55e129bc79740892d618f49ee94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09d1b84a4a8d18909eba95e952c23701') in 0.017342 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 22.716268 seconds.
+  path: Assets/Sprites/Character/run/P0003.png
+  artifactKey: Guid(4b37f1341245971448b2219e45e696c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/run/P0003.png using Guid(4b37f1341245971448b2219e45e696c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8469c1358035f5523b45e4cfc3e20cae') in 0.023133 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/Character/run/P0012.png
+  artifactKey: Guid(12991e69ae912004790151c40065b8b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/run/P0012.png using Guid(12991e69ae912004790151c40065b8b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bef2723ce3f8e1e095391050c9d30fe') in 0.021369 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Character/run/P0013.png
+  artifactKey: Guid(2b87138d1113f7a4b91f8ca473a64028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/run/P0013.png using Guid(2b87138d1113f7a4b91f8ca473a64028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e04e1b23f85d1e45054d04d7ce803960') in 0.019492 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/Character/run/P0009.png
+  artifactKey: Guid(2c1e8f55e56708b4b9ad51dcce36b581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Character/run/P0009.png using Guid(2c1e8f55e56708b4b9ad51dcce36b581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae923e779b415999dbfe8896f37d9cf5') in 0.018380 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -128,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        animator.SetTrigger("jump");
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
     }
     
