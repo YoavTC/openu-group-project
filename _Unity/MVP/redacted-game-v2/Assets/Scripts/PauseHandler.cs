@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Udar.SceneManager;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PauseHandler : MonoBehaviour
@@ -28,6 +29,8 @@ public class PauseHandler : MonoBehaviour
                 //Pauses the game
                 Time.timeScale = 0f;
                 isPaused = true;
+                
+                gamePaused?.Invoke();
             
                 //Transition to menu scene
                 SceneManager.LoadSceneAsync(pauseMenuScene.BuildIndex, LoadSceneMode.Additive);
@@ -35,6 +38,8 @@ public class PauseHandler : MonoBehaviour
                 //Unpauses the game
                 Time.timeScale = 1f;
                 isPaused = false;
+                
+                gameUnpaused?.Invoke();
             
                 //Transition to menu scene
                 SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(pauseMenuScene.BuildIndex));
@@ -42,4 +47,7 @@ public class PauseHandler : MonoBehaviour
             }
         }
     }
+
+    public UnityEvent gamePaused;
+    public UnityEvent gameUnpaused;
 }

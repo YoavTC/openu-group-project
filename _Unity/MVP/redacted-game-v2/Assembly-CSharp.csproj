@@ -54,6 +54,7 @@
     <Compile Include="Assets\External Packages\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\SpeedrunTimer.cs" />
     <Compile Include="Assets\External Packages\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+    <Compile Include="Assets\Player Settings\PlayerSettingsScriptableObject.cs" />
     <Compile Include="Assets\External Packages\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\IStickyNote.cs" />
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\MonoBehaviours\StickyNote.cs" />
