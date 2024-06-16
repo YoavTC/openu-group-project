@@ -4,6 +4,7 @@ using DG.Tweening;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
@@ -204,8 +205,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Respawn()
     {
+        playerDied?.Invoke();
         rb.velocity = Vector2.zero;
         transform.position = startPosition;
     }
-
+    
+    //Events
+    [Header("Events")]
+    public UnityEvent playerDied;
 }

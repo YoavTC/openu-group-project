@@ -63,6 +63,7 @@
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\Vanilla\StickyNote.cs" />
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\ScriptableObjects\StickyNote.cs" />
     <Compile Include="Assets\UI\UI Scripts\VersionDisplayer.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\StateMachineBehaviours\StickyNote.cs" />
     <Compile Include="Assets\Scripts\PauseHandler.cs" />
     <Compile Include="Assets\External Packages\DOTween\Modules\DOTweenModuleUI.cs" />

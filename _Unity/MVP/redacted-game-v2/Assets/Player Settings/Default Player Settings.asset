@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8021e8446dd984baa495ef28a8d7fb, type: 3}
   m_Name: Default Player Settings
   m_EditorClassIdentifier: 
-  showTimer: 0
+  showTimer: 1

@@ -399,6 +399,7 @@
 "Assets/External Packages/StickyNotes/Implementations/StateMachineBehaviours/StickyNote.cs"
 "Assets/External Packages/StickyNotes/Implementations/StickyNoteMode.cs"
 "Assets/External Packages/StickyNotes/Implementations/Vanilla/StickyNote.cs"
+"Assets/GameManager.cs"
 "Assets/Player Settings/PlayerSettingsScriptableObject.cs"
 "Assets/Scripts/PauseHandler.cs"
 "Assets/Scripts/PlayerMovement.cs"

@@ -269,6 +269,58 @@ PrefabInstance:
       propertyPath: wallMountFrame
       value: 
       objectReference: {fileID: 21300000, guid: cddb4c45ddd4db0499fb1c78c74aa2d1, type: 3}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784986603}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1689038297}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlayerDeathEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SpeedrunTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.16
@@ -1558,6 +1610,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &784986603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+  m_PrefabInstance: {fileID: 6697243438364154000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2179af1ff51b06b4f954e40b27bcba27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &905506809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,10 +2807,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timer
       objectReference: {fileID: 0}
-    - target: {fileID: 5716532570280347415, guid: 3053bb7ccb5b9f748be678db4a119a28, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8189760643842065740, guid: 3053bb7ccb5b9f748be678db4a119a28, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3198,6 +3257,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
+      propertyPath: gamePaused.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
       propertyPath: gamePaused.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1689038297}
@@ -3214,8 +3277,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
+      propertyPath: gamePaused.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
       propertyPath: gamePaused.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnGamePauseOrUnpaused
+      value: OnGamePause
       objectReference: {fileID: 0}
     - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
       propertyPath: gameUnpaused.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3223,10 +3290,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
       propertyPath: gameUnpaused.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnGamePauseOrUnpaused
+      value: OnGameUnpaused
       objectReference: {fileID: 0}
     - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
       propertyPath: gamePaused.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpeedrunTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
+      propertyPath: gamePaused.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SpeedrunTimer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4658043429686245069, guid: 1907822c0dad57848ab31d2481940923, type: 3}
@@ -3290,6 +3361,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1907822c0dad57848ab31d2481940923, type: 3}
+--- !u!1001 &6697243438364154000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 738123140577155226, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392472490405504458, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: m_Name
+      value: Game Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3300,3 +3428,4 @@ SceneRoots:
   - {fileID: 6359162144765721100}
   - {fileID: 1858334134}
   - {fileID: 134047162}
+  - {fileID: 6697243438364154000}
