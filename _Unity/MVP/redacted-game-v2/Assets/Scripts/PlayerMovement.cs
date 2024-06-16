@@ -46,6 +46,10 @@ public class PlayerMovement : MonoBehaviour
     [ReadOnly] [SerializeField] private bool isSliding;
     [ReadOnly] [SerializeField] private bool canGetUp;
     private Coroutine slideCoroutine;
+
+    [Header("Flip")]
+    //private bool facingRight = true;
+    private int facingDirection = 1;
     
     private void Start()
     {
@@ -55,6 +59,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Flipping
+        if (moveInput > 0 && facingDirection == -1)
+        {
+            Flip();
+        }
+        if (moveInput < 0 && facingDirection == 1)
+        {
+            Flip();
+        }
+        
+        
         //Horizontal movement
         if (!isSliding)
         {
@@ -65,19 +80,30 @@ public class PlayerMovement : MonoBehaviour
         //Jumping
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
+            animator.SetTrigger("jump");
             Jump();
         }
         
         //Wall jumping
         if (!isGrounded && Input.GetButtonDown("Jump") && (mountedRightWall || mountedLeftWall))
         {
+            //Animator
+            animator.SetBool("is_mounted", true);
+            
             Jump();
             rb.velocity = Vector2.zero;
             isWallJumping = true;
             
-            if (mountedRightWall) rb.velocity = new Vector2(-1 * wallJumpForce, 0);
-            if (mountedLeftWall) rb.velocity = new Vector2(wallJumpForce, 0);
+            if (mountedRightWall) rb.velocity = new Vector2(-1 * facingDirection * wallJumpForce, 0);
+            if (mountedLeftWall) rb.velocity = new Vector2(facingDirection * wallJumpForce, 0);
+            Flip();
         }
+        
+        //Wall Mounted
+        animator.SetBool("is_mounted", mountedLeftWall || mountedRightWall);
+        
+        //Airborne
+        animator.SetBool("is_airborne", !isGrounded);
         
         //Sliding
         if (isGrounded && Input.GetButtonDown("Slide") && !isSliding)
@@ -128,7 +154,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        animator.SetTrigger("jump");
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
     }
     
@@ -164,6 +189,18 @@ public class PlayerMovement : MonoBehaviour
     #endregion
     
     private Vector3 startPosition;
+
+    private void Flip()
+    {
+        // Debug.Log("Flipped!");
+        // float currentScale = transform.localScale.x;
+        // transform.DOScaleX(currentScale * -1, 0f);
+        // facingRight = !facingRight;
+        facingDirection *= -1;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
 
     private void Respawn()
     {
