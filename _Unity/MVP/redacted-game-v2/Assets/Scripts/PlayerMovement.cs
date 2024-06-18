@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
        
         
         //Jumping
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump") && !isSliding)
         {
             animator.SetTrigger("jump");
             Jump();
@@ -99,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
             if (mountedLeftWall) rb.velocity = new Vector2(facingDirection * wallJumpForce, 0);
             Flip();
         }
+        
+        animator.SetBool("is_idle", !(Mathf.Abs(moveInput) > 0));
         
         //Wall Mounted
         animator.SetBool("is_mounted", mountedLeftWall || mountedRightWall);
@@ -173,7 +175,8 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Slide()
     {
         //Animation
-        animator.SetTrigger("slide");
+        //animator.SetTrigger("slide");
+        animator.SetBool("is_sliding", true);
         
         canGetUp = false;
         isSliding = true;
@@ -192,7 +195,8 @@ public class PlayerMovement : MonoBehaviour
         if (Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer)) { return; }
         
         //Animation
-        animator.SetTrigger("run");
+        //animator.SetTrigger("get_up");
+        animator.SetBool("is_sliding", false);
         
         StopCoroutine(slideCoroutine);
         canGetUp = false;
