@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("is_airborne", !isGrounded);
         
         //Sliding
-        if (isGrounded && Input.GetButtonDown("Slide") && !isSliding)
+        if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
         { 
             slideCoroutine = StartCoroutine(Slide());
         }
