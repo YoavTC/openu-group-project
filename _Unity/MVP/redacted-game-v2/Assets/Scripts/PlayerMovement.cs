@@ -4,12 +4,14 @@ using DG.Tweening;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Debug Options")] 
     [SerializeField] private bool doVoidDeath;
+    [SerializeField] private bool snappyMovement;
     [EnableIf("doVoidDeath")]
     [SerializeField] private float voidDeathLevel;
     
@@ -46,6 +48,10 @@ public class PlayerMovement : MonoBehaviour
     [ReadOnly] [SerializeField] private bool isSliding;
     [ReadOnly] [SerializeField] private bool canGetUp;
     private Coroutine slideCoroutine;
+
+    [Header("Flip")]
+    //private bool facingRight = true;
+    private int facingDirection = 1;
     
     private void Start()
     {
@@ -55,6 +61,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Flipping
+        if (moveInput > 0 && facingDirection == -1)
+        {
+            Flip();
+        }
+        if (moveInput < 0 && facingDirection == 1)
+        {
+            Flip();
+        }
+        
         //Horizontal movement
         if (!isSliding)
         {
@@ -63,24 +79,37 @@ public class PlayerMovement : MonoBehaviour
        
         
         //Jumping
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump") && !isSliding)
         {
+            animator.SetTrigger("jump");
             Jump();
         }
         
         //Wall jumping
         if (!isGrounded && Input.GetButtonDown("Jump") && (mountedRightWall || mountedLeftWall))
         {
+            //Animator
+            animator.SetBool("is_mounted", true);
+            
             Jump();
             rb.velocity = Vector2.zero;
             isWallJumping = true;
             
-            if (mountedRightWall) rb.velocity = new Vector2(-1 * wallJumpForce, 0);
-            if (mountedLeftWall) rb.velocity = new Vector2(wallJumpForce, 0);
+            if (mountedRightWall) rb.velocity = new Vector2(-1 * facingDirection * wallJumpForce, 0);
+            if (mountedLeftWall) rb.velocity = new Vector2(facingDirection * wallJumpForce, 0);
+            Flip();
         }
         
+        animator.SetBool("is_idle", !(Mathf.Abs(moveInput) > 0));
+        
+        //Wall Mounted
+        animator.SetBool("is_mounted", mountedLeftWall || mountedRightWall);
+        
+        //Airborne
+        animator.SetBool("is_airborne", !isGrounded);
+        
         //Sliding
-        if (isGrounded && Input.GetButtonDown("Slide") && !isSliding)
+        if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
         { 
             slideCoroutine = StartCoroutine(Slide());
         }
@@ -111,12 +140,24 @@ public class PlayerMovement : MonoBehaviour
         //Apply deceleration
         if (moveInput == 0 && !isWallJumping)
         {
-            float deceleration = decelerationRate;
+            if (snappyMovement)
+            {
+                //Snappy movement DO NOT DELETE!
+                if (isSliding) rb.velocity = new Vector2(facingDirection * 10, rb.velocity.y);
+                else
+                {
+                    rb.velocity = new Vector2(moveInput, rb.velocity.y);
+                }
+            }
+            else
+            {
+                //Floaty movement DO NOT DELETE!
+                float deceleration = decelerationRate;
             
-            if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
-            if (isSliding) deceleration = 0;
-            
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
+                if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
+                if (isSliding) rb.velocity = new Vector2(facingDirection * 10, rb.velocity.y);
+                else rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
+            }
         }
 
         //Clamp horizontal movement
@@ -128,14 +169,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        animator.SetTrigger("jump");
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
     }
     
     private IEnumerator Slide()
     {
         //Animation
-        animator.SetTrigger("slide");
+        //animator.SetTrigger("slide");
+        animator.SetBool("is_sliding", true);
         
         canGetUp = false;
         isSliding = true;
@@ -154,7 +195,8 @@ public class PlayerMovement : MonoBehaviour
         if (Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer)) { return; }
         
         //Animation
-        animator.SetTrigger("run");
+        //animator.SetTrigger("get_up");
+        animator.SetBool("is_sliding", false);
         
         StopCoroutine(slideCoroutine);
         canGetUp = false;
@@ -165,10 +207,26 @@ public class PlayerMovement : MonoBehaviour
     
     private Vector3 startPosition;
 
+    private void Flip()
+    {
+        // Debug.Log("Flipped!");
+        // float currentScale = transform.localScale.x;
+        // transform.DOScaleX(currentScale * -1, 0f);
+        // facingRight = !facingRight;
+        facingDirection *= -1;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
     private void Respawn()
     {
+        playerDied?.Invoke();
         rb.velocity = Vector2.zero;
         transform.position = startPosition;
     }
-
+    
+    //Events
+    [Header("Events")]
+    public UnityEvent playerDied;
 }

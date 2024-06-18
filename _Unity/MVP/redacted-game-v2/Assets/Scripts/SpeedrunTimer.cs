@@ -1,26 +1,52 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class SpeedrunTimer : MonoBehaviour
 {
+    [SerializeField] private PlayerSettingsScriptableObject playerSettings;
+    
     private TMP_Text timerDisplay;
-    private DateTime timeStarted;
+    
+    private bool timerRunning = true;
+    private float elapsedTime;
     
     void Start()
     {
         timerDisplay = GetComponent<TMP_Text>();
-        timeStarted = DateTime.Now;
+        gameObject.SetActive(playerSettings.showTimer);
     }
 
     
     void Update()
     {
-        //timerDisplay.text = Time.timeSinceLevelLoad.ToString("0.000");
-        TimeSpan newDateTime = TimeSpan.FromSeconds(Time.timeSinceLevelLoad);
-        //TimeSpan newDateTime = DateTime.Now - timeStarted;
-        timerDisplay.text = string.Format("{0:00}:{1:00}:{2:000}", newDateTime.Minutes, newDateTime.Seconds, newDateTime.Milliseconds);
+        if (timerRunning)
+        {
+            elapsedTime += Time.deltaTime;
+            TimeSpan timeSpan = TimeSpan.FromSeconds(elapsedTime);
+            timerDisplay.text = string.Format("{0:00}:{1:00}:{2:000}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+        }
+    }
+
+    public void OnGamePause()
+    {
+        timerRunning = false;
+        timerDisplay.enabled = playerSettings.showTimer;
+    }
+
+    public void OnGameUnpaused()
+    {
+        timerRunning = true;
+        timerDisplay.enabled = playerSettings.showTimer;
+    }
+
+    public void ResetTimer()
+    {
+        elapsedTime = 0f;
+    }
+
+    public void NewTimer()
+    {
+        timerRunning = false;
     }
 }
