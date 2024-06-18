@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Debug Options")] 
     [SerializeField] private bool doVoidDeath;
+    [SerializeField] private bool snappyMovement;
     [EnableIf("doVoidDeath")]
     [SerializeField] private float voidDeathLevel;
     
@@ -69,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-        
         
         //Horizontal movement
         if (!isSliding)
@@ -138,12 +138,24 @@ public class PlayerMovement : MonoBehaviour
         //Apply deceleration
         if (moveInput == 0 && !isWallJumping)
         {
-            float deceleration = decelerationRate;
+            if (snappyMovement)
+            {
+                //Snappy movement DO NOT DELETE!
+                if (isSliding) rb.velocity = new Vector2(facingDirection * 10, rb.velocity.y);
+                else
+                {
+                    rb.velocity = new Vector2(moveInput, rb.velocity.y);
+                }
+            }
+            else
+            {
+                //Floaty movement DO NOT DELETE!
+                float deceleration = decelerationRate;
             
-            if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
-            if (isSliding) deceleration = 0;
-            
-            rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
+                if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
+                if (isSliding) rb.velocity = new Vector2(facingDirection * 10, rb.velocity.y);
+                else rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
+            }
         }
 
         //Clamp horizontal movement
