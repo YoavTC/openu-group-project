@@ -353,6 +353,9 @@
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+    </Reference>
     <Reference Include="0Harmony_3.5">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\External Packages\CastVisualizer\Editor\HarmonyLib\0Harmony_3.5.dll</HintPath>
     </Reference>
@@ -891,6 +894,10 @@
       <Project>{34596b3d-3a29-0d7a-fda2-554bb717f0f4}</Project>
       <Name>Unity.CastVisualizer.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Plugins.Baedrick.ColoredHeaderCreator.Editor.csproj">
       <Project>{2bd21a01-49f6-eb32-dcb0-6984d91baae9}</Project>
       <Name>Plugins.Baedrick.ColoredHeaderCreator.Editor</Name>
@@ -902,6 +909,10 @@
     <ProjectReference Include="Udar.SceneManager.csproj">
       <Project>{115e259c-2a75-76a5-9a76-a9bdd54777d2}</Project>
       <Name>Udar.SceneManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{89e082d1-7164-b9fe-b87c-30ad11dbec59}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.CastVisualizer.Samples.SampleScenes.csproj">
       <Project>{7c5a9f54-2aee-9f37-79a7-9d342a094e89}</Project>
@@ -918,6 +929,10 @@
     <ProjectReference Include="Unity.CastVisualizer.Editor.csproj">
       <Project>{9b5864a6-b550-1bbe-5b2f-b302cfe86364}</Project>
       <Name>Unity.CastVisualizer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{d7187419-381a-2e2a-1572-944e0564c2cc}</Project>
+      <Name>AstarPathfindingProject</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{46a88ab3-28fc-b4e4-923c-21016cc8cde5}</Project>

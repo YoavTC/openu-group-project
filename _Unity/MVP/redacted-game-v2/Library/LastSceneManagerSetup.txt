@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_Scenes/Level Design Scene Ptototype.unity
+- path: Assets/_Scenes/AI Testing Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

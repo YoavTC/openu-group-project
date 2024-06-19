@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -14,6 +15,8 @@ public class PredatorSystem : MonoBehaviour
 
     [Header("Drone Settings")] 
     [SerializeField] private float droneSpeed;
+    [SerializeField] private float droneKillDistance;
+    [SerializeField] private float droneSeeDistance;
     private BezierKnot closestKnot;
 
     #region old
@@ -71,7 +74,18 @@ public class PredatorSystem : MonoBehaviour
         SplineUtility.GetNearestPoint(splinePath, playerTransform.localPosition, out closestPointFloat3, out float t);
         Vector3 closestPoint = closestPointFloat3;
         debugObject.position = splinePath.EvaluatePosition(t);
-        droneObject.position = Vector3.Lerp(droneObject.position, splinePath.EvaluatePosition(t), droneSpeed);
-        //droneObject.position = closestPoint;
+        
+        droneObject.DOMove(debugObject.position, droneSpeed).SetEase(Ease.InOutSine);
+        //droneObject.position = Vector3.Lerp(droneObject.position, debugObject.position, droneSpeed);
+        //droneObject.position = Vector3.MoveTowards(droneObject.position, debugObject.position, droneSpeed);
+
+        float dronePlayerDistance = Vector3.Distance(droneObject.position, playerTransform.position);
+        
+        
+
+        if (dronePlayerDistance < droneKillDistance)
+        {
+            Debug.Log("Player got caught!");
+        }
     }
 }
