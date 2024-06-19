@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Editor", "NaughtyAttributes.Editor.csproj", "{46a88ab3-28fc-b4e4-923c-21016cc8cde5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{d7187419-381a-2e2a-1572-944e0564c2cc}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Core", "NaughtyAttributes.Core.csproj", "{b4853568-974c-a3cf-ff83-653164e83b42}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Editor", "NaughtyAttributes.Editor.csproj", "{46a88ab3-28fc-b4e4-923c-21016cc8cde5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{89e082d1-7164-b9fe-b87c-30ad11dbec59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Core", "NaughtyAttributes.Core.csproj", "{b4853568-974c-a3cf-ff83-653164e83b42}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{984db408-110f-da68-341e-3a5743f05c6f}"
 EndProject
@@ -15,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaughtyAttributes.Test", "NaughtyAttributes.Test.csproj", "{e51b79c1-5df2-f199-d74a-c36f02e84f83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.Baedrick.ColoredHeaderCreator.Editor", "Plugins.Baedrick.ColoredHeaderCreator.Editor.csproj", "{2bd21a01-49f6-eb32-dcb0-6984d91baae9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{89e082d1-7164-b9fe-b87c-30ad11dbec59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.Baedrick.ColoredHeaderCreator.Editor", "Plugins.Baedrick.ColoredHeaderCreator.Editor.csproj", "{2bd21a01-49f6-eb32-dcb0-6984d91baae9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CastVisualizer.Runtime", "Unity.CastVisualizer.Runtime.csproj", "{34596b3d-3a29-0d7a-fda2-554bb717f0f4}"
 EndProject
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udar.SceneManager", "Udar.SceneManager.csproj", "{115e259c-2a75-76a5-9a76-a9bdd54777d2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CastVisualizer.Samples.SampleScenes", "Unity.CastVisualizer.Samples.SampleScenes.csproj", "{7c5a9f54-2aee-9f37-79a7-9d342a094e89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.CastVisualizer.Editor", "Unity.CastVisualizer.Editor.csproj", "{9b5864a6-b550-1bbe-5b2f-b302cfe86364}"
 EndProject
@@ -36,24 +36,22 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46a88ab3-28fc-b4e4-923c-21016cc8cde5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46a88ab3-28fc-b4e4-923c-21016cc8cde5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d7187419-381a-2e2a-1572-944e0564c2cc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{d7187419-381a-2e2a-1572-944e0564c2cc}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46a88ab3-28fc-b4e4-923c-21016cc8cde5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46a88ab3-28fc-b4e4-923c-21016cc8cde5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b4853568-974c-a3cf-ff83-653164e83b42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b4853568-974c-a3cf-ff83-653164e83b42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89e082d1-7164-b9fe-b87c-30ad11dbec59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89e082d1-7164-b9fe-b87c-30ad11dbec59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{984db408-110f-da68-341e-3a5743f05c6f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{984db408-110f-da68-341e-3a5743f05c6f}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{bd459238-7824-054d-191c-1fb02fc1713e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{bd459238-7824-054d-191c-1fb02fc1713e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e51b79c1-5df2-f199-d74a-c36f02e84f83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{e51b79c1-5df2-f199-d74a-c36f02e84f83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89e082d1-7164-b9fe-b87c-30ad11dbec59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89e082d1-7164-b9fe-b87c-30ad11dbec59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2bd21a01-49f6-eb32-dcb0-6984d91baae9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2bd21a01-49f6-eb32-dcb0-6984d91baae9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34596b3d-3a29-0d7a-fda2-554bb717f0f4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34596b3d-3a29-0d7a-fda2-554bb717f0f4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3374beb6-6e05-1d28-3f07-be055befea39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -62,6 +60,8 @@ Global
 		{115e259c-2a75-76a5-9a76-a9bdd54777d2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7c5a9f54-2aee-9f37-79a7-9d342a094e89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7c5a9f54-2aee-9f37-79a7-9d342a094e89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{cfb13a9a-fd11-3967-6ff2-3354723b2eb9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9b5864a6-b550-1bbe-5b2f-b302cfe86364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9b5864a6-b550-1bbe-5b2f-b302cfe86364}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e05a13f2-d480-e945-098e-509ab091cf80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

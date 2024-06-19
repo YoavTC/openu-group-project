@@ -126,7 +126,7 @@
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
--r:"Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll"
+-r:"Assets/External Packages/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll"
 -r:"Assets/External Packages/CastVisualizer/Editor/HarmonyLib/0Harmony_3.5.dll"
 -r:"Assets/External Packages/CastVisualizer/Editor/HarmonyLib/0Harmony_4.5.dll"
 -r:"Assets/External Packages/DOTween/DOTween.dll"

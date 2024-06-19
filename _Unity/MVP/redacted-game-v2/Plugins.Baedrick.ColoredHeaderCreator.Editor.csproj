@@ -345,7 +345,7 @@
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\External Packages\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="0Harmony_3.5">
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\External Packages\CastVisualizer\Editor\HarmonyLib\0Harmony_3.5.dll</HintPath>

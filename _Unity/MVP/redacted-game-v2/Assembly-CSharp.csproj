@@ -43,6 +43,7 @@
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+    <Analyzer Include="C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\External Packages\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\External Packages\DOTween\Modules\DOTweenModuleSprite.cs" />
@@ -355,7 +356,7 @@
       <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>C:\Users\owner\Dropbox\My PC (i7-gamer)\Documents\GitHub\openu-group-project\_Unity\MVP\redacted-game-v2\Assets\External Packages\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.26f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -886,13 +887,13 @@
       <Project>{115e259c-2a75-76a5-9a76-a9bdd54777d2}</Project>
       <Name>Udar.SceneManager</Name>
     </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{89e082d1-7164-b9fe-b87c-30ad11dbec59}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.CastVisualizer.Samples.SampleScenes.csproj">
       <Project>{7c5a9f54-2aee-9f37-79a7-9d342a094e89}</Project>
       <Name>Unity.CastVisualizer.Samples.SampleScenes</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{d7187419-381a-2e2a-1572-944e0564c2cc}</Project>
+      <Name>AstarPathfindingProject</Name>
     </ProjectReference>
     <ProjectReference Include="Plugins.Baedrick.ColoredHeaderCreator.csproj">
       <Project>{3374beb6-6e05-1d28-3f07-be055befea39}</Project>
@@ -906,13 +907,13 @@
       <Project>{9b5864a6-b550-1bbe-5b2f-b302cfe86364}</Project>
       <Name>Unity.CastVisualizer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{d7187419-381a-2e2a-1572-944e0564c2cc}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{46a88ab3-28fc-b4e4-923c-21016cc8cde5}</Project>
       <Name>NaughtyAttributes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{89e082d1-7164-b9fe-b87c-30ad11dbec59}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
