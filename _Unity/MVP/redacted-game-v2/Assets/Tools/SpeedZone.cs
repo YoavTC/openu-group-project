@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using UnityEngine;
 
+[SelectionBase]
 public class SpeedZone : MonoBehaviour
 {
     [MinValue(-100), MaxValue(100)]

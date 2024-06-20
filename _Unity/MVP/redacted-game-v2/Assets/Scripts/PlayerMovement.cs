@@ -219,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = scale;
     }
 
-    private void Respawn()
+    public void Respawn()
     {
         playerDied?.Invoke();
         rb.velocity = Vector2.zero;

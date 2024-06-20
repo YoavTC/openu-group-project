@@ -67,12 +67,14 @@
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\ScriptableObjects\StickyNote.cs" />
     <Compile Include="Assets\UI\UI Scripts\VersionDisplayer.cs" />
     <Compile Include="Assets\Tools\PointsManager.cs" />
+    <Compile Include="Assets\UI\UI Scripts\MainMenu.cs" />
     <Compile Include="Assets\External Packages\StickyNotes\Implementations\StateMachineBehaviours\StickyNote.cs" />
     <Compile Include="Assets\Scripts\PauseHandler.cs" />
     <Compile Include="Assets\External Packages\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Tools\PointObject.cs" />
     <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Materials &amp; Shaders\Sprite Example Shader.shader" />
     <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />

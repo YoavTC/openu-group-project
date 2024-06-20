@@ -16,11 +16,13 @@ public class PredatorSystem : MonoBehaviour
     [SerializeField] private float droneReturnSpeed;
     [SerializeField] private float droneReturnDistance;
     [SerializeField] private float droneKillDistance;
+    private Vector3 startingPos;
 
     private void Start()
     {
         if (playerTransform == null) playerTransform = FindObjectOfType<PlayerMovement>().transform;
         droneAI.maxSpeed = droneSpeed;
+        startingPos = droneObject.position;
     }
     
     private void Update()
@@ -33,6 +35,7 @@ public class PredatorSystem : MonoBehaviour
         //Checks
         if (dronePlayerDistance < droneKillDistance)
         {
+            playerTransform.GetComponent<PlayerMovement>().Respawn();
             Debug.Log("Player got caught!");
         }
     }
@@ -51,5 +54,10 @@ public class PredatorSystem : MonoBehaviour
     public void ExitSpeedZone()
     {
         droneSpeed = lastSpeed;
+    }
+
+    public void OnPlayerDied()
+    {
+        droneObject.position = startingPos;
     }
 }
