@@ -10,10 +10,12 @@ using Debug = UnityEngine.Debug;
 public class VersionDisplayer : MonoBehaviour
 {
     [SerializeField] private string prefix;
+    [SerializeField] private string iterationID;
+    
     void Start()
     {
         string version = GetLastShortCommitId() + "_d" + DateTime.Today.DayOfYear;
-        GetComponent<TMP_Text>().text = prefix + version;
+        GetComponent<TMP_Text>().text = prefix + iterationID + "_" + version;
     }
 
     private string GetLastShortCommitId()
