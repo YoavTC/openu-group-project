@@ -22,7 +22,7 @@ namespace Dan.Main
         [RuntimeInitializeOnLoadMethod]
         private static void Initialize()
         {
-            Log("Initializing...");
+            //Log("Initializing...");
             _behaviour = new GameObject("[LeaderboardCreator]").AddComponent<LeaderboardCreatorBehaviour>();
             UnityEngine.Object.DontDestroyOnLoad(_behaviour.gameObject);
 
@@ -66,7 +66,7 @@ namespace Dan.Main
         public static void SetUserGuid(string userGuid)
         {
             UserGuid = userGuid;
-            Log("<b><color=#009900>Initialized!</color></b>");
+            //Log("<b><color=#009900>Initialized!</color></b>");
         }
 
         /// <summary>

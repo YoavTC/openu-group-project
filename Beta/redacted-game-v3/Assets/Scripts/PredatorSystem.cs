@@ -11,7 +11,6 @@ public class PredatorSystem : MonoBehaviour
 
     [Header("Drone Settings")] 
     [SerializeField] private float droneSpeed;
-    [SerializeField] private float droneUpSpeed;
     private float lastSpeed;
     [SerializeField] private float droneReturnSpeed;
     [SerializeField] private float droneReturnDistance;
