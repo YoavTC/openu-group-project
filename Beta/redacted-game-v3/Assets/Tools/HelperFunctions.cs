@@ -179,6 +179,39 @@ public class HelperFunctions : MonoBehaviour
     #region Math & Time Related
 
     /// <summary>
+    /// Converts 1 -> 1st
+    /// 2 -> 2nd
+    /// 3 -> 3rd
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns></returns>
+    public static string ConvertToOrdinal(int number)
+    {
+        if (number <= 0) return number.ToString();
+
+        string suffix = "th";
+        int lastTwoDigits = number % 100;
+        
+        if (lastTwoDigits < 11 || lastTwoDigits > 13)
+        {
+            switch (number % 10)
+            {
+                case 1:
+                    suffix = "st";
+                    break;
+                case 2:
+                    suffix = "nd";
+                    break;
+                case 3:
+                    suffix = "rd";
+                    break;
+            }
+        }
+
+        return number + suffix;
+    }
+
+    /// <summary>
     /// Get a brand unique new ID
     /// </summary>
     public static string GetUUID()
