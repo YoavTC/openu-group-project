@@ -271,13 +271,10 @@ public class PlayerMovement : MonoBehaviour
     // Flips the player's sprite direction
     private void Flip()
     {
-        Debug.Log("Flip!");
         facingDirection *= -1;
         Vector3 scale = animator.transform.localScale;
-        //Vector3 scale = transform.localScale;
         scale.x *= -1;
         animator.transform.localScale = scale;
-        //transform.localScale = scale;
     }
 
     public void Respawn()
