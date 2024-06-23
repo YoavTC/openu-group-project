@@ -210,8 +210,8 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             isWallJumping = true;
 
-            if (mountedRightWall) rb.velocity = new Vector2(-1 * facingDirection * wallJumpForce, 0);
-            if (mountedLeftWall) rb.velocity = new Vector2(facingDirection * wallJumpForce, 0);
+            if (mountedRightWall) rb.velocity = new Vector2(-1 * wallJumpForce, 0);
+            if (mountedLeftWall) rb.velocity = new Vector2(wallJumpForce, 0);
             Flip();
         }
     }
@@ -261,8 +261,8 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
 
-        mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
-        mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
+        mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
+        mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
 
         if (isGrounded) isWallJumping = false;
         if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
@@ -271,10 +271,13 @@ public class PlayerMovement : MonoBehaviour
     // Flips the player's sprite direction
     private void Flip()
     {
+        Debug.Log("Flip!");
         facingDirection *= -1;
-        Vector3 scale = transform.localScale;
+        Vector3 scale = animator.transform.localScale;
+        //Vector3 scale = transform.localScale;
         scale.x *= -1;
-        transform.localScale = scale;
+        animator.transform.localScale = scale;
+        //transform.localScale = scale;
     }
 
     public void Respawn()
