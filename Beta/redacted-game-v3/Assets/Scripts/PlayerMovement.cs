@@ -67,8 +67,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         isJumpingThisFrame = Input.GetButtonDown("Jump");
-        HandleFlipping();
         HandleMovement();
+        HandleFlipping();
         UpdateAnimatorStates();
         
         if (doVoidDeath && transform.position.y < voidDeathLevel) Respawn();
@@ -170,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
     // Handles flipping the player's sprite based on movement direction
     private void HandleFlipping()
     {
+        if (isWallJumping) return;
         if (moveInput > 0 && facingDirection == -1)
         {
             Flip();
@@ -183,6 +184,11 @@ public class PlayerMovement : MonoBehaviour
     // Handles horizontal movement input
     private void HandleHorizontalMovement()
     {
+        if (isWallJumping)
+        {
+            moveInput = 0;
+            return;
+        }
         if (!isSliding)
         {
             moveInput = Input.GetAxisRaw("Horizontal");
@@ -203,18 +209,29 @@ public class PlayerMovement : MonoBehaviour
     // Handles wall jumping input
     private void HandleWallJumping()
     {
-        if (!isGrounded && isJumpingThisFrame && (mountedRightWall || mountedLeftWall))
+        if (CanJump())
         {
             animator.SetBool("is_mounted", true);
             Jump();
             rb.velocity = Vector2.zero;
             isWallJumping = true;
 
-            if (mountedRightWall) rb.velocity = new Vector2(-1 * wallJumpForce, 0);
-            if (mountedLeftWall) rb.velocity = new Vector2(wallJumpForce, 0);
-            Flip();
+            if (mountedRightWall)
+            {
+                rb.velocity = new Vector2(-1 * wallJumpForce, 0);
+                if (facingDirection == 1) Flip();
+            }
+            if (mountedLeftWall)
+            {
+                rb.velocity = new Vector2(wallJumpForce, 0);
+                if (facingDirection == -1) Flip();
+            }
         }
     }
+
+    private bool CanJump() => !isGrounded && isJumpingThisFrame && (mountedRightWall || mountedLeftWall);
+    
+    
 
     // Updates animator states based on player's status
     private void UpdateAnimatorStates()
@@ -261,11 +278,14 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
 
-        mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
-        mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
+        // mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
+        // mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
+        
+        mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
+        mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
 
         if (isGrounded) isWallJumping = false;
-        if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
+        //if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
     }
 
     // Flips the player's sprite direction
