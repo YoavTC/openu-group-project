@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/_Scenes/Main Menu.unity
     guid: c7d758425759d5340b10b74d710b399e
   - enabled: 1
-    path: Assets/_Scenes/MVP.unity
-    guid: f74c7a28363d0de41b4056d96b208b2a
+    path: Assets/_Scenes/Beta.unity
+    guid: 61807de4e652ef148a389857f41a9f0e
   - enabled: 1
     path: Assets/_Scenes/Pause Menu.unity
     guid: 9efc7caa36a153f4e8db72f288cf65a1
+  - enabled: 1
+    path: Assets/_Scenes/Leaderboard.unity
+    guid: 57235db1bd66a1a41ac76a19d5a931cc
   m_configObjects: {}

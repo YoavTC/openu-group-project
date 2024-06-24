@@ -541,9 +541,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: is_airborne
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: slide_queued
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4213619497248044480}
   m_Solo: 0

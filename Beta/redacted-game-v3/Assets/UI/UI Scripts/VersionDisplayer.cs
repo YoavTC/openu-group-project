@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -11,11 +12,17 @@ public class VersionDisplayer : MonoBehaviour
 {
     [SerializeField] private string prefix;
     [SerializeField] private string iterationID;
+    [SerializeField] private StringFieldScriptableObject cachedVersionID;
     
     void Start()
     {
+#if UNITY_EDITOR
         string version = GetLastShortCommitId() + "_d" + DateTime.Today.DayOfYear;
         GetComponent<TMP_Text>().text = prefix + iterationID + "_" + version;
+#else
+        string version = "build_" + cachedVersionID.stringField + "_d" + DateTime.Today.DayOfYear;
+        GetComponent<TMP_Text>().text = prefix + iterationID + "_" + version;
+#endif
     }
 
     private string GetLastShortCommitId()
@@ -38,6 +45,8 @@ public class VersionDisplayer : MonoBehaviour
         string output = process.StandardOutput.ReadToEnd();
         process.WaitForExit();
         process.Close();
+
+        cachedVersionID.stringField = output.Trim();
 
         if (!string.IsNullOrEmpty(output))
         {
