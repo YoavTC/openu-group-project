@@ -496,10 +496,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: wallJumpForce
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1689038297}
@@ -507,14 +503,6 @@ PrefabInstance:
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1709850392}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OnPlayerDied
-      objectReference: {fileID: 0}
-    - target: {fileID: 6739447967473929711, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.1

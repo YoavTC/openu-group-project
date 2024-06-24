@@ -256,7 +256,6 @@ public class PlayerMovement : MonoBehaviour
             is_airborne = isAirborneNow;
             animator.SetBool("is_airborne", is_airborne);
         }
-        //animator.SetBool("is_airborne", !isGrounded);
     }
 
     // Handles sliding input
