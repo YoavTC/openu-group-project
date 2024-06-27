@@ -18,6 +18,11 @@ public class PauseHandler : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(transform);
+        #if UNITY_EDITOR
+        pauseShortcut = KeyCode.Tab;
+        #else
+        pauseShortcut = KeyCode.Escape;
+        #endif
     }
 
     void Update()
