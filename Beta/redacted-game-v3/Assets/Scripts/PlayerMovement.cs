@@ -23,12 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     [HorizontalLine]
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed;
     [SerializeField] private float decelerationRate, airDecelerationRateMultiplier, maxSpeed;
     private float moveInput;
 
     [Header("Jumping")]
-    [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private float jumpForce;
     [SerializeField] private float jumpCooldown;
     [SerializeField] private float groundCheckRadius = 0.2f;
     [ReadOnly] [SerializeField] private bool canJump;
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     private Coroutine slideCoroutine;
 
     [Header("Flip")]
-    private int facingDirection = 1;
+    private int isFacingRight = 1;
 
     private Vector3 startPosition;
 
@@ -93,14 +93,27 @@ public class PlayerMovement : MonoBehaviour
         HandleSliding();
     }
 
-    #region Movement Methods
-    // Applies horizontal movement based on input
+    #region FixedUpdate Methods
+
+    private void PerformChecks()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
+
+        // mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
+        // mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
+        
+        mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
+        mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
+
+        if (isGrounded) isWallJumping = false;
+        //if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
+    }
+    
     private void ApplyHorizontalMovement()
     {
         rb.velocity += new Vector2(moveInput * moveSpeed, 0);
     }
-
-    // Applies deceleration when the player stops moving
+    
     private void ApplyDeceleration()
     {
         if (moveInput == 0 && !isWallJumping)
@@ -108,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             if (snappyMovement)
             {
                 // Snappy movement DO NOT DELETE!
-                if (isSliding) rb.velocity = new Vector2(facingDirection * 10, rb.velocity.y);
+                if (isSliding) rb.velocity = new Vector2(isFacingRight * 10, rb.velocity.y);
                 else
                 {
                     rb.velocity = new Vector2(moveInput, rb.velocity.y);
@@ -120,17 +133,88 @@ public class PlayerMovement : MonoBehaviour
                 float deceleration = decelerationRate;
 
                 if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
-                if (isSliding) rb.velocity = new Vector2(facingDirection * 10, rb.velocity.y);
+                if (isSliding) rb.velocity = new Vector2(isFacingRight * 10, rb.velocity.y);
                 else rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
             }
         }
     }
-
-    // Clamps the horizontal movement to prevent exceeding max speed
+    
     private void ClampHorizontalMovement()
     {
         float x = rb.velocity.x;
         rb.velocity = new Vector2(Mathf.Clamp(x, -maxSpeed, maxSpeed), rb.velocity.y);
+    }
+
+    #endregion
+
+    #region Movement Methods
+
+    private void HandleHorizontalMovement()
+    {
+        if (isWallJumping)
+        {
+            moveInput = 0;
+            return;
+        }
+        if (!isSliding)
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
+        }
+        else moveInput = 0;
+    }
+    
+    private void HandleJumping()
+    {
+        if (isGrounded && isJumpingThisFrame && !isSliding && canJump)
+        {
+            animator.SetTrigger("jump");
+            StartCoroutine(JumpCooldown());
+            Jump();
+        }
+    }
+    
+    //Jump cooldown
+    private IEnumerator JumpCooldown()
+    {
+        canJump = false;
+        yield return HelperFunctions.GetWait(jumpCooldown);
+        canJump = true;
+    }
+    
+    private void HandleWallJumping()
+    {
+        if (CanJump())
+        {
+            animator.SetBool("is_mounted", true);
+            Jump();
+            rb.velocity = Vector2.zero;
+            isWallJumping = true;
+
+            if (mountedRightWall)
+            {
+                rb.velocity = new Vector2(-1 * wallJumpForce, 0);
+                if (isFacingRight == 1) Flip();
+            }
+            if (mountedLeftWall)
+            {
+                rb.velocity = new Vector2(wallJumpForce, 0);
+                if (isFacingRight == -1) Flip();
+            }
+        }
+    }
+    
+    private void HandleSliding()
+    {
+        if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
+        {
+            Debug.Log("grounded: " + isGrounded);
+            slideCoroutine = StartCoroutine(Slide());
+        }
+
+        if (!Input.GetButton("Slide") && isSliding && canGetUp)
+        {
+            GetUpFromSlide();
+        }
     }
     
     private void Jump()
@@ -153,7 +237,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(timeDiff);
         if (isSliding) GetUpFromSlide();
     }
-
+    
     private void GetUpFromSlide()
     {
         // If under object and cannot exit slide
@@ -166,6 +250,7 @@ public class PlayerMovement : MonoBehaviour
         canGetUp = false;
         isSliding = false;
     }
+
     #endregion
 
     #region Helper Methods
@@ -174,70 +259,13 @@ public class PlayerMovement : MonoBehaviour
     private void HandleFlipping()
     {
         if (isWallJumping) return;
-        if (moveInput > 0 && facingDirection == -1)
+        if (moveInput > 0 && isFacingRight == -1)
         {
             Flip();
         }
-        if (moveInput < 0 && facingDirection == 1)
+        if (moveInput < 0 && isFacingRight == 1)
         {
             Flip();
-        }
-    }
-
-    // Handles horizontal movement input
-    private void HandleHorizontalMovement()
-    {
-        if (isWallJumping)
-        {
-            moveInput = 0;
-            return;
-        }
-        if (!isSliding)
-        {
-            moveInput = Input.GetAxisRaw("Horizontal");
-        }
-        else moveInput = 0;
-    }
-
-    // Handles jumping input
-    private void HandleJumping()
-    {
-        if (isGrounded && isJumpingThisFrame && !isSliding && canJump)
-        {
-            animator.SetTrigger("jump");
-            StartCoroutine(JumpCooldown());
-            Jump();
-        }
-    }
-    
-    //Jump cooldown
-    private IEnumerator JumpCooldown()
-    {
-        canJump = false;
-        yield return HelperFunctions.GetWait(jumpCooldown);
-        canJump = true;
-    }
-
-    // Handles wall jumping input
-    private void HandleWallJumping()
-    {
-        if (CanJump())
-        {
-            animator.SetBool("is_mounted", true);
-            Jump();
-            rb.velocity = Vector2.zero;
-            isWallJumping = true;
-
-            if (mountedRightWall)
-            {
-                rb.velocity = new Vector2(-1 * wallJumpForce, 0);
-                if (facingDirection == 1) Flip();
-            }
-            if (mountedLeftWall)
-            {
-                rb.velocity = new Vector2(wallJumpForce, 0);
-                if (facingDirection == -1) Flip();
-            }
         }
     }
 
@@ -270,40 +298,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Handles sliding input
-    private void HandleSliding()
-    {
-        if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
-        {
-            Debug.Log("grounded: " + isGrounded);
-            slideCoroutine = StartCoroutine(Slide());
-        }
-
-        if (!Input.GetButton("Slide") && isSliding && canGetUp)
-        {
-            GetUpFromSlide();
-        }
-    }
-
-    // Performs various checks in FixedUpdate
-    private void PerformChecks()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
-
-        // mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
-        // mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
-        
-        mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
-        mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
-
-        if (isGrounded) isWallJumping = false;
-        //if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
-    }
-
     // Flips the player's sprite direction
     private void Flip()
     {
-        facingDirection *= -1;
+        isFacingRight *= -1;
         Vector3 scale = animator.transform.localScale;
         scale.x *= -1;
         animator.transform.localScale = scale;
