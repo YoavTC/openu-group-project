@@ -29,8 +29,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     [SerializeField] private float jumpForce = 10f;
-    [ReadOnly] [SerializeField] private bool isGrounded;
+    [SerializeField] private float jumpCooldown;
     [SerializeField] private float groundCheckRadius = 0.2f;
+    [ReadOnly] [SerializeField] private bool canJump;
+    [ReadOnly] [SerializeField] private bool isGrounded;
     private bool isJumpingThisFrame;
 
     [Header("Wall Jumps")] 
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
+        canJump = true;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -199,11 +202,20 @@ public class PlayerMovement : MonoBehaviour
     // Handles jumping input
     private void HandleJumping()
     {
-        if (isGrounded && isJumpingThisFrame && !isSliding)
+        if (isGrounded && isJumpingThisFrame && !isSliding && canJump)
         {
             animator.SetTrigger("jump");
+            StartCoroutine(JumpCooldown());
             Jump();
         }
+    }
+    
+    //Jump cooldown
+    private IEnumerator JumpCooldown()
+    {
+        canJump = false;
+        yield return HelperFunctions.GetWait(jumpCooldown);
+        canJump = true;
     }
 
     // Handles wall jumping input
@@ -263,6 +275,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
         {
+            Debug.Log("grounded: " + isGrounded);
             slideCoroutine = StartCoroutine(Slide());
         }
 
