@@ -173,6 +173,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
+    private void Jump()
+    {
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
+    }
+    
     //Jump cooldown
     private IEnumerator JumpCooldown()
     {
@@ -216,11 +221,6 @@ public class PlayerMovement : MonoBehaviour
             GetUpFromSlide();
         }
     }
-    
-    private void Jump()
-    {
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
-    }
 
     private IEnumerator Slide()
     {
@@ -235,13 +235,21 @@ public class PlayerMovement : MonoBehaviour
         canGetUp = true;
 
         yield return new WaitForSeconds(timeDiff);
-        if (isSliding) GetUpFromSlide();
+        //if (isSliding) GetUpFromSlide();
+        if (isSliding) StartCoroutine(GetUpFromSlide());
     }
     
-    private void GetUpFromSlide()
+    private IEnumerator GetUpFromSlide()
     {
         // If under object and cannot exit slide
-        if (Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer)) { return; }
+        bool cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer);
+        
+        while (cant)
+        {
+            cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer);
+            Debug.Log("Can't get up, retrying.. ");
+            yield return HelperFunctions.GetWait(0.15f);
+        }
 
         // Animation
         animator.SetBool("is_sliding", false);
