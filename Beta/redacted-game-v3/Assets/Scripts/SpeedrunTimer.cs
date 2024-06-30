@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpeedrunTimer : MonoBehaviour
 {
     [SerializeField] private PlayerSettingsScriptableObject playerSettings;
+    [SerializeField] private IntFieldScriptableObject intTime;
     private TMP_Text timerDisplay;
     private bool timerRunning = true;
     private float elapsedTime;
@@ -45,6 +46,7 @@ public class SpeedrunTimer : MonoBehaviour
 
     public void NewTimer()
     {
+        intTime.intField = (int) TimeSpan.FromSeconds(elapsedTime).TotalMilliseconds;
         timerRunning = false;
     }
 }
