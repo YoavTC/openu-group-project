@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -217,7 +219,6 @@ public class PlayerMovement : MonoBehaviour
         if (isJumpingThisFrame) return;
         if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
         {
-            Debug.Log("grounded: " + isGrounded);
             slideCoroutine = StartCoroutine(Slide());
         }
 
@@ -328,4 +329,27 @@ public class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+    
+    //Debug Panel
+    public DebugInformation[] GetDebugInformation()
+    {
+        List<DebugInformation> debugInformations = new List<DebugInformation>();
+        
+        //Movement variables
+        debugInformations.Add(new DebugInformation(nameof(moveInput), moveInput));
+        debugInformations.Add(new DebugInformation(nameof(isGrounded), isGrounded));
+        debugInformations.Add(new DebugInformation(nameof(canJump), canJump));
+        debugInformations.Add(new DebugInformation(nameof(isJumpingThisFrame), isJumpingThisFrame));
+        debugInformations.Add(new DebugInformation(nameof(mountedLeftWall), mountedLeftWall));
+        debugInformations.Add(new DebugInformation(nameof(mountedRightWall), mountedRightWall));
+        debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
+        debugInformations.Add(new DebugInformation(nameof(canGetUp), canGetUp));
+        debugInformations.Add(new DebugInformation(nameof(isFacingRight), isFacingRight));
+
+        //Sort & return
+        return debugInformations
+            .OrderBy(info => info.value is float || info.value is int ? 0 : 1)
+            .ThenBy(info => info.value is int ? 0 : 1)
+            .ToArray();
+    }
 }

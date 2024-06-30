@@ -60,7 +60,15 @@ public class HelperFunctions : MonoBehaviour
     /// <param name="parent"></param>
     /// <param name="tag"></param>
     /// <param name="destroyWithoutTag"></param>
-    public static void DestroyChildren(Transform parent, string tag = "", bool destroyWithoutTag = false)
+    public static void DestroyChildren(Transform parent)
+    {
+        for (int i = parent.childCount - 1; i >= 0; i--)
+        {
+            Destroy(parent.GetChild(i).gameObject);
+        }
+    }
+    
+    public static void DestroyChildren(Transform parent, string tag, bool destroyWithoutTag = false)
     {
         for (int i = parent.childCount - 1; i >= 0; i--)
         {
