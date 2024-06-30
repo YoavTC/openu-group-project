@@ -172,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isGrounded && isJumpingThisFrame && !isSliding && canJump)
             {
+                InGameLogger.Log("jaumping!!!2!", Color.magenta);
                 animator.SetTrigger("jump");
                 StartCoroutine(JumpCooldown());
                 Jump();
@@ -230,6 +231,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Slide()
     {
+        InGameLogger.Log("sliding, wow!!1!", Color.green);
         // Animation
         animator.SetBool("is_sliding", true);
 
