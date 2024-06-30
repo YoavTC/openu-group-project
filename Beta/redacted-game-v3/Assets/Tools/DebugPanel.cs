@@ -18,8 +18,6 @@ public class DebugPanel : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         debugInformations = playerMovement.GetDebugInformation();
 
-        PopulateDebugPanel();
-
         if (refreshRate == 0) refreshRate = 0.1f;
         InvokeRepeating(nameof(UpdateDebug), 0f, refreshRate);
     }
