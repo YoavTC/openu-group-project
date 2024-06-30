@@ -225,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!Input.GetButton("Slide") && isSliding && canGetUp)
         {
-            GetUpFromSlide();
+            StartCoroutine(GetUpFromSlide());
         }
     }
 
@@ -256,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
         {
             cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer);
             Debug.Log("Can't get up, retrying.. ");
-            yield return HelperFunctions.GetWait(0.15f);
+            yield return HelperFunctions.GetWait(0.05f);
         }
 
         // Animation

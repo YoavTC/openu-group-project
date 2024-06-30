@@ -496,18 +496,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: DebugPanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: jumpCooldown
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1689038297}

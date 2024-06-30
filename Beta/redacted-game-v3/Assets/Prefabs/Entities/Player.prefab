@@ -87,8 +87,10 @@ MonoBehaviour:
   airDecelerationRateMultiplier: 0.2
   maxSpeed: 10
   jumpForce: 750
+  jumpCooldown: 0.3
+  groundCheckRadius: 0.1
+  canJump: 0
   isGrounded: 1
-  groundCheckRadius: 0.2
   wallJumpForce: 9
   rightWallPoint: {fileID: 97199744522446005}
   leftWallPoint: {fileID: 4472520153321668441}
