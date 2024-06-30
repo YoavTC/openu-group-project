@@ -2,6 +2,7 @@ using System.Collections;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
         rb = GetComponent<Rigidbody2D>();
     }
-
+    
     private void Update()
     {
         isJumpingThisFrame = Input.GetButtonDown("Jump");
@@ -165,11 +166,14 @@ public class PlayerMovement : MonoBehaviour
     
     private void HandleJumping()
     {
-        if (isGrounded && isJumpingThisFrame && !isSliding && canJump)
+        if (!isSliding)
         {
-            animator.SetTrigger("jump");
-            StartCoroutine(JumpCooldown());
-            Jump();
+            if (isGrounded && isJumpingThisFrame && !isSliding && canJump)
+            {
+                animator.SetTrigger("jump");
+                StartCoroutine(JumpCooldown());
+                Jump();
+            } 
         }
     }
     
@@ -210,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void HandleSliding()
     {
+        if (isJumpingThisFrame) return;
         if (isGrounded && Input.GetButtonDown("Slide") && !isSliding && Mathf.Abs(moveInput) > 0)
         {
             Debug.Log("grounded: " + isGrounded);
