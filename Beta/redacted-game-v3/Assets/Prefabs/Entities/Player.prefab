@@ -141,7 +141,6 @@ GameObject:
   - component: {fileID: 3047610180023702218}
   - component: {fileID: 1470077800178443665}
   - component: {fileID: 3342444204449865603}
-  - component: {fileID: 570313636185963953}
   m_Layer: 0
   m_Name: Animated Components
   m_TagString: Untagged
@@ -239,24 +238,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &570313636185963953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2799450286227759386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b258918354f460419f06c0a5c9d7652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _headerText: 
-  _text: Everything on and under this GameObject is stuff that needs to be animated
-    with the player actions
-  _color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  _consoleText: 
-  _mode: 0
 --- !u!1 &4103594396920742565
 GameObject:
   m_ObjectHideFlags: 0
