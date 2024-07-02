@@ -189,7 +189,9 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator JumpCooldown()
     {
         canJump = false;
+        animator.SetBool("can_transition_from_jump", false);
         yield return HelperFunctions.GetWait(jumpCooldown);
+        animator.SetBool("can_transition_from_jump", true);
         canJump = true;
     }
     
