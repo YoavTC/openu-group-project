@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [ReadOnly] [SerializeField] private bool canJump;
     [ReadOnly] [SerializeField] private bool isGrounded;
+    private LayerMask groundLayers;
     private bool isJumpingThisFrame;
 
     [Header("Wall Jumps")] 
@@ -67,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     {
         startPosition = transform.position;
         canJump = true;
+        groundLayers = LayerMask.GetMask("NonJumpable", "WallGround");
         rb = GetComponent<Rigidbody2D>();
     }
     
@@ -100,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void PerformChecks()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, wallGroundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayers);
 
         // mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
         // mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
