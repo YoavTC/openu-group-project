@@ -24,11 +24,19 @@ public class DebugPanel : MonoBehaviour
 
     private void Update()
     {
+        #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.R))
         {
             isDebugPanelEnabled = !isDebugPanelEnabled;
             GetComponent<RectTransform>().localScale = isDebugPanelEnabled ? Vector3.one : Vector3.zero;
         }
+        #else
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.R))
+        {
+            isDebugPanelEnabled = !isDebugPanelEnabled;
+            GetComponent<RectTransform>().localScale = isDebugPanelEnabled ? Vector3.one : Vector3.zero;
+        }
+        #endif
     }
 
     private void UpdateDebug()

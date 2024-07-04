@@ -16,10 +16,17 @@ public class ConsoleLogPanel : MonoBehaviour
 
     private void Update()
     {
+        #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.L))
         {
             isConsolePanelEnabled = !isConsolePanelEnabled;
         }
+        #else
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.L))
+        {
+            isConsolePanelEnabled = !isConsolePanelEnabled;
+        }
+        #endif
     }
     
     private void HandleLog(string message, Color color)
