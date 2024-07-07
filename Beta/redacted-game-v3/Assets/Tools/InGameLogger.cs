@@ -10,10 +10,12 @@ public static class InGameLogger
     public static void Log(string message, Color color)
     {
         OnLog?.Invoke(message, color);
+        Debug.Log("[IGL] " + message);
     }
     
     public static void Log(string message)
     {
         OnLog?.Invoke(message, Color.white);
+        Debug.Log("[IGL] " + message);
     }
 }

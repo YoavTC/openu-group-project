@@ -1,44 +1,107 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Dan.Main;
 using DG.Tweening;
+using LootLocker.Requests;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
 {
+    
+    [Header("LootLocker Leaderboard")] 
+    [SerializeField] [ReadOnly] private int leaderboardID = 23210;
+    [SerializeField] [ReadOnly] private bool isAuthenticated;
+    private Leaderboard leaderboard;
+    private readonly int authenticationTimeout = 70;
+    
     [Header("Leaderboard Loading Logic")] 
     [SerializeField] private bool loadLeaderboard;
     [SerializeField] private GameObject entryPrefab;
     [SerializeField] private Transform leaderboardEntriesContainer;
     [SerializeField] private Transform loadingAnimation;
     [SerializeField] private float loadingAnimationSpeed;
+    
+    [Header("User Submission Logic")] 
+    [SerializeField] private int maxUsernameLength;
+    [SerializeField] private int minUsernameLength;
+    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private IntFieldScriptableObject timeIntField;
+    [SerializeField] private TMP_Text errorMessageDisplay;
 
-    private readonly string publicLeaderboardKey = "5a97bceda0f4f224409e575843a1ad908f7d1577edfe646c681589a68f8eb089";
+    [SerializeField] private float submitCooldown;
+    [SerializeField] private bool canSubmit;
 
-    private void Start()
+    private IEnumerator Start()
     {
+        canSubmit = true;
+        isAuthenticated = false;
+        int authenticationTimer = 0;
+        
+        StartLoadingAnimation();
+
+        StartCoroutine(LoginRoutine());
+        while (!isAuthenticated || authenticationTimer >= authenticationTimeout)
+        {
+            InGameLogger.Log("Waiting for LootLocker Authentication Servers...", Color.yellow);
+            authenticationTimer++;
+            yield return HelperFunctions.GetWait(0.5f);
+        }
         if (loadLeaderboard) PopulateLeaderboard();
+    }
+
+    private IEnumerator LoginRoutine()
+    {
+        bool done = false;
+        LootLockerSDKManager.StartGuestSession(response =>
+        {
+            if (response.success)
+            {
+                InGameLogger.Log("Player was authenticated successfully!", Color.green);
+                PlayerPrefs.SetString("PlayerID", response.player_id.ToString());
+                isAuthenticated = true;
+            }
+            else
+            {
+                InGameLogger.Log("Servers failed to authenticate player!", Color.red);
+                isAuthenticated = false;
+            }
+            done = true;
+        });
+        yield return new WaitWhile(() => !done);
     }
 
     private void PopulateLeaderboard()
     {
+        //Loading animation
+        loadingAnimation.parent.gameObject.SetActive(true);
+        loadingAnimation.DORotate(new Vector3(0, 0, 360), loadingAnimationSpeed, RotateMode.FastBeyond360)
+            .SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear);
+        
         HelperFunctions.DestroyChildren(leaderboardEntriesContainer);
-        LeaderboardCreator.GetLeaderboard(publicLeaderboardKey, (leaderboard) =>
+        LootLockerSDKManager.GetScoreList(leaderboardID.ToString(), 10, response =>
         {
-            Debug.Log("Got leaderboard: " + leaderboard);
-            for (int i = 0; i < leaderboard.Length; i++)
+            if (response.success)
             {
-                Debug.Log("Added entry: " + i + ", " + leaderboard[i].Username + leaderboard[i].Score);
-                LeaderboardEntry leaderboardEntry = Instantiate(entryPrefab, leaderboardEntriesContainer).GetComponent<LeaderboardEntry>();
-                leaderboardEntry.SetupEntry(leaderboard[i].Rank, leaderboard[i].Username, leaderboard[i].Score);
+                StopLoadingAnimation();
+                LootLockerLeaderboardMember[] members = response.items;
+                for (int i = 0; i < members.Length; i++)
+                {
+                    Debug.Log("Added entry: " + i + ", " + members[i].player.name + members[i].score);
+                    LeaderboardEntry leaderboardEntry = Instantiate(entryPrefab, leaderboardEntriesContainer).GetComponent<LeaderboardEntry>();
+                    leaderboardEntry.SetupEntry(members[i].rank, members[i].player.name, members[i].score);
+                }
             }
-            
-            StopLoadingAnimation();
         });
+    }
 
+    #region Animations
+
+    private void StartLoadingAnimation()
+    {
         loadingAnimation.parent.gameObject.SetActive(true);
         loadingAnimation.DORotate(new Vector3(0, 0, 360), loadingAnimationSpeed, RotateMode.FastBeyond360)
             .SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear);
@@ -50,41 +113,111 @@ public class Leaderboard : MonoBehaviour
         loadingAnimation.parent.gameObject.SetActive(false);
     }
 
-    [Header("User Submission Logic")] 
-    [SerializeField] private int maxUsernameLength;
-    [SerializeField] private int minUsernameLength;
-    [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private IntFieldScriptableObject timeIntField;
-    [SerializeField] private TMP_Text errorMessageDisplay;
-    
-    public void SubmitTime()
+    #endregion
+
+    #region Submit Logic
+
+    public void SubmitTimeButton()
     {
-        string username = inputField.text.Substring(0, Math.Min(maxUsernameLength, inputField.text.Length));
-        InvalidUsernameErrorMessage errorCheck = isValidName(username);
-        if (errorCheck.isValid)
+        if (canSubmit)
         {
-            LeaderboardCreator.UploadNewEntry(publicLeaderboardKey,
-                username, timeIntField.intField, delegate(bool successful)
-                {
-                    if (successful)
-                    {
-                        Debug.Log("Entry uploaded successfully!");
-                        DisplayMessage("Entry Submitted!", Color.green);
-                    }
-                    else
-                    {
-                        DisplayMessage("Server Error!\nFailed to upload entry!" + errorCheck.message, Color.red);
-                        Debug.Log("Failed to upload entry!");
-                    }
-                });
+            StartCoroutine(SubmitTime());
+            StartCoroutine(SubmitCooldown());
+        }
+        else
+        {
+            DisplayMessage("Please wait before submitting another run!", Color.yellow);
+        }
+    }
+    
+    private IEnumerator SubmitTime()
+    {
+        bool done = false;
+        string playerID = PlayerPrefs.GetString("PlayerID");
+
+        InvalidUsernameErrorMessage invalidUsernameErrorMessage = isValidName(inputField.text);
+
+        if (invalidUsernameErrorMessage.isValid)
+        {
+            //Set Name
+            SetName(inputField.text);
             
-            DisplayMessage("Submitting entry...", Color.yellow);
-        } else {
-            //InGameLogger.Log("Invalid name: " + errorCheck.message, Color.red);
-            DisplayMessage(errorCheck.message, Color.red);
+            //Set Score
+            LootLockerSDKManager.SubmitScore(playerID, timeIntField.intField, leaderboardID.ToString(), response =>
+            {
+                DisplayMessage("Submitting entry...", Color.yellow);
+                if (response.success)
+                {
+                    InGameLogger.Log("Successfully submitted time!", Color.green);
+                    DisplayMessage("Successfully submitted time!", Color.green);
+                }
+                else
+                {
+                    InGameLogger.Log("Unable to submit time!", Color.red);
+                    DisplayMessage("Unable to submit time!", Color.red);
+                }
+                done = true;
+            });
+            yield return new WaitWhile(() => !done);
+
+            yield return HelperFunctions.GetWait(0.5f);
+            PopulateLeaderboard();
+        }
+        else
+        {
+            InGameLogger.Log(invalidUsernameErrorMessage.message, Color.red);
+            DisplayMessage(invalidUsernameErrorMessage.message, Color.red);
         }
     }
 
+    private IEnumerator SubmitCooldown()
+    {
+        canSubmit = false;
+        yield return HelperFunctions.GetWait(submitCooldown);
+        canSubmit = true;
+    }
+
+    #endregion
+
+    #region Name Changing
+
+    private void SetName(string username)
+    {
+        LootLockerSDKManager.SetPlayerName(username, response =>
+        {
+            if (response.success)
+            {
+                InGameLogger.Log("Successfully set the player's name to: " + username, Color.green);
+            }
+            else
+            {
+                InGameLogger.Log("Could not set the player's name to: " + username, Color.red);
+            }
+        });
+    }
+    
+    // private bool IsNameValidAndSet()
+    // {
+    //     bool isValidAndSet = true;
+    //     
+    //     string username = inputField.text.Substring(0, Math.Min(maxUsernameLength, inputField.text.Length));
+    //     InvalidUsernameErrorMessage errorCheck = isValidName(username);
+    //     
+    //     if (errorCheck.isValid)
+    //     {
+    //         LootLockerSDKManager.SetPlayerName(username, response =>
+    //         {
+    //             isValidAndSet = response.success;
+    //         });
+    //     } else
+    //     {
+    //         DisplayMessage(errorCheck.message, Color.red);
+    //         return false;
+    //     }
+    //
+    //     return isValidAndSet;
+    // }
+    
     private InvalidUsernameErrorMessage isValidName(string username)
     {
         if (username == string.Empty) return new InvalidUsernameErrorMessage("Name cannot contain spaces", false);
@@ -122,6 +255,8 @@ public class Leaderboard : MonoBehaviour
         }
         return false;
     }
+
+    #endregion
 
     private void DisplayMessage(string message, Color color)
     {
