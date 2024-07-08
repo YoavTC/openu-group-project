@@ -17,6 +17,8 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] [ReadOnly] private bool isAuthenticated;
     private Leaderboard leaderboard;
     private readonly int authenticationTimeout = 70;
+    private bool isBetterScore;
+    private bool isBetterScoreCheck;
     
     [Header("Leaderboard Loading Logic")] 
     [SerializeField] private bool loadLeaderboard;
@@ -37,6 +39,9 @@ public class Leaderboard : MonoBehaviour
 
     private IEnumerator Start()
     {
+        isBetterScore = false;
+        isBetterScoreCheck = false;
+        
         canSubmit = true;
         isAuthenticated = false;
         int authenticationTimer = 0;
@@ -132,6 +137,15 @@ public class Leaderboard : MonoBehaviour
     
     private IEnumerator SubmitTime()
     {
+        //Score checking
+        StartCoroutine(IsBetterScore());
+        yield return new WaitWhile(() => isBetterScoreCheck);
+        if (!isBetterScore)
+        {
+            DisplayMessage("You already have a better score on the leaderboard!", Color.yellow);
+            yield break;
+        }
+        
         bool done = false;
         string playerID = PlayerPrefs.GetString("PlayerID");
 
@@ -176,7 +190,26 @@ public class Leaderboard : MonoBehaviour
         yield return HelperFunctions.GetWait(submitCooldown);
         canSubmit = true;
     }
+    
+    private IEnumerator IsBetterScore()
+    {
+        isBetterScoreCheck = false;
+        int newScore = timeIntField.intField;
+        int oldScore = 0;
+        string memberID = PlayerPrefs.GetString("PlayerID");
+        
+        bool done = false;
+        LootLockerSDKManager.GetMemberRank(leaderboardID.ToString(), memberID, response =>
+        {
+            oldScore = response.score;
+            done = true;
+        });
+        
+        yield return new WaitUntil(() => done);
 
+        isBetterScore = oldScore > newScore;
+        isBetterScoreCheck = true;
+    }
     #endregion
 
     #region Name Changing
