@@ -14,6 +14,7 @@ public class ScoreDisplay : MonoBehaviour
     void Start()
     {
         display = GetComponent<TMP_Text>();
-        display.text = timerField.intField.ToString();
+        TimeSpan runTimeSpan = TimeSpan.FromMilliseconds(timerField.intField);
+        display.text = runTimeSpan.ToString();
     }
 }
