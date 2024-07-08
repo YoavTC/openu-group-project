@@ -17,8 +17,8 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] [ReadOnly] private bool isAuthenticated;
     private Leaderboard leaderboard;
     private readonly int authenticationTimeout = 70;
-    private bool isBetterScore;
-    private bool isBetterScoreCheck;
+    [SerializeField] [ReadOnly] private bool isBetterScore;
+    [SerializeField] [ReadOnly] private bool isBetterScoreCheck;
     
     [Header("Leaderboard Loading Logic")] 
     [SerializeField] private bool loadLeaderboard;
@@ -92,6 +92,10 @@ public class Leaderboard : MonoBehaviour
             if (response.success)
             {
                 StopLoadingAnimation();
+                if (response.items == null)
+                {
+                    return;
+                }
                 LootLockerLeaderboardMember[] members = response.items;
                 for (int i = 0; i < members.Length; i++)
                 {
@@ -206,8 +210,9 @@ public class Leaderboard : MonoBehaviour
         });
         
         yield return new WaitUntil(() => done);
-
+        
         isBetterScore = oldScore > newScore;
+        if (oldScore == 0) isBetterScore = true;
         isBetterScoreCheck = true;
     }
     #endregion
