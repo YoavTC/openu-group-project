@@ -38,7 +38,7 @@ public class Leaderboard : MonoBehaviour
     private IEnumerator Start()
     {
         isBetterScore = false;
-        isBetterScoreCheck = false;
+        isBetterScoreCheck = true;
         
         canSubmit = true;
         isAuthenticated = false;
@@ -141,13 +141,13 @@ public class Leaderboard : MonoBehaviour
     {
         //Score checking
         StartCoroutine(IsBetterScore());
-        yield return new WaitWhile(() => isBetterScoreCheck);
+        yield return new WaitUntil(() => !isBetterScoreCheck);
         if (!isBetterScore)
         {
             DisplayMessage("You already have a better score on the leaderboard!", Color.yellow);
             yield break;
         }
-        
+
         bool done = false;
         string playerID = PlayerPrefs.GetString("PlayerID");
 
@@ -155,10 +155,10 @@ public class Leaderboard : MonoBehaviour
 
         if (invalidUsernameErrorMessage.isValid)
         {
-            //Set Name
+            // Set Name
             SetName(inputField.text);
-            
-            //Set Score
+
+            // Set Score
             LootLockerSDKManager.SubmitScore(playerID, timeIntField.intField, leaderboardID.ToString(), response =>
             {
                 DisplayMessage("Submitting entry...", Color.yellow);
@@ -174,7 +174,7 @@ public class Leaderboard : MonoBehaviour
                 }
                 done = true;
             });
-            yield return new WaitWhile(() => !done);
+            yield return new WaitUntil(() => done);
 
             yield return HelperFunctions.GetWait(0.5f);
             PopulateLeaderboard();
@@ -195,23 +195,23 @@ public class Leaderboard : MonoBehaviour
     
     private IEnumerator IsBetterScore()
     {
-        isBetterScoreCheck = false;
+        isBetterScoreCheck = true;
         int newScore = timeIntField.intField;
         int oldScore = 0;
         string memberID = PlayerPrefs.GetString("PlayerID");
-        
+
         bool done = false;
         LootLockerSDKManager.GetMemberRank(leaderboardID.ToString(), memberID, response =>
         {
             oldScore = response.score;
             done = true;
         });
-        
+
         yield return new WaitUntil(() => done);
-        
+
         isBetterScore = oldScore > newScore;
         if (oldScore == 0) isBetterScore = true;
-        isBetterScoreCheck = true;
+        isBetterScoreCheck = false;
     }
     #endregion
 
