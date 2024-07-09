@@ -6,6 +6,8 @@ using LootLocker.Requests;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Leaderboard : MonoBehaviour
 {
@@ -31,6 +33,7 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private IntFieldScriptableObject timeIntField;
     [SerializeField] private TMP_Text errorMessageDisplay;
+    [SerializeField] private Image errorMessageBackground;
 
     [SerializeField] private float submitCooldown;
     [SerializeField] private bool canSubmit;
@@ -85,7 +88,7 @@ public class Leaderboard : MonoBehaviour
             .SetLoops(-1, LoopType.Incremental).SetEase(Ease.Linear);
         
         HelperFunctions.DestroyChildren(leaderboardEntriesContainer);
-        LootLockerSDKManager.GetScoreList(leaderboardID.ToString(), 10, response =>
+        LootLockerSDKManager.GetScoreList(leaderboardID.ToString(), 9, response =>
         {
             if (response.success)
             {
@@ -103,6 +106,8 @@ public class Leaderboard : MonoBehaviour
                 }
             }
         });
+        
+        leaderboardLoaded?.Invoke();
     }
 
     #region Animations
@@ -296,16 +301,24 @@ public class Leaderboard : MonoBehaviour
 
     private void DisplayMessage(string message, Color color)
     {
+        errorMessageBackground.DOKill();
         errorMessageDisplay.DOKill();
         color.a = 0f;
         errorMessageDisplay.text = message;
         errorMessageDisplay.color = color;
+
+        errorMessageBackground.DOFade(0.8f, 0.2f).OnComplete(() =>
+        {
+            errorMessageBackground.DOFade(0, 3f).SetDelay(4);
+        });
 
         errorMessageDisplay.DOFade(1, 0.2f).OnComplete(() =>
         {
             errorMessageDisplay.DOFade(0, 3f).SetDelay(4);
         });
     }
+
+    public UnityEvent leaderboardLoaded;
 }
 
 public class InvalidUsernameErrorMessage

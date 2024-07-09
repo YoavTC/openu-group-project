@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.36066, y: -50}
-  m_SizeDelta: {x: 164.2111, y: 50}
+  m_AnchoredPosition: {x: -111.71118, y: -50}
+  m_SizeDelta: {x: 200.9122, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8447959812374783359
 CanvasRenderer:
@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 00:00:000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 48476fa707b40814a8d421e84b15167b, type: 2}
+  m_sharedMaterial: {fileID: -4425301001021760859, guid: 48476fa707b40814a8d421e84b15167b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -148,3 +148,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSettings: {fileID: 11400000, guid: 9d9c27efde787374e8732c28e1b3d8f9, type: 2}
+  intTime: {fileID: 11400000, guid: 12d16d0cb5d84464a92e608d29ed2745, type: 2}
