@@ -55,8 +55,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Flip")]
     private int isFacingRight = 1;
 
-    private Vector3 startPosition;
-
     [Header("Events")]
     public UnityEvent playerDied;
 
@@ -66,11 +64,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        startPosition = transform.position;
         canJump = true;
         groundLayers = LayerMask.GetMask("NonJumpable", "WallGround");
         rb = GetComponent<Rigidbody2D>();
-        playerDied.AddListener(Respawn);
     }
     
     private void Update()
@@ -328,10 +324,10 @@ public class PlayerMovement : MonoBehaviour
         animator.transform.localScale = scale;
     }
 
-    public void Respawn()
+    public void Respawn(Vector2 newSpawnPoint)
     {
         rb.velocity = Vector2.zero;
-        transform.position = startPosition;
+        transform.position = newSpawnPoint;
     }
 
     #endregion

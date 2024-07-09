@@ -18,6 +18,8 @@ public class PointsManager : Singleton<PointsManager>
     public void CreateNewCheckpoint()
     {
         PointObject newPoint = Instantiate(pointPrefab, transform).GetComponent<PointObject>();
+        GameObject newDronePoint = Instantiate(new GameObject("Drone Respawn Point"), newPoint.transform);
+        newDronePoint.transform.localPosition = new Vector3(-5, 2, 0);
         newPoint.pointType = PointType.CHECKPOINT;
         newPoint.gameObject.name = "CHECKPOINT";
     }
@@ -50,11 +52,17 @@ public class PointsManager : Singleton<PointsManager>
         {
             playerInteractedWithEnemy?.Invoke();
         }
+        
+        if (point.pointType == PointType.CHECKPOINT)
+        {
+            playerReachCheckpoint.Invoke(point);
+        }
     }
     
     //Events
     public UnityEvent playerReachedGoalPoint;
     public UnityEvent playerInteractedWithEnemy;
+    public UnityEvent<PointObject> playerReachCheckpoint;
 }
 
 public enum PointType

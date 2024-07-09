@@ -1,11 +1,11 @@
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PredatorSystem : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Transform droneObject;
-    [SerializeField] private Transform debugObject;
     [SerializeField] private AIPath droneAI;
     private Transform playerTransform;
 
@@ -15,13 +15,11 @@ public class PredatorSystem : MonoBehaviour
     [SerializeField] private float droneReturnSpeed;
     [SerializeField] private float droneReturnDistance;
     [SerializeField] private float droneKillDistance;
-    private Vector3 startingPos;
 
     private void Start()
     {
         if (playerTransform == null) playerTransform = FindObjectOfType<PlayerMovement>().transform;
         droneAI.maxSpeed = droneSpeed;
-        startingPos = droneObject.position;
     }
     
     private void Update()
@@ -34,11 +32,17 @@ public class PredatorSystem : MonoBehaviour
         //Checks
         if (dronePlayerDistance < droneKillDistance)
         {
-            playerTransform.GetComponent<PlayerMovement>().Respawn();
+            //playerTransform.GetComponent<PlayerMovement>().Respawn();
+            onDroneCatchPlayer?.Invoke();
             Debug.Log("Player got caught!");
         }
     }
 
+    public void Respawn(Vector2 newSpawnPoint)
+    {
+        transform.position = newSpawnPoint;
+    }
+    
     private float DronePlayerDistance()
     {
         return Vector2.Distance(droneObject.position, playerTransform.position);
@@ -55,9 +59,5 @@ public class PredatorSystem : MonoBehaviour
         droneSpeed = lastSpeed;
     }
 
-    public void OnPlayerDied()
-    {
-        //Check with checkpoint system
-        droneObject.position = startingPos;
-    }
+    public UnityEvent onDroneCatchPlayer;
 }

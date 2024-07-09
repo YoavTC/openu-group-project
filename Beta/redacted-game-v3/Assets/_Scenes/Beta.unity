@@ -497,38 +497,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1689038297}
+      objectReference: {fileID: 1982012265}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1709850392}
+      objectReference: {fileID: 7498245377150672511}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1982012265}
+      objectReference: {fileID: 7498245377150672511}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 7498245377150672511}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnPlayerRespawnEvent
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RespawnPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RespawnPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: RespawnPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CheckpointManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: CheckpointManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: CheckpointManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
@@ -576,97 +616,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
---- !u!1 &182491087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 182491088}
-  - component: {fileID: 182491090}
-  - component: {fileID: 182491089}
-  m_Layer: 0
-  m_Name: ENEMY POINT (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &182491088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182491087}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.4, y: 2.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7498245377150672511}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &182491089
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182491087}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3}
-  m_EdgeRadius: 0
---- !u!114 &182491090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182491087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bbd28c789bbe6e4589333acc24a54c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointType: 2
 --- !u!1 &183222243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2204,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &643707417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643707418}
+  m_Layer: 0
+  m_Name: Drone Respawn Point(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &643707418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643707417}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2000265465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679225026
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,6 +3421,34 @@ PrefabInstance:
       propertyPath: droneReturnSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1982012265}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlayerRespawnEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
+      propertyPath: onDroneCatchPlayer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3638400120839860765, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
       propertyPath: m_Name
       value: Predator System
@@ -3683,97 +3691,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1274187445
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1274187446}
-  - component: {fileID: 1274187448}
-  - component: {fileID: 1274187447}
-  m_Layer: 0
-  m_Name: ENEMY POINT
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1274187446
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274187445}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3, y: -1.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7498245377150672511}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1274187447
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274187445}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3}
-  m_EdgeRadius: 0
---- !u!114 &1274187448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274187445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bbd28c789bbe6e4589333acc24a54c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointType: 2
 --- !u!1 &1294440680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,6 +3775,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1301690962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301690963}
+  m_Layer: 0
+  m_Name: Drone Respawn Point(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1301690963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301690962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1777981119}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1420729622 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2256795685363440156, guid: 665b76b331d52964fb5152473a97d4df, type: 3}
@@ -4670,17 +4618,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
   m_PrefabInstance: {fileID: 134047162}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1709850392 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1807604901628222257, guid: a135f3b306adfe14b8c49901d49dff8b, type: 3}
-  m_PrefabInstance: {fileID: 1168239761}
+--- !u!1 &1723260954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723260955}
+  - component: {fileID: 1723260957}
+  - component: {fileID: 1723260956}
+  m_Layer: 0
+  m_Name: CHECKPOINT (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1723260955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723260954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 182.3, y: -1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1831098762}
+  m_Father: {fileID: 7498245377150672513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1723260956
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723260954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
+--- !u!114 &1723260957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723260954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1faf5f85fb23eb14bb7063001ba0ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bbd28c789bbe6e4589333acc24a54c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointType: 0
 --- !u!1001 &1737316885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4746,6 +4775,98 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43f11d2b999a79e40b6f047e5867f106, type: 3}
+--- !u!1 &1777981118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1777981119}
+  - component: {fileID: 1777981121}
+  - component: {fileID: 1777981120}
+  m_Layer: 0
+  m_Name: CHECKPOINT (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1777981119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777981118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 74.8, y: 2.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1301690963}
+  m_Father: {fileID: 7498245377150672513}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1777981120
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777981118}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
+--- !u!114 &1777981121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777981118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbd28c789bbe6e4589333acc24a54c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointType: 0
 --- !u!1 &1812261895
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,6 +5043,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5831392310459179035, guid: 51a6568f42747f044a643fe44ecaeb51, type: 3}
   m_PrefabInstance: {fileID: 2080577313460280427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1831098761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1831098762}
+  m_Layer: 0
+  m_Name: Drone Respawn Point(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1831098762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831098761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1723260955}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836745847
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,7 +5152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1858334131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5318,97 +5470,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1836745848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1965694282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1965694283}
-  - component: {fileID: 1965694285}
-  - component: {fileID: 1965694284}
-  m_Layer: 0
-  m_Name: ENEMY POINT (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1965694283
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965694282}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 130.17, y: -1.59, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7498245377150672511}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1965694284
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965694282}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3}
-  m_EdgeRadius: 0
---- !u!114 &1965694285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965694282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bbd28c789bbe6e4589333acc24a54c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointType: 2
 --- !u!114 &1982012265 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
@@ -5420,7 +5481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2179af1ff51b06b4f954e40b27bcba27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2036872621
+--- !u!1 &2000265464
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5428,38 +5489,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2036872622}
-  - component: {fileID: 2036872624}
-  - component: {fileID: 2036872623}
+  - component: {fileID: 2000265465}
+  - component: {fileID: 2000265467}
+  - component: {fileID: 2000265466}
   m_Layer: 0
-  m_Name: ENEMY POINT
+  m_Name: CHECKPOINT
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2036872622
+--- !u!4 &2000265465
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036872621}
+  m_GameObject: {fileID: 2000265464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.6, y: -1.5, z: 0}
+  m_LocalPosition: {x: 40.5, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7498245377150672511}
+  m_Children:
+  - {fileID: 643707418}
+  m_Father: {fileID: 7498245377150672513}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2036872623
+--- !u!61 &2000265466
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036872621}
+  m_GameObject: {fileID: 2000265464}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -5498,19 +5560,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
---- !u!114 &2036872624
+--- !u!114 &2000265467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036872621}
+  m_GameObject: {fileID: 2000265464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bbd28c789bbe6e4589333acc24a54c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointType: 2
+  pointType: 0
 --- !u!1 &2054894051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6193,42 +6255,42 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 513051711268734666, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
       propertyPath: m_Name
-      value: Checkpoint Manager
+      value: Point Manager
       objectReference: {fileID: 0}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: _enemyPrefab
-      value: 
-      objectReference: {fileID: 1003773925032019376, guid: ad726fee819bdf048b8cac3ee38bcf82, type: 3}
-    - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7498245377150672511}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
       propertyPath: playerReachedGoalPoint.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1689038297}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
       propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1982012265}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReachedNewCheckpoint
       objectReference: {fileID: 0}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPlayerRespawnEvent
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CheckpointManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1927488459104478977, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      propertyPath: playerInteractedWithEnemy.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: playerReachCheckpoint.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4177133871409472624, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
@@ -6276,19 +6338,27 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4177133871409472624, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1274187446}
+      addedObject: {fileID: 2000265465}
     - targetCorrespondingSourceObject: {fileID: 4177133871409472624, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2036872622}
+      addedObject: {fileID: 1777981119}
     - targetCorrespondingSourceObject: {fileID: 4177133871409472624, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 182491088}
-    - targetCorrespondingSourceObject: {fileID: 4177133871409472624, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1965694283}
+      addedObject: {fileID: 1723260955}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
---- !u!4 &7498245377150672511 stripped
+--- !u!114 &7498245377150672511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7203321968556244006, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
+  m_PrefabInstance: {fileID: 7498245377150672510}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27eea912088538a45839781ee13a2403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &7498245377150672513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4177133871409472624, guid: af86e8bc03b53ae46bb5d19c2efa6a27, type: 3}
   m_PrefabInstance: {fileID: 7498245377150672510}

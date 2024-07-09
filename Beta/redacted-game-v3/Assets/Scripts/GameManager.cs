@@ -1,22 +1,29 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Udar.SceneManager;
+using Unity.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private SceneField gameScene;
     [SerializeField] private PlayerMovement playerController;
+    [SerializeField] private CheckpointManager checkpointManager;
+    [SerializeField] private PredatorSystem predatorSystem;
 
     private void Start()
     {
-        playerController = FindObjectOfType<PlayerMovement>();
+        if (checkpointManager == null) checkpointManager = FindObjectOfType<CheckpointManager>();
+        if (playerController == null) playerController = FindObjectOfType<PlayerMovement>();
+        if (predatorSystem == null) predatorSystem = FindObjectOfType<PredatorSystem>();
     }
     
     public void OnPlayerRespawnEvent()
     {
-        //Alert checkpoint system
+        //Get checkpoint point
+        Vector2 playerRespawnPoint = checkpointManager.GetLastCheckpoint(true);
+        Vector2 droneRespawnPoint = checkpointManager.GetLastCheckpoint(false);
+        
+        //Make the player & drone move
+        playerController.Respawn(playerRespawnPoint);
+        predatorSystem.Respawn(droneRespawnPoint);
     }
 }
