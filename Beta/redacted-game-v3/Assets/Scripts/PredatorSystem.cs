@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using Pathfinding;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,31 +17,54 @@ public class PredatorSystem : MonoBehaviour
     [SerializeField] private float droneReturnDistance;
     [SerializeField] private float droneKillDistance;
 
+    [SerializeField] [ReadOnly] private float xProgress;
+    [SerializeField] [ReadOnly] private float currentXProgress;
+    [SerializeField] private float xProgressBuffer;
+    [SerializeField] [ReadOnly] private bool isGoingBack; 
+
     private void Start()
     {
         if (playerTransform == null) playerTransform = FindObjectOfType<PlayerMovement>().transform;
         droneAI.maxSpeed = droneSpeed;
+        xProgress = droneObject.position.x;
     }
     
     private void Update()
     {
         float dronePlayerDistance = DronePlayerDistance();
+        currentXProgress = droneObject.position.x - xProgressBuffer;
 
         //Move drone
         droneAI.maxSpeed = (dronePlayerDistance > droneReturnDistance) ? droneReturnSpeed : droneSpeed;
+
+        if (currentXProgress < xProgress)
+        {
+            isGoingBack = true;
+            droneAI.maxSpeed = droneReturnSpeed * 1.5f;
+        }
+        else
+        {
+            isGoingBack = false;
+            droneAI.maxSpeed = droneSpeed;
+        }
         
         //Checks
         if (dronePlayerDistance < droneKillDistance)
         {
-            //playerTransform.GetComponent<PlayerMovement>().Respawn();
             onDroneCatchPlayer?.Invoke();
             Debug.Log("Player got caught!");
         }
+
+        if (currentXProgress > xProgress) xProgress = currentXProgress;
+        Debug.DrawRay(new Vector2(xProgress, -10f), Vector3.up * 50, Color.green);
+        Debug.DrawRay(new Vector2(currentXProgress, -10f), Vector3.up * 50, Color.magenta);
     }
 
     public void Respawn(Vector2 newSpawnPoint)
     {
-        transform.position = newSpawnPoint;
+        droneObject.position = newSpawnPoint;
+        currentXProgress = newSpawnPoint.x;
+        xProgress = newSpawnPoint.x;
     }
     
     private float DronePlayerDistance()

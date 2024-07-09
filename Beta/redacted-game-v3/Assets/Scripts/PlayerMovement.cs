@@ -256,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
         while (cant)
         {
             cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer);
-            Debug.Log("Can't get up, retrying.. ");
+            //Debug.Log("Can't get up, retrying.. ");
             yield return HelperFunctions.GetWait(0.05f);
         }
 
