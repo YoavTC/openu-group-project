@@ -70,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
         groundLayers = LayerMask.GetMask("NonJumpable", "WallGround");
         rb = GetComponent<Rigidbody2D>();
+        playerDied.AddListener(Respawn);
     }
     
     private void Update()
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         HandleFlipping();
         UpdateAnimatorStates();
         
-        if (doVoidDeath && transform.position.y < voidDeathLevel) Respawn();
+        if (doVoidDeath && transform.position.y < voidDeathLevel) playerDied?.Invoke();
     }
 
     private void FixedUpdate()
@@ -329,7 +330,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Respawn()
     {
-        playerDied?.Invoke();
         rb.velocity = Vector2.zero;
         transform.position = startPosition;
     }

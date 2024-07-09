@@ -57,6 +57,7 @@ public class PredatorSystem : MonoBehaviour
 
     public void OnPlayerDied()
     {
+        //Check with checkpoint system
         droneObject.position = startingPos;
     }
 }

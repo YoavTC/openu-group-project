@@ -4,12 +4,15 @@ using UnityEngine;
 public class PointObject : MonoBehaviour
 {
     public PointType pointType;
+    private GameObject enemyPrefab;
 
     private void Start()
     {
         if (pointType == PointType.ENEMY_POINT)
         {
+            enemyPrefab = transform.parent.GetComponent<PointsManager>().EnemyPrefab;
             Destroy(GetComponent<Collider2D>());
+            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         }
     }
 
@@ -17,7 +20,7 @@ public class PointObject : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            transform.parent.GetComponent<PointsManager>().PlayerActivatedPoint(transform);
+            transform.parent.GetComponent<PointsManager>().PlayerActivatedPoint(this);
         }
     }
 }

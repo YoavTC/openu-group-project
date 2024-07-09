@@ -1,12 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Udar.SceneManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public void OnPlayerDeathEvent()
+    [SerializeField] private SceneField gameScene;
+    [SerializeField] private PlayerMovement playerController;
+
+    private void Start()
     {
-        Debug.Log("Player died!");
+        playerController = FindObjectOfType<PlayerMovement>();
+    }
+    
+    public void OnPlayerRespawnEvent()
+    {
+        //Alert checkpoint system
     }
 }

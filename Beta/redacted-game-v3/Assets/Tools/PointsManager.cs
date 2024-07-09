@@ -2,10 +2,17 @@ using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PointsManager : MonoBehaviour
+public class PointsManager : Singleton<PointsManager>
 {
     #region Utility
     [SerializeField] private GameObject pointPrefab;
+    [SerializeField] private GameObject _enemyPrefab;
+
+    public GameObject EnemyPrefab
+    {
+        get { return _enemyPrefab; }
+        private set { _enemyPrefab = value; }
+    }
     
     [Button]
     public void CreateNewCheckpoint()
@@ -32,16 +39,22 @@ public class PointsManager : MonoBehaviour
     }
     #endregion
 
-    public void PlayerActivatedPoint(Transform point)
+    public void PlayerActivatedPoint(PointObject point)
     {
-        if (point.GetComponent<PointObject>().pointType == PointType.GOAL_POINT)
+        if (point.pointType == PointType.GOAL_POINT)
         {
             playerReachedGoalPoint?.Invoke();
+        }
+        
+        if (point.pointType == PointType.ENEMY_POINT)
+        {
+            playerInteractedWithEnemy?.Invoke();
         }
     }
     
     //Events
     public UnityEvent playerReachedGoalPoint;
+    public UnityEvent playerInteractedWithEnemy;
 }
 
 public enum PointType
