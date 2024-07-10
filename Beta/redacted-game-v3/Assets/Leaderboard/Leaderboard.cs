@@ -40,6 +40,8 @@ public class Leaderboard : MonoBehaviour
 
     private IEnumerator Start()
     {
+        Time.timeScale = 1f;
+        
         isBetterScore = false;
         isBetterScoreCheck = true;
         
