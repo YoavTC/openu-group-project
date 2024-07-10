@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
+        if (Time.deltaTime == 0) return;
         isJumpingThisFrame = Input.GetButtonDown("Jump");
         HandleMovement();
         HandleFlipping();
@@ -275,7 +276,7 @@ public class PlayerMovement : MonoBehaviour
     // Handles flipping the player's sprite based on movement direction
     private void HandleFlipping()
     {
-        if (isWallJumping || Time.timeScale == 0f) return;
+        if (isWallJumping) return;
         if (moveInput > 0 && isFacingRight == -1)
         {
             Flip();
