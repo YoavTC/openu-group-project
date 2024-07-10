@@ -131,14 +131,19 @@ public class Leaderboard : MonoBehaviour
 
     public void SubmitTimeButton()
     {
-        if (canSubmit)
+        if (timeIntField.intField <= 0)
         {
-            StartCoroutine(SubmitTime());
-            StartCoroutine(SubmitCooldown());
-        }
-        else
-        {
-            DisplayMessage("Please wait before submitting another run!", Color.yellow);
+            DisplayMessage("Go play the game first (:", Color.yellow);
+        } else {
+            if (canSubmit)
+            {
+                StartCoroutine(SubmitTime());
+                StartCoroutine(SubmitCooldown());
+            }
+            else
+            {
+                DisplayMessage("Please wait before submitting another run!", Color.yellow);
+            } 
         }
     }
     
