@@ -25,11 +25,13 @@ public class SpeedZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.isTrigger) return;
         transform.parent.GetComponent<PredatorSystem>().EnterSpeedZone(speedRatePercentage);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.isTrigger) return;
         transform.parent.GetComponent<PredatorSystem>().ExitSpeedZone();
     }
 }

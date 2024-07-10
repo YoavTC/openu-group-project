@@ -40,7 +40,7 @@ public class PredatorSystem : MonoBehaviour
         if (currentXProgress < xProgress)
         {
             isGoingBack = true;
-            droneAI.maxSpeed = droneReturnSpeed * 1.5f;
+            droneAI.maxSpeed *= 1.2f;
         }
         else
         {

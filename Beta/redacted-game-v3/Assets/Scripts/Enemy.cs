@@ -20,12 +20,12 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         GetComponent<BoxCollider2D>().enabled = false;
-        GetComponent<Animator>().SetTrigger("Die");
+        GetComponent<Animator>().SetBool("alive", false);
     }
 
     public void Resurrect()
     {
         GetComponent<BoxCollider2D>().enabled = true;
-        GetComponent<Animator>().SetTrigger("Resurrect");
+        GetComponent<Animator>().SetBool("alive", true);
     }
 }
