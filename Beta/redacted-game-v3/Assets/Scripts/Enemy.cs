@@ -19,7 +19,13 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        Destroy(GetComponent<BoxCollider2D>());
+        GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<Animator>().SetTrigger("Die");
+    }
+
+    public void Resurrect()
+    {
+        GetComponent<BoxCollider2D>().enabled = true;
+        GetComponent<Animator>().SetTrigger("Resurrect");
     }
 }
