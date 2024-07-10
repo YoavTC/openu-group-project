@@ -251,11 +251,11 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator GetUpFromSlide()
     {
         // If under object and cannot exit slide
-        bool cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer);
+        bool cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, groundLayers);
         
         while (cant)
         {
-            cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, wallGroundLayer);
+            cant = Physics2D.OverlapBox(slideBlockPoint.position, slideBlockRadius, 0f, groundLayers);
             //Debug.Log("Can't get up, retrying.. ");
             yield return HelperFunctions.GetWait(0.05f);
         }
