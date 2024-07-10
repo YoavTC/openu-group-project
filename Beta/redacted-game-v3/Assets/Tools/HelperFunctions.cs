@@ -35,6 +35,15 @@ public class HelperFunctions : MonoBehaviour
         waitDictionary[time] = new WaitForSeconds(time);
         return waitDictionary[time];
     }
+    
+    private static Dictionary<float, WaitForSecondsRealtime> waitDictionaryRT = new Dictionary<float, WaitForSecondsRealtime>();
+    public static WaitForSecondsRealtime GetWaitRealTime(float time)
+    {
+        if (waitDictionaryRT.TryGetValue(time, out var wait)) return wait;
+
+        waitDictionaryRT[time] = new WaitForSecondsRealtime(time);
+        return waitDictionaryRT[time];
+    }
 
     public static Transform GetRandomObject(List<Transform> list, Transform avoidedObject = null)
     {
