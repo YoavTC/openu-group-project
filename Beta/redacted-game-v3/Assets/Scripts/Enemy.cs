@@ -14,6 +14,12 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        PointsManager.Instance.playerInteractedWithEnemy?.Invoke();
+        if (!other.isTrigger) PointsManager.Instance.playerInteractedWithEnemy?.Invoke();
+    }
+
+    public void Die()
+    {
+        Destroy(GetComponent<BoxCollider2D>());
+        GetComponent<Animator>().SetTrigger("Die");
     }
 }
