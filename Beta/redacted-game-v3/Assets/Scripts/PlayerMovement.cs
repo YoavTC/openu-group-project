@@ -275,7 +275,7 @@ public class PlayerMovement : MonoBehaviour
     // Handles flipping the player's sprite based on movement direction
     private void HandleFlipping()
     {
-        if (isWallJumping) return;
+        if (isWallJumping || Time.timeScale == 0f) return;
         if (moveInput > 0 && isFacingRight == -1)
         {
             Flip();

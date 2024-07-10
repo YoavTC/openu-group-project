@@ -46,14 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuScene:
     _sceneOB: {fileID: 102900000, guid: 9efc7caa36a153f4e8db72f288cf65a1, type: 3}
-    _name: Pause Menu Scene
-    _path: Assets/_Scenes/Pause Menu Scene.unity
-    _buildIndex: 3
-  gameScene:
-    _sceneOB: {fileID: 102900000, guid: 7cca8b77a036a9d4d84fd947383a4d7d, type: 3}
-    _name: Movement Testing Scene
-    _path: Assets/_Scenes/Movement Testing Scene.unity
+    _name: Pause Menu
+    _path: Assets/_Scenes/Pause Menu.unity
     _buildIndex: 2
+  gameScene:
+    _sceneOB: {fileID: 102900000, guid: 61807de4e652ef148a389857f41a9f0e, type: 3}
+    _name: Beta
+    _path: Assets/_Scenes/Beta.unity
+    _buildIndex: 1
   pauseShortcut: 9
   gamePaused:
     m_PersistentCalls:
