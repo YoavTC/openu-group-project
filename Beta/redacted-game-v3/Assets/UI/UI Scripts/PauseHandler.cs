@@ -91,7 +91,7 @@ public class PauseHandler : MonoBehaviour
     public void PressMainMenuButton()
     {
         if (!canInteract) return;
-        UnpauseGame();
+        //UnpauseGame();
         SceneManager.LoadScene(mainMenuScene.BuildIndex);
     }
     
