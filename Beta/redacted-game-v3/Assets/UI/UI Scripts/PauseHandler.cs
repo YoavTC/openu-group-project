@@ -14,6 +14,7 @@ public class PauseHandler : MonoBehaviour
     [Header("Scenes")] 
     [SerializeField] private SceneField mainMenuScene;
     [SerializeField] private SceneField settingsScene;
+    [SerializeField] private SceneField leaderboardScene;
 
     [Header("Settings")]
     [SerializeField] private KeyCode pauseKeyCode;
@@ -93,6 +94,11 @@ public class PauseHandler : MonoBehaviour
         if (!canInteract) return;
         //UnpauseGame();
         SceneManager.LoadScene(mainMenuScene.BuildIndex);
+    }
+
+    public void PressLeaderboardButton()
+    {
+        SceneManager.LoadScene(leaderboardScene.BuildIndex);
     }
     
     #endregion
