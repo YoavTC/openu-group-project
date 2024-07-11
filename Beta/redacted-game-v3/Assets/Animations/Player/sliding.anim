@@ -344,7 +344,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.x
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -383,7 +383,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.y
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -422,7 +422,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.x
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -461,7 +461,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.y
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -591,7 +591,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2172794778
+      path: 860563329
       attribute: 413499720
       script: {fileID: 0}
       typeID: 61
@@ -600,7 +600,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2172794778
+      path: 860563329
       attribute: 1872933342
       script: {fileID: 0}
       typeID: 61
@@ -609,7 +609,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2172794778
+      path: 860563329
       attribute: 4197328169
       script: {fileID: 0}
       typeID: 61
@@ -618,7 +618,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2172794778
+      path: 860563329
       attribute: 2368279999
       script: {fileID: 0}
       typeID: 61
@@ -1203,7 +1203,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.x
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -1242,7 +1242,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Offset.y
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -1281,7 +1281,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.x
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -1320,7 +1320,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Size.y
-    path: Colliders
+    path: Collider
     classID: 61
     script: {fileID: 0}
     flags: 0
