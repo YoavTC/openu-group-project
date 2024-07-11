@@ -93,12 +93,12 @@ public class PauseHandler : MonoBehaviour
     {
         if (!canInteract) return;
         //UnpauseGame();
-        SceneManager.LoadScene(mainMenuScene.BuildIndex);
+        SceneManager.LoadScene(0);
     }
 
     public void PressLeaderboardButton()
     {
-        SceneManager.LoadScene(leaderboardScene.BuildIndex);
+        SceneManager.LoadScene(3);
     }
     
     #endregion

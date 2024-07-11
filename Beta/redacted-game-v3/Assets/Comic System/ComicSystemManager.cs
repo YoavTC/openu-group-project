@@ -59,7 +59,7 @@ public class ComicSystemManager : MonoBehaviour
             //All pages & windows read, move to next scene
             if (pageIndex == transform.childCount - 1)
             {
-                SceneManager.LoadScene(nextScene.BuildIndex);
+                SceneManager.LoadScene(2);
                 return;
             }
             HelperFunctions.DestroyChildren(transform.GetChild(pageIndex));
@@ -69,7 +69,7 @@ public class ComicSystemManager : MonoBehaviour
         
         if (windowIndex > 0) comicWindows[windowIndex - 1].transform.DOKill(true);
         
-        comicWindows[windowIndex].Enter();
+        if (windowIndex > 0) comicWindows[windowIndex].Enter();
         windowIndex++;
         //Play sound effect?
     }

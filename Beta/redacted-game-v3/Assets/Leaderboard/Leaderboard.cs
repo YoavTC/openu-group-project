@@ -13,7 +13,7 @@ public class Leaderboard : MonoBehaviour
 {
     
     [Header("LootLocker Leaderboard")] 
-    [SerializeField] [ReadOnly] private int leaderboardID = 23210;
+    [SerializeField] private int leaderboardID = 23411;
     [SerializeField] [ReadOnly] private bool isAuthenticated;
     private Leaderboard leaderboard;
     private readonly int authenticationTimeout = 70;

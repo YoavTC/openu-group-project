@@ -10,7 +10,6 @@ public class ComicWindow : MonoBehaviour
     [SerializeField] private float entrySpeed;
     [SerializeField] private EntryType entryType;
     
-    [EnableIf("entryType", EntryType.MOVE_IN)]
     [SerializeField] private Ease easeType;
     [EnableIf("entryType", EntryType.MOVE_IN)]
     [Space]

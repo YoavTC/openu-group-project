@@ -20,7 +20,7 @@ public class VersionDisplayer : MonoBehaviour
         string version = GetLastShortCommitId() + "_d" + DateTime.Today.DayOfYear;
         GetComponent<TMP_Text>().text = prefix + iterationID + "_" + version;
 #else
-        string version = "build_" + cachedVersionID.stringField + "_d" + DateTime.Today.DayOfYear;
+        string version = "build" + cachedVersionID.stringField + "_d" + DateTime.Today.DayOfYear;
         GetComponent<TMP_Text>().text = prefix + iterationID + "_" + version;
 #endif
     }
