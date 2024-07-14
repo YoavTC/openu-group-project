@@ -15,8 +15,7 @@ public class ScoreDisplay : MonoBehaviour
     {
         //Display score
         TMP_Text scoreDisplay = GetComponent<TMP_Text>();
-        TimeSpan runTimeSpan = TimeSpan.FromMilliseconds(timerField.intField);
-        scoreDisplay.text = runTimeSpan.ToString();
+        scoreDisplay.text = NumToDisplayableTime(timerField.intField);
 
         //Display rank
         TMP_Text rankDisplay = transform.GetChild(0).GetComponent<TMP_Text>();
@@ -38,5 +37,13 @@ public class ScoreDisplay : MonoBehaviour
         yield return new WaitUntil(() => done);
         
         rankDisplay.text = rank;
+    }
+    
+    private string NumToDisplayableTime(float t)
+    {
+        TimeSpan timeSpan = TimeSpan.FromMilliseconds(t);
+        string displayTime = string.Format("{0:00}:{1:00}:{2:000}", timeSpan.Minutes, timeSpan.Seconds,
+            timeSpan.Milliseconds);
+        return displayTime;
     }
 }
