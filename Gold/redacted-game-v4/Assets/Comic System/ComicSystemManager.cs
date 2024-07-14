@@ -1,76 +1,84 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 using NaughtyAttributes;
 using Udar.SceneManager;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class ComicSystemManager : MonoBehaviour
+public class ComicSystemManager : Singleton<ComicSystemManager>
 {
-    [SerializeField] private SceneField nextScene;
+    [SerializeField] private int nextSceneIndex;
     
-    private ComicWindow[] comicWindows;
+    private ComicWindow[] currentWindows;
     [SerializeField] [ReadOnly] private int windowIndex, pageIndex;
-    
-    [SerializeField] private float nextWindowCooldown;
-    private float elapsedTime;
+    [SerializeField] private bool canNextWindow;
 
     private void Start()
     {
-        //Make children invisible
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).gameObject.SetActive(false);
+            transform.GetChild(i).GetComponent<PageContainer>().HideChildren();
         }
-        
-        pageIndex = 0;
-        SetWindows();
+        canNextWindow = true;
+        pageIndex = -1;
+        NextPage();
     }
 
-    void Update()
+    private void Update()
     {
-        elapsedTime += Time.deltaTime;
-        
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && canNextWindow)
         {
-            if (elapsedTime > nextWindowCooldown)
-            {
-                elapsedTime = 0f;
-                NextWindow();
-            }
+            StartCoroutine(NextWindow());
         }
     }
 
-    private void SetWindows()
+    private IEnumerator NextWindow()
     {
-        Transform pageParent = transform.GetChild(pageIndex);
-        pageParent.gameObject.SetActive(true);
-        comicWindows = HelperFunctions.GetChildren(pageParent).ToArray().Select(t => t.GetComponent<ComicWindow>()).Where(rb => rb != null).ToArray();
-        windowIndex = 0;
-    }
-
-    private void NextWindow()
-    {
-        //Move to next page
-        if (windowIndex == comicWindows.Length)
+        canNextWindow = false;
+        if (windowIndex == 1)
         {
-            //All pages & windows read, move to next scene
-            if (pageIndex == transform.childCount - 1)
-            {
-                SceneManager.LoadScene(2);
-                return;
-            }
-            HelperFunctions.DestroyChildren(transform.GetChild(pageIndex));
-            pageIndex++;
-            SetWindows();
+            yield return HelperFunctions.GetWait(0.5f);
+            InGameLogger.Log("delaying!", Color.cyan);
         }
-        
-        if (windowIndex > 0) comicWindows[windowIndex - 1].transform.DOKill(true);
-        
-        if (windowIndex > 0) comicWindows[windowIndex].Enter();
-        windowIndex++;
-        //Play sound effect?
+        if (windowIndex >= currentWindows.Length)
+        {
+            NextPage();
+        }
+        else
+        {
+            currentWindows[windowIndex].Enter();
+            windowIndex++;
+        }
+    }
+
+    private void NextPage()
+    {
+        windowIndex = 1;
+        pageIndex++;
+        canNextWindow = true;
+
+        if (pageIndex == transform.childCount)
+        {
+            Debug.Log("Move to new scene!");  
+            SceneManager.LoadScene(nextSceneIndex);
+            return;
+        }
+        if (pageIndex > 0)
+        {
+            //transform.GetChild(pageIndex - 1).gameObject.SetActive(false);
+            transform.GetChild(pageIndex - 1).GetComponent<PageContainer>().TransitionOut();
+        }
+        transform.GetChild(pageIndex).gameObject.SetActive(true);
+        currentWindows = HelperFunctions.GetChildren(transform.GetChild(pageIndex))
+            .Select(i => i.GetComponent<ComicWindow>()).ToArray();
+        StartCoroutine(NextWindow());
+    }
+
+    public void AnimationCompleted()
+    {
+        canNextWindow = true;
     }
 }

@@ -1,6 +1,4 @@
-using System;
 using DG.Tweening;
-using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,41 +7,38 @@ public class ComicWindow : MonoBehaviour
     [Header("Window Components & Settings")]
     [SerializeField] private float entrySpeed;
     [SerializeField] private EntryType entryType;
-    
     [SerializeField] private Ease easeType;
-    [EnableIf("entryType", EntryType.MOVE_IN)]
-    [Space]
-    [SerializeField] private Transform startingPosition;
     
+    private Transform offScreenPosition;
+    private Vector3 onScreenPosition;
     private Image image;
-    private Vector3 endPosition;
 
-    private void Start()
+    public void SetUp()
     {
+        Debug.Log(gameObject + " Starting", gameObject);
+        offScreenPosition = transform.GetChild(0);
+        onScreenPosition = transform.position;
+        transform.position = offScreenPosition.position;
         image = GetComponent<Image>();
-        if (entryType == EntryType.FADE_IN)
-        {
-            //Set invisible
-            image.DOFade(0, 0f);
-        }
-        if (entryType == EntryType.MOVE_IN)
-        {
-            endPosition = transform.position;
-            transform.position = startingPosition.position;
-        }
+        if (entryType == EntryType.FADE_IN) image.DOFade(0, 0f);
     }
-
-    [Button]
+    
     public void Enter()
     {
+        Debug.Log(gameObject + " Entering", gameObject);
         if (entryType == EntryType.FADE_IN)
         {
-            //Set invisible
-            image.DOFade(1, entrySpeed).SetEase(easeType);
+            image.DOFade(1, entrySpeed).SetEase(easeType).OnComplete(() =>
+            {
+                ComicSystemManager.Instance.AnimationCompleted();
+            });
         }
         if (entryType == EntryType.MOVE_IN)
         {
-            transform.DOMove(endPosition, entrySpeed).SetEase(easeType);
+            transform.DOMove(onScreenPosition, entrySpeed).SetEase(easeType).OnComplete(() =>
+            {
+                ComicSystemManager.Instance.AnimationCompleted();
+            });
         }
     }
 }
