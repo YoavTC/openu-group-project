@@ -1,0 +1,7 @@
+﻿//add comments with "//"!
+list
+of
+bad
+words
+//English
+//Hebrew
