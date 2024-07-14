@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Comic Prototype.unity
     guid: bfe3a4d8f7d49ce4ab9409c823740a74
   - enabled: 1
-    path: Assets/_Scenes/Beta.unity
+    path: Assets/_Scenes/Gold.unity
     guid: 61807de4e652ef148a389857f41a9f0e
   - enabled: 1
     path: Assets/_Scenes/Leaderboard.unity

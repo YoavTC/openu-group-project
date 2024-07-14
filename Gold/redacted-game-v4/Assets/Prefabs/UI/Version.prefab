@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefix: 'version: '
-  iterationID: beta
+  iterationID: gold
   cachedVersionID: {fileID: 11400000, guid: e51364689c11ba64db64b01dc94a2f06, type: 2}
 --- !u!114 &7892923072035494744
 MonoBehaviour:
