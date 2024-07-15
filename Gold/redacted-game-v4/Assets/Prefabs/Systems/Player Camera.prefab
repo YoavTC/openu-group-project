@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 1314756521369464041}
   - component: {fileID: 4998296792188487734}
   - component: {fileID: 2964868178625290127}
+  - component: {fileID: 3747593054022510002}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -216,6 +217,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3747593054022510002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945919803611818699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54b9859f9af0d44d836d13924c2ddb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8257447108074523678
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +240,7 @@ GameObject:
   - component: {fileID: 6930519820296047600}
   - component: {fileID: 3307879995294015946}
   - component: {fileID: 9122513216859089432}
+  - component: {fileID: 3621908265805582233}
   - component: {fileID: 2648164832461268336}
   m_Layer: 0
   m_Name: Virtual Camera
@@ -305,6 +319,29 @@ MonoBehaviour:
   m_Offset: {x: 8, y: 1, z: 0}
   m_ApplyAfter: 1
   m_PreserveComposition: 1
+--- !u!114 &3621908265805582233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257447108074523678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 1
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &2648164832461268336
 MonoBehaviour:
   m_ObjectHideFlags: 0
