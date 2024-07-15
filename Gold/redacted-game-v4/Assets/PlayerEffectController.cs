@@ -28,7 +28,7 @@ public class PlayerEffectController : MonoBehaviour
 
     public void OnPlayerSpeedChange(int level)
     {
-        Debug.Log("New speed level: " + level);
+        InGameLogger.Log("Acceleration State: " + level, Color.magenta);
         //trailRenderer.colorGradient = colorGradients[level];
         if (gradientTransitionCoroutine != null)
         {
