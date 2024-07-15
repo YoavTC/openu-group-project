@@ -195,7 +195,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Math.Abs(rb.velocity.x) > 0.5f)
         {
-            nonZeroVelocityTime += Time.fixedDeltaTime;
+            nonZeroVelocityTime += Time.deltaTime;
 
             int newSpeedState = 0;
             float newMaxSpeed = originalMaxSpeed;
@@ -420,13 +420,15 @@ public class PlayerMovement : MonoBehaviour
         debugInformations.Add(new DebugInformation(nameof(moveInput), moveInput));
         debugInformations.Add(new DebugInformation(nameof(isGrounded), isGrounded));
         debugInformations.Add(new DebugInformation(nameof(canJump), canJump));
-        debugInformations.Add(new DebugInformation(nameof(isJumpingThisFrame), isJumpingThisFrame));
+        //debugInformations.Add(new DebugInformation(nameof(isJumpingThisFrame), isJumpingThisFrame));
         debugInformations.Add(new DebugInformation(nameof(mountedLeftWall), mountedLeftWall));
         debugInformations.Add(new DebugInformation(nameof(mountedRightWall), mountedRightWall));
-        debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
-        debugInformations.Add(new DebugInformation(nameof(canGetUp), canGetUp));
+        // debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
+        // debugInformations.Add(new DebugInformation(nameof(canGetUp), canGetUp));
         debugInformations.Add(new DebugInformation(nameof(isFacingRight), isFacingRight));
         debugInformations.Add(new DebugInformation(nameof(rb.velocity.x), rb.velocity.x));
+        debugInformations.Add(new DebugInformation(nameof(nonZeroVelocityTime), nonZeroVelocityTime));
+        debugInformations.Add(new DebugInformation(nameof(lastSpeedState), lastSpeedState));
 
         //Sort & return
         return debugInformations

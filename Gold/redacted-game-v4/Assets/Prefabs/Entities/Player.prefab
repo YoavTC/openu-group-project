@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8180658501910143928}
   - component: {fileID: 4294950339169791192}
   - component: {fileID: 4615796280959636495}
-  - component: {fileID: 3637855289651480806}
   - component: {fileID: 3181818316900641958}
   - component: {fileID: 3213167076362503192}
   m_Layer: 0
@@ -97,11 +96,13 @@ MonoBehaviour:
   canJump: 0
   isGrounded: 1
   wallJumpForce: 9
+  wallJumpTime: 1
   rightWallPoint: {fileID: 97199744522446005}
   leftWallPoint: {fileID: 4472520153321668441}
   mountedRightWall: 0
   mountedLeftWall: 0
   isWallJumping: 0
+  currentClimbingCourse: {fileID: 0}
   slideBlockPoint: {fileID: 6314410552016944470}
   slideBlockRadius: {x: 2, y: 0.5}
   slideDurationMax: 1.5
@@ -150,18 +151,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3637855289651480806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2444253028585105649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5726addba66fbcf4391b7a68c4fae326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3181818316900641958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,12 +698,21 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.57562804
-        inSlope: 0
-        outSlope: 0
+        value: 0.35714287
+        inSlope: 3.8756614
+        outSlope: 3.8756614
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0.69231176
+      - serializedVersion: 3
+        time: 0.13310502
+        value: 0.5597513
+        inSlope: 0.16089357
+        outSlope: 0.16089357
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 1
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
@@ -730,7 +728,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 0.48235294}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
