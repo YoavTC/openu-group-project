@@ -105,6 +105,42 @@ public class HelperFunctions : MonoBehaviour
 
         return null;
     }
+    
+    /// <summary>
+    /// Returns the first child with a certain component in a recursive manner
+    /// </summary>
+    /// <param name="parent"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    public static T GetFirstChildWithComponent<T>(Transform parent) where T : Component
+    {
+        Transform fittingChild = RecursiveFindChildWithComponent<T>(parent);
+        return fittingChild != null ? fittingChild.GetComponent<T>() : null;
+    }
+
+    private static Transform RecursiveFindChildWithComponent<T>(Transform parent) where T : Component
+    {
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            Transform child = parent.GetChild(i);
+
+            if (child.GetComponent<T>() != null)
+            {
+                return child;
+            }
+
+            if (child.childCount > 0)
+            {
+                Transform found = RecursiveFindChildWithComponent<T>(child);
+                if (found != null)
+                {
+                    return found;
+                }
+            }
+        }
+
+        return null;
+    }
 
     /// <summary>
     /// Returns a List of Transform children from a parent

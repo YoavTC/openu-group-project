@@ -1,16 +1,30 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+using Cinemachine;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class PlayerEffectController : MonoBehaviour
 {
     [SerializeField] private float transitionDuration;
     [SerializeField] private Gradient[] colorGradients;
-    [SerializeField] private TrailRenderer trailRenderer;
+    [SerializeField] private float shakeForce;
+    private TrailRenderer trailRenderer;
+    private CinemachineImpulseSource cinemachineImpulseSource;
     private Coroutine gradientTransitionCoroutine;
+
+    private void Start()
+    {
+        trailRenderer = HelperFunctions.GetFirstChildWithComponent<TrailRenderer>(transform);
+        if (trailRenderer == null)
+        {
+            TrailRenderer[] trailRenderers = FindObjectsOfType<TrailRenderer>();
+            foreach (var trail in trailRenderers)
+            {
+                if (trail.transform.IsChildOf(transform)) trailRenderer = trail;
+            }
+        }
+        cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
+    }
 
     public void OnPlayerSpeedChange(int level)
     {
@@ -22,8 +36,16 @@ public class PlayerEffectController : MonoBehaviour
         }
 
         gradientTransitionCoroutine = StartCoroutine(TransitionGradient(colorGradients[level]));
+        ShakeCamera(level);
     }
-    
+
+    private void ShakeCamera(int level)
+    {
+        cinemachineImpulseSource.GenerateImpulse(shakeForce * level);
+    }
+
+    #region Transition
+
     private IEnumerator TransitionGradient(Gradient targetGradient)
     {
         Gradient startGradient = trailRenderer.colorGradient;
@@ -62,4 +84,6 @@ public class PlayerEffectController : MonoBehaviour
         result.SetKeys(colorKeys, alphaKeys);
         return result;
     }
+
+    #endregion
 }
