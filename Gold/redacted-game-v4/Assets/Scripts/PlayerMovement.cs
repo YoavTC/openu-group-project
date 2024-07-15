@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float decelerationRate, airDecelerationRateMultiplier, maxSpeed;
     private float moveInput;
 
+    [Header("Acceleration")] 
+    [SerializeField] private Vector3 accelerationTimePoints;
+    [SerializeField] private Vector3 accelerationBoostPoints;
+    private float nonZeroVelocityTime;
+    private float originalMaxSpeed;
+    private int lastSpeedState;
+
     [Header("Jumping")]
     [SerializeField] private float jumpForce;
     [SerializeField] private float jumpCooldown;
@@ -57,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent playerDied;
+    public UnityEvent<int> speedLevelChange;
 
     [Header("Animator Variables")]
     private bool is_idle, is_mounted, is_airborne;
@@ -64,9 +73,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+
+        lastSpeedState = 0;
+        originalMaxSpeed = maxSpeed;
         canJump = true;
         groundLayers = LayerMask.GetMask("NonJumpable", "WallGround");
-        rb = GetComponent<Rigidbody2D>();
     }
     
     private void Update()
@@ -91,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
     private void HandleMovement()
     {
         HandleHorizontalMovement();
+        HandleAcceleration();
         HandleJumping();
         HandleWallJumping();
         HandleSliding();
@@ -136,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
                 float deceleration = decelerationRate;
 
                 if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
-                if (isSliding) rb.velocity = new Vector2(isFacingRight * 10, rb.velocity.y);
+                if (isSliding) rb.velocity = new Vector2((isFacingRight + maxSpeed) * 10, rb.velocity.y);
                 else rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
             }
         }
@@ -165,6 +178,56 @@ public class PlayerMovement : MonoBehaviour
         }
         else moveInput = 0;
     }
+    
+    private void HandleAcceleration()
+    {
+        if (isSliding || isWallJumping || !isGrounded)
+        {
+            return;
+        }
+
+        if (Math.Abs(rb.velocity.x) > 0.5f)
+        {
+            nonZeroVelocityTime += Time.fixedDeltaTime;
+
+            int newSpeedState = 0;
+            float newMaxSpeed = originalMaxSpeed;
+
+            if (nonZeroVelocityTime >= accelerationTimePoints.z)
+            {
+                newSpeedState = 3;
+                newMaxSpeed += accelerationBoostPoints.z;
+            }
+            else if (nonZeroVelocityTime >= accelerationTimePoints.y)
+            {
+                newSpeedState = 2;
+                newMaxSpeed += accelerationBoostPoints.y;
+            }
+            else if (nonZeroVelocityTime >= accelerationTimePoints.x)
+            {
+                newSpeedState = 1;
+                newMaxSpeed += accelerationBoostPoints.x;
+            }
+
+            if (newSpeedState != lastSpeedState)
+            {
+                speedLevelChange?.Invoke(newSpeedState);
+                lastSpeedState = newSpeedState;
+            }
+            maxSpeed = newMaxSpeed;
+        }
+        else
+        {
+            if (lastSpeedState != 0)
+            {
+                speedLevelChange?.Invoke(0);
+                lastSpeedState = 0;
+            }
+            nonZeroVelocityTime = 0;
+            maxSpeed = originalMaxSpeed;
+        }
+    }
+
     
     private void HandleJumping()
     {
@@ -206,12 +269,12 @@ public class PlayerMovement : MonoBehaviour
 
             if (mountedRightWall)
             {
-                rb.velocity = new Vector2(-1 * wallJumpForce, 0);
+                rb.velocity = new Vector2(-1 * (wallJumpForce + maxSpeed), 0);
                 if (isFacingRight == 1) Flip();
             }
             if (mountedLeftWall)
             {
-                rb.velocity = new Vector2(wallJumpForce, 0);
+                rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
                 if (isFacingRight == -1) Flip();
             }
         }
@@ -348,6 +411,7 @@ public class PlayerMovement : MonoBehaviour
         debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
         debugInformations.Add(new DebugInformation(nameof(canGetUp), canGetUp));
         debugInformations.Add(new DebugInformation(nameof(isFacingRight), isFacingRight));
+        debugInformations.Add(new DebugInformation(nameof(rb.velocity.x), rb.velocity.x));
 
         //Sort & return
         return debugInformations
