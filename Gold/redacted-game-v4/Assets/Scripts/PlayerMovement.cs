@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
@@ -49,8 +50,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Wall Jumps")] 
     [SerializeField] private float wallJumpForce;
+    [SerializeField] private float wallJumpTime;
     [SerializeField] private Transform rightWallPoint, leftWallPoint;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
+    public ClimbingCourse currentClimbingCourse;
 
     [Header("Sliding")]
     [SerializeField] private Transform slideBlockPoint;
@@ -114,15 +117,17 @@ public class PlayerMovement : MonoBehaviour
     private void PerformChecks()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayers);
-
-        // mountedRightWall = facingDirection == 1 && (bool) Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
-        // mountedLeftWall = facingDirection == -1 && (bool) Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
-        
         mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
         mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
 
+        if ((mountedRightWall || mountedLeftWall) && !isGrounded)
+        {
+            rb.gravityScale = 1f;
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
+        }
+        else rb.gravityScale = 2f;
+
         if (isGrounded) isWallJumping = false;
-        //if (Mathf.Abs(moveInput) > 0) isWallJumping = false;
     }
     
     private void ApplyHorizontalMovement()
@@ -137,8 +142,10 @@ public class PlayerMovement : MonoBehaviour
             if (snappyMovement)
             {
                 // Snappy movement DO NOT DELETE!
-                if (isSliding) rb.velocity = new Vector2(isFacingRight * 10, rb.velocity.y);
-                else
+                if (isSliding)
+                {
+                    rb.velocity = new Vector2((isFacingRight * maxSpeed) * 10, rb.velocity.y);
+                } else
                 {
                     rb.velocity = new Vector2(moveInput, rb.velocity.y);
                 }
@@ -149,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
                 float deceleration = decelerationRate;
 
                 if (!isGrounded) deceleration = decelerationRate * airDecelerationRateMultiplier;
-                if (isSliding) rb.velocity = new Vector2((isFacingRight + maxSpeed) * 10, rb.velocity.y);
+                if (isSliding) rb.velocity = new Vector2((isFacingRight * maxSpeed) * 10, rb.velocity.y);
                 else rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
             }
         }
@@ -262,23 +269,31 @@ public class PlayerMovement : MonoBehaviour
     {
         if (CanJump())
         {
+            
             animator.SetBool("is_mounted", true);
-            Jump();
+            //Jump();
             rb.velocity = Vector2.zero;
             isWallJumping = true;
 
+            Vector3 point = ClimbingPointsManager.Instance.GetPoint(this);
+            transform.DOMove(point, 0.5f);
             if (mountedRightWall)
             {
-                rb.velocity = new Vector2(-1 * (wallJumpForce + maxSpeed), 0);
+                //rb.velocity = new Vector2(-1 * (wallJumpForce + maxSpeed), 0);
                 if (isFacingRight == 1) Flip();
             }
             if (mountedLeftWall)
             {
-                rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
+                //rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
                 if (isFacingRight == -1) Flip();
             }
         }
     }
+
+    // private Vector3 GetNextClimbPoint(Vector3 currentPos)
+    // {
+    //     
+    // }
     
     private void HandleSliding()
     {
