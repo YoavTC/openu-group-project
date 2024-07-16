@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallJumpTime;
     [SerializeField] private Transform rightWallPoint, leftWallPoint;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
-    public ClimbingCourse currentClimbingCourse;
 
     [Header("Sliding")]
     [SerializeField] private Transform slideBlockPoint;
@@ -122,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((mountedRightWall || mountedLeftWall) && !isGrounded)
         {
-            rb.gravityScale = 1f;
+            rb.gravityScale = 0f;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
         }
         else rb.gravityScale = 2f;
@@ -274,8 +273,8 @@ public class PlayerMovement : MonoBehaviour
             //Jump();
             rb.velocity = Vector2.zero;
             isWallJumping = true;
-
-            Vector3 point = ClimbingPointsManager.Instance.GetPoint(this);
+            
+            Vector3 point = GetComponent<PlayerClimbingController>().GetNextPoint(transform.position);
             transform.DOMove(point, 0.5f);
             if (mountedRightWall)
             {
@@ -289,11 +288,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-    // private Vector3 GetNextClimbPoint(Vector3 currentPos)
-    // {
-    //     
-    // }
     
     private void HandleSliding()
     {

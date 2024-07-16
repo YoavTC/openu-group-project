@@ -5,62 +5,51 @@ using UnityEngine;
 
 public class ClimbingCourse : MonoBehaviour
 {
-    private List<Vector3> points = new List<Vector3>();
+    [SerializeField] private Transform[] points;
     [SerializeField] private float bufferDistance;
+    public int pointsLength => points.Length;
 
     private void Start()
     {
-        points = HelperFunctions.GetChildren(transform).Select(child => child.position).ToList();
+        points = HelperFunctions.GetChildren(transform).ToArray();
     }
 
+    public Transform GetClosestPointAbove(Vector3 playerPosition)
+    {
+        Transform closestPoint = null;
+        float closestDistance = 1000f;
+
+        for (int i = 0; i < points.Length; i++)
+        {
+            if (points[i].position.y > playerPosition.y)
+            {
+                float distance = Vector3.Distance(playerPosition, points[i].position);
+                Debug.Log("Distance: " + distance);
+                if (distance < closestDistance && distance > bufferDistance)
+                {
+                    closestDistance = distance;
+                    closestPoint = points[i];
+                }
+            }
+        }
+        if (closestPoint == null) return points[points.Length - 1];
+        return closestPoint;
+    }
+
+    #region Detection Functions
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            other.transform.parent.parent.GetComponent<PlayerMovement>().currentClimbingCourse = this;
+            other.GetComponentInParent<PlayerClimbingController>().UpdateCurrentCourse(this);
         }
     }
-    
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.GetComponentInParent<PlayerClimbingController>())
         {
-            other.transform.parent.parent.GetComponent<PlayerMovement>().currentClimbingCourse = null;
+            other.GetComponentInParent<PlayerClimbingController>().UnsetCurrentCourse();
         }
     }
-
-    public Vector3 GetClosestAbovePlayer(Vector3 playerPos)
-    {
-        Vector3 closestPoint = Vector3.zero;
-        float closestDistance = float.MaxValue;
-
-        foreach (var point in points)
-        {
-            // Check if the point is above the player's Y position
-            if (point.y <= playerPos.y)
-                continue;
-
-            // Calculate distance to player position
-            float distance = Vector3.Distance(point, playerPos);
-
-            // Check if the distance is within the buffer zone
-            if (distance < bufferDistance)
-                continue;
-
-            // Update closest point if this point is closer
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestPoint = point;
-            }
-        }
-
-        // If no valid points above the player's Y position (excluding player's current position and buffer zone) are found, handle accordingly
-        if (closestPoint == Vector3.zero)
-        {
-            return points[points.Count - 1];
-        }
-
-        return closestPoint;
-    }
+    #endregion
 }
