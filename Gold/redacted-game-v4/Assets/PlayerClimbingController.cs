@@ -1,38 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerClimbingController : MonoBehaviour
 {
     [SerializeField] private ClimbingCourse currentCourse;
+    [SerializeField] private float raycastLineLength;
     
-    public void UpdateCurrentCourse(ClimbingCourse course)
-    {
-        currentCourse = course;
-    }
+    public void UpdateCurrentCourse(ClimbingCourse course) => currentCourse = course;
+    public void UnsetCurrentCourse() => currentCourse = null;
+    
 
-    public void UnsetCurrentCourse()
+    public Vector3 GetNextPoint(Vector3 playerPos, int layerMask, int isFacingRight)
     {
-        currentCourse = null;
-    }
+        Vector2 hitPoint;
+        Vector2 dir = new Vector2(((isFacingRight * -1) * 45), 45);
+        RaycastHit2D hit = Physics2D.Raycast(playerPos, dir, raycastLineLength, layerMask);
 
-    public Vector3 GetNextPoint(Vector3 playerPos)
-    {
-        return currentCourse.GetClosestPointAbove(playerPos).position;
+        if (hit.collider == null)
+        {
+            hitPoint = (Vector2) playerPos + dir.normalized * raycastLineLength;
+        } else hitPoint = hit.point;
+        
+        Debug.DrawLine(playerPos, hitPoint, Color.magenta, 1f);
+        return currentCourse.GetClosestPoint(hitPoint).position;
     }
-
-    // public Vector3 GetNextPoint(Vector3 playerPos)
-    // {
-    //     int returnPointIndex = (currentPointIndex == -1) ? currentCourse.GetClosestPointIndex(playerPos) : currentPointIndex;
-    //     currentPointIndex++;
-    //     Vector3 returnPoint = currentCourse.GetNextPoint(returnPointIndex).position;
-    //     
-    //     if (currentCourse.pointsLength == currentPointIndex)
-    //     {
-    //         //Completed
-    //         currentPointIndex = -1;
-    //     }
-    //     
-    //     return returnPoint;
-    // } 
 }

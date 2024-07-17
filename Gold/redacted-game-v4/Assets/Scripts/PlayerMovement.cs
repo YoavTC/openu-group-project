@@ -274,7 +274,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             isWallJumping = true;
             
-            Vector3 point = GetComponent<PlayerClimbingController>().GetNextPoint(transform.position);
+            Vector3 point = GetComponent<PlayerClimbingController>().GetNextPoint(transform.position, groundLayers, isFacingRight);
             transform.DOMove(point, 0.5f);
             if (mountedRightWall)
             {
