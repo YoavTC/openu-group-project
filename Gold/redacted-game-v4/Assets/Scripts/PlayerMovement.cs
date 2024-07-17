@@ -420,7 +420,7 @@ public class PlayerMovement : MonoBehaviour
         // debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
         // debugInformations.Add(new DebugInformation(nameof(canGetUp), canGetUp));
         debugInformations.Add(new DebugInformation(nameof(isFacingRight), isFacingRight));
-        debugInformations.Add(new DebugInformation(nameof(rb.velocity.x), rb.velocity.x));
+        //debugInformations.Add(new DebugInformation(nameof(rb.velocity.x), rb.velocity.x));
         debugInformations.Add(new DebugInformation(nameof(nonZeroVelocityTime), nonZeroVelocityTime));
         debugInformations.Add(new DebugInformation(nameof(lastSpeedState), lastSpeedState));
 
