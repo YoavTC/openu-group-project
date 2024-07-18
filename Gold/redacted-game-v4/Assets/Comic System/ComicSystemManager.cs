@@ -16,11 +16,16 @@ public class ComicSystemManager : Singleton<ComicSystemManager>
     [SerializeField] [ReadOnly] private int windowIndex, pageIndex;
     [SerializeField] private bool canNextWindow;
 
+    [SerializeField] private Image messageElement;
+    [SerializeField] private float inactiveTimePopupMessage;
+    private float inactiveTime;
+
     private void Start()
     {
+        messageElement.DOFade(0, 0f);
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).GetComponent<PageContainer>().HideChildren();
+            transform.GetChild(i).GetComponent<PageContainer>()?.HideChildren();
         }
         canNextWindow = true;
         pageIndex = -1;
@@ -29,8 +34,18 @@ public class ComicSystemManager : Singleton<ComicSystemManager>
 
     private void Update()
     {
+        inactiveTime += Time.deltaTime;
+        if (inactiveTime >= inactiveTimePopupMessage)
+        {
+            messageElement.DOKill();
+            messageElement.DOFade(1, 1);
+        }
+        
         if (Input.anyKeyDown && canNextWindow)
         {
+            inactiveTime = 0f;
+            messageElement.DOKill();
+            messageElement.DOFade(0, 0.2f);
             StartCoroutine(NextWindow());
         }
     }
