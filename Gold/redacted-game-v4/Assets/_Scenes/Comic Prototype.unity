@@ -1740,6 +1740,8 @@ MonoBehaviour:
   canNextWindow: 0
   messageElement: {fileID: 1616244091}
   inactiveTimePopupMessage: 5
+  fadeInTime: 2
+  fadeOutTime: 1
 --- !u!1 &1894700335
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class ComicSystemManager : Singleton<ComicSystemManager>
     [SerializeField] private bool canNextWindow;
 
     [SerializeField] private Image messageElement;
-    [SerializeField] private float inactiveTimePopupMessage;
+    [SerializeField] private float inactiveTimePopupMessage, fadeInTime, fadeOutTime;
     private float inactiveTime;
 
     private void Start()
@@ -38,14 +38,14 @@ public class ComicSystemManager : Singleton<ComicSystemManager>
         if (inactiveTime >= inactiveTimePopupMessage)
         {
             messageElement.DOKill();
-            messageElement.DOFade(1, 1);
+            messageElement.DOFade(1, fadeInTime);
         }
         
         if (Input.anyKeyDown && canNextWindow)
         {
             inactiveTime = 0f;
             messageElement.DOKill();
-            messageElement.DOFade(0, 0.2f);
+            messageElement.DOFade(0, fadeOutTime);
             StartCoroutine(NextWindow());
         }
     }
