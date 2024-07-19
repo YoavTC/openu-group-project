@@ -49,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumpingThisFrame;
 
     [Header("Wall Jumps")] 
-    [SerializeField] private float wallJumpForce;
-    [SerializeField] private float wallJumpTime;
+    [SerializeField] private float wallJumpDuration;
+    [SerializeField] private float wallJumpArch;
     [SerializeField] private Transform rightWallPoint, leftWallPoint;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
 
@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalMovement();
         HandleAcceleration();
         HandleJumping();
-        HandleWallJumping();
+        if (isJumpingThisFrame) HandleWallJumping();
         HandleSliding();
     }
 
@@ -266,27 +266,28 @@ public class PlayerMovement : MonoBehaviour
     
     private void HandleWallJumping()
     {
-        if (CanJump())
+        if (CanWallJump())
         {
-            
             animator.SetBool("is_mounted", true);
-            //Jump();
+        
             rb.velocity = Vector2.zero;
             isWallJumping = true;
             
-            Vector3 point = GetComponent<PlayerClimbingController>().GetNextPoint(transform.position, groundLayers, isFacingRight);
-            transform.DOMove(point, 0.5f);
-            if (mountedRightWall)
-            {
-                //rb.velocity = new Vector2(-1 * (wallJumpForce + maxSpeed), 0);
-                if (isFacingRight == 1) Flip();
-            }
-            if (mountedLeftWall)
-            {
-                //rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
-                if (isFacingRight == -1) Flip();
-            }
+            Vector3 playerPos = transform.position;
+            Vector3 point = GetComponent<PlayerClimbingController>().GetNextPoint(playerPos, groundLayers, isFacingRight);
+            Vector3[] path = GetPath(playerPos, point);
+            transform.DOPath(path, wallJumpDuration, PathType.CatmullRom).SetEase(Ease.Linear);
+            
+            Flip();
         }
+    }
+
+    private Vector3[] GetPath(Vector3 playerPos, Vector3 endPos)
+    {
+        Vector3 controlPoint1 = Vector3.Lerp(playerPos, endPos, 0.25f) + Vector3.up * wallJumpArch;
+        Vector3 controlPoint2 = Vector3.Lerp(playerPos, endPos, 0.75f) + Vector3.up * wallJumpArch;
+
+        return new Vector3[] { playerPos, controlPoint1, controlPoint2, endPos };
     }
     
     private void HandleSliding()
@@ -359,7 +360,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private bool CanJump() => !isGrounded && isJumpingThisFrame && (mountedRightWall || mountedLeftWall);
+    private bool CanWallJump() => !isGrounded && (mountedRightWall || mountedLeftWall);
     
     
 

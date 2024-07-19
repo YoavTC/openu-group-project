@@ -2819,6 +2819,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: wallJumpArch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: wallJumpDuration
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5948588659845791986, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: debugObject
       value: 
@@ -3096,7 +3104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1843705338
 MonoBehaviour:
   m_ObjectHideFlags: 0
