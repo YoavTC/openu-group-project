@@ -49,10 +49,12 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumpingThisFrame;
 
     [Header("Wall Jumps")] 
+    [SerializeField] private float wallJumpForce;
     [SerializeField] private float wallJumpDuration;
     [SerializeField] private float wallJumpArch;
     [SerializeField] private Transform rightWallPoint, leftWallPoint;
     [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
+    private PlayerClimbingController playerClimbingController;
 
     [Header("Sliding")]
     [SerializeField] private Transform slideBlockPoint;
@@ -76,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerClimbingController = GetComponent<PlayerClimbingController>();
 
         lastSpeedState = 0;
         originalMaxSpeed = maxSpeed;
@@ -274,10 +277,17 @@ public class PlayerMovement : MonoBehaviour
             isWallJumping = true;
             
             Vector3 playerPos = transform.position;
-            Vector3 point = GetComponent<PlayerClimbingController>().GetNextPoint(playerPos, groundLayers, isFacingRight);
-            Vector3[] path = GetPath(playerPos, point);
-            transform.DOPath(path, wallJumpDuration, PathType.CatmullRom).SetEase(Ease.Linear);
-            
+            Vector3 point = playerClimbingController.GetNextPoint(playerPos, groundLayers, isFacingRight);
+            if (point == Vector3.zero)
+            {
+                rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
+                Jump();
+            }
+            else
+            {
+                Vector3[] path = GetPath(playerPos, point);
+                transform.DOPath(path, wallJumpDuration, PathType.CatmullRom).SetEase(Ease.Linear);
+            }
             Flip();
         }
     }

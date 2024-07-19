@@ -31,7 +31,7 @@ public class ClimbingCourse : MonoBehaviour
                 closestPoint = points[i];
             }
         }
-        
+        Debug.Log("ClimbingCourse return: " + closestPoint);
         return closestPoint;
     }
 
