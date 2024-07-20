@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SoundSystem : Singleton<SoundSystem>
 {
-    public AudioSource[] source;
+    [SerializeField] private AudioSource[] source;
+    
+    // Create enum for audio clip names
     
     public void Play(int curSource, AudioClip playableSfx, bool loop)
     {
