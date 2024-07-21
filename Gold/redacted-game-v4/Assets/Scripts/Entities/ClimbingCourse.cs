@@ -34,30 +34,12 @@ public class ClimbingCourse : MonoBehaviour
         Debug.Log("ClimbingCourse return: " + closestPoint);
         return closestPoint;
     }
-
-    // public Transform GetClosestPointAbove(Vector3 playerPosition)
-    // {
-    //     
-    //     Transform closestPoint = null;
-    //     float closestDistance = 1000f;
-    //
-    //     for (int i = 0; i < points.Length; i++)
-    //     {
-    //         if (points[i].position.y > playerPosition.y)
-    //         {
-    //             float distance = Vector3.Distance(playerPosition, points[i].position);
-    //             Debug.Log("Distance: " + distance);
-    //             if (distance < closestDistance && distance > bufferDistance)
-    //             {
-    //                 closestDistance = distance;
-    //                 closestPoint = points[i];
-    //             }
-    //         }
-    //     }
-    //     if (closestPoint == null) return points[points.Length - 1];
-    //     return closestPoint;
-    // }
-
+    
+    public bool IsLastPoint(Transform point)
+    {
+        return point == points[points.Length - 1];
+    }
+    
     #region Detection Functions
     private void OnTriggerEnter2D(Collider2D other)
     {

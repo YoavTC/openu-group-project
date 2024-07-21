@@ -277,27 +277,18 @@ public class PlayerMovement : MonoBehaviour
             isWallJumping = true;
             
             Vector3 playerPos = transform.position;
-            Vector3 point = playerClimbingController.GetNextPoint(playerPos, groundLayers, isFacingRight);
-            if (point == Vector3.zero)
+            var (point, isLastPoint) = playerClimbingController.GetNextPoint(playerPos, groundLayers, isFacingRight);
+            if (point == Vector3.zero || isLastPoint)
             {
                 rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
                 Jump();
             }
             else
             {
-                Vector3[] path = GetPath(playerPos, point);
-                transform.DOPath(path, wallJumpDuration, PathType.CatmullRom).SetEase(Ease.Linear);
+                transform.DOMove(point, wallJumpDuration).SetEase(Ease.OutSine);
             }
             Flip();
         }
-    }
-
-    private Vector3[] GetPath(Vector3 playerPos, Vector3 endPos)
-    {
-        Vector3 controlPoint1 = Vector3.Lerp(playerPos, endPos, 0.25f) + Vector3.up * wallJumpArch;
-        Vector3 controlPoint2 = Vector3.Lerp(playerPos, endPos, 0.75f) + Vector3.up * wallJumpArch;
-
-        return new Vector3[] { playerPos, controlPoint1, controlPoint2, endPos };
     }
     
     private void HandleSliding()
@@ -426,6 +417,7 @@ public class PlayerMovement : MonoBehaviour
         debugInformations.Add(new DebugInformation(nameof(isGrounded), isGrounded));
         debugInformations.Add(new DebugInformation(nameof(canJump), canJump));
         //debugInformations.Add(new DebugInformation(nameof(isJumpingThisFrame), isJumpingThisFrame));
+        debugInformations.Add(new DebugInformation(nameof(isWallJumping), isWallJumping));
         debugInformations.Add(new DebugInformation(nameof(mountedLeftWall), mountedLeftWall));
         debugInformations.Add(new DebugInformation(nameof(mountedRightWall), mountedRightWall));
         // debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
