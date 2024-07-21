@@ -18,7 +18,7 @@ public class FadeInFadeOutText : MonoBehaviour
         text.rectTransform.localScale *= scales.x;
         
         text.DOFade(1, fadeInDuration);
-        text.rectTransform.DOScale(new Vector2(scales.y, scales.y), fadeInDuration + fadeOutDelayDuration + fadeOutDuration).SetEase(Ease.InOutSine);
+        text.rectTransform.DOScale(new Vector2(scales.y, scales.y), fadeInDuration + fadeOutDelayDuration + fadeOutDuration).SetEase(Ease.OutSine);
         yield return HelperFunctions.GetWait(fadeInDuration + fadeOutDelayDuration);
         text.DOFade(0, fadeOutDuration);
     }
