@@ -127,11 +127,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 187
-        y: 3870
-        width: 598
+        y: 5250
+        width: 592
         height: 1108
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,11 +148,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1020
-        y: 3882
+        y: 5262
         width: 611
-        height: 1076
+        height: 1077
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,11 +169,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1878
-        y: 3872
+        y: 5252
         width: 567
         height: 1004
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -190,11 +190,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2795
-        y: 3882
+        y: 5263
         width: 584
         height: 888
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -211,11 +211,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3698
-        y: 3992
+        y: 5372
         width: 722
         height: 624
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -232,11 +232,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4634
-        y: 4132
+        y: 5512
         width: 691
         height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,11 +253,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5491
-        y: 4089
-        width: 622
+        y: 5469
+        width: 623
         height: 463
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -274,11 +274,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 69
-        y: 3075
+        y: 4455
         width: 551
         height: 532
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -295,11 +295,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1013
-        y: 3058
+        y: 4438
         width: 640
-        height: 634
+        height: 635
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -316,11 +316,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1849
-        y: 3079
+        y: 4459
         width: 567
         height: 651
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: Flip_Sheet_10
       rect:
         serializedVersion: 2
-        x: 2827
-        y: 3098
-        width: 483
+        x: 2818
+        y: 4478
+        width: 492
         height: 691
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -358,11 +358,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3750
-        y: 3163
+        y: 4543
         width: 554
         height: 608
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -379,11 +379,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4524
-        y: 3233
+        y: 4613
         width: 594
         height: 469
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -400,11 +400,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5330
-        y: 3209
+        y: 4589
         width: 608
         height: 370
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -421,11 +421,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 215
-        y: 2195
+        y: 3575
         width: 648
         height: 486
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -442,11 +442,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1029
-        y: 2122
+        y: 3502
         width: 520
         height: 633
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -463,11 +463,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1960
-        y: 2049
+        y: 3429
         width: 426
         height: 778
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -484,11 +484,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2647
-        y: 2018
+        y: 3398
         width: 421
         height: 883
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -505,11 +505,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3375
-        y: 1943
+        y: 3323
         width: 452
         height: 955
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -526,11 +526,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4069
-        y: 1895
+        y: 3275
         width: 464
         height: 1006
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,6 +538,510 @@ TextureImporter:
       bones: []
       spriteID: 1e9cf5174bfb2e147b5850bcd5c5c8a3
       internalID: 1369270615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Airborne
+      rect:
+        serializedVersion: 2
+        x: 4691
+        y: 3275
+        width: 465
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ac7988e10b71d46aa11477e90346b3
+      internalID: -812142980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle
+      rect:
+        serializedVersion: 2
+        x: 5360
+        y: 3276
+        width: 358
+        height: 1150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b309c0ef74d8f9c4989d0af2310b9438
+      internalID: -983611762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallMounted
+      rect:
+        serializedVersion: 2
+        x: 5964
+        y: 3275
+        width: 381
+        height: 1038
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d098d8fb6335b8842b740a9d805c1c66
+      internalID: -1736867931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 2448
+        width: 412
+        height: 758
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cab0f64c6e27984ab5e2aff2a5b605c
+      internalID: -539723028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 2448
+        width: 414
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaad950e5af34fd479f9ff8183cbd040
+      internalID: -7229704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2389
+        width: 421
+        height: 923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49d1892bc977724585e1d5ffd6730c4
+      internalID: -476755178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 2210
+        width: 413
+        height: 1065
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449d6d27b5a6e794d8c6c8716741dcf8
+      internalID: -1037898016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2718
+        y: 2178
+        width: 398
+        height: 1097
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87e6a300adeabe47bab90c7834963dc
+      internalID: 1508651335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 3323
+        y: 2178
+        width: 369
+        height: 1039
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06aaa0afaa3b6da4fa35fd6fb12ae524
+      internalID: 1281600274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3965
+        y: 2186
+        width: 390
+        height: 1008
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423142f3cbb330a4986a16d7b035c0fb
+      internalID: 574389318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 2178
+        width: 470
+        height: 1016
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53224bb40a7f57b4bb232d5454a453a4
+      internalID: 572730731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 5163
+        y: 2194
+        width: 555
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b1cf09c9707884894db10adff09fd2
+      internalID: 1177054613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 5767
+        y: 2225
+        width: 621
+        height: 918
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c574509543dae3468b9f86b5b349ba6
+      internalID: 998815862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1312
+        width: 645
+        height: 841
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d674eed5cb37324a9ab46b7cae3e3e0
+      internalID: 767467181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1272
+        width: 665
+        height: 754
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84af7c525794a9458389a6c37c06fee
+      internalID: -386364636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 1272
+        width: 764
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51172b8f0e2f4f44a99501a49d10e7c
+      internalID: 517436102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2632
+        y: 1243
+        width: 850
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11289f90aa13544aaaa5802bf6443d3
+      internalID: 1785416446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 1305
+        width: 910
+        height: 688
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c8912b0575d5b40a1d91aaf09c76ac
+      internalID: -203304753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 4771
+        y: 1376
+        width: 1042
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ab050e2e0458645981cfb0105174e6
+      internalID: 203268356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 466
+        width: 1185
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e892969b741d00349bfb831fef4b2d6e
+      internalID: 1190774858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 489
+        width: 1246
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee254ea71ae93234eb6916fb0c0c9c60
+      internalID: 1177860017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 525
+        width: 1240
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1834a2ef70bedf42b2c384360a5e0cc
+      internalID: -1906972854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 3953
+        y: 544
+        width: 1215
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c5bd6346e724c4dae2c3f11f616275
+      internalID: 1911371435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flip_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 5253
+        y: 544
+        width: 1234
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225520e674479a04d9b13d4018ec05f6
+      internalID: -365839499
       vertices: []
       indices: 
       edges: []
@@ -553,6 +1057,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Airborne: -812142980
       Flip_Sheet_0: 132071581
       Flip_Sheet_1: 438199568
       Flip_Sheet_10: -1216047279
@@ -566,13 +1071,36 @@ TextureImporter:
       Flip_Sheet_18: 809331341
       Flip_Sheet_19: 1369270615
       Flip_Sheet_2: 1514052109
+      Flip_Sheet_20: -539723028
+      Flip_Sheet_21: -7229704
+      Flip_Sheet_22: -476755178
+      Flip_Sheet_23: -1037898016
+      Flip_Sheet_24: 1508651335
+      Flip_Sheet_25: 1281600274
+      Flip_Sheet_26: 574389318
+      Flip_Sheet_27: 572730731
+      Flip_Sheet_28: 1177054613
+      Flip_Sheet_29: 998815862
       Flip_Sheet_3: -44608407
+      Flip_Sheet_30: 767467181
+      Flip_Sheet_31: -386364636
+      Flip_Sheet_32: 517436102
+      Flip_Sheet_33: 1785416446
+      Flip_Sheet_34: -203304753
+      Flip_Sheet_35: 203268356
+      Flip_Sheet_36: 1190774858
+      Flip_Sheet_37: 1177860017
+      Flip_Sheet_38: -1906972854
+      Flip_Sheet_39: 1911371435
       Flip_Sheet_4: -704923479
+      Flip_Sheet_40: -365839499
       Flip_Sheet_5: -1753289137
       Flip_Sheet_6: 1833180056
       Flip_Sheet_7: -119987830
       Flip_Sheet_8: -220010758
       Flip_Sheet_9: -2120489392
+      Idle: -983611762
+      WallMounted: -1736867931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
