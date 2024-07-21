@@ -96,7 +96,7 @@ MonoBehaviour:
   canJump: 0
   isGrounded: 1
   wallJumpForce: 9
-  wallJumpDuration: 0
+  wallJumpDuration: 0.3
   wallJumpArch: 0
   rightWallPoint: {fileID: 97199744522446005}
   leftWallPoint: {fileID: 4472520153321668441}
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCourse: {fileID: 0}
-  raycastLineLength: 0
+  raycastLineLength: 5
 --- !u!114 &3181818316900641958
 MonoBehaviour:
   m_ObjectHideFlags: 0
