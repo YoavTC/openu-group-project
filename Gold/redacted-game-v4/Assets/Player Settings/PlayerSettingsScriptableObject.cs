@@ -5,10 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerSettings", menuName = "PlayerSettings")]
 public class PlayerSettingsScriptableObject : ScriptableObject
 {
-    public bool showTimer;
+    public float volume;
 
-    public void ToggleShowTimer()
+    public void SetVolume(float newVolume)
     {
-        showTimer = !showTimer;
+        volume = newVolume;
+        SetAudioListenerVolume(volume);
+    }
+
+    private static void SetAudioListenerVolume(float newVolume)
+    {
+        AudioListener.volume = newVolume;
     }
 }

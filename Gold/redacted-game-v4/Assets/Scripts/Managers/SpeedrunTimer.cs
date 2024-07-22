@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpeedrunTimer : MonoBehaviour
 {
-    [SerializeField] private PlayerSettingsScriptableObject playerSettings;
     [SerializeField] private IntFieldScriptableObject intTime;
     private TMP_Text timerDisplay;
     private bool timerRunning = true;
@@ -13,7 +12,6 @@ public class SpeedrunTimer : MonoBehaviour
     void Start()
     {
         timerDisplay = GetComponent<TMP_Text>();
-        gameObject.SetActive(playerSettings.showTimer);
     }
 
     
@@ -30,13 +28,11 @@ public class SpeedrunTimer : MonoBehaviour
     public void OnGamePause()
     {
         timerRunning = false;
-        timerDisplay.enabled = playerSettings.showTimer;
     }
 
     public void OnGameUnpaused()
     {
         timerRunning = true;
-        timerDisplay.enabled = playerSettings.showTimer;
     }
 
     public void ResetTimer()
