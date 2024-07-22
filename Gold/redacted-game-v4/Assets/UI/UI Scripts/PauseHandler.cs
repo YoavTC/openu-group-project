@@ -83,22 +83,11 @@ public class PauseHandler : MonoBehaviour
         UnpauseGame();
     }
 
-    public void PressSettingsButton()
-    {
-        if (!canInteract) return;
-        //SceneManager.LoadScene(settingsScene.BuildIndex);
-    }
-
     public void PressMainMenuButton()
     {
         if (!canInteract) return;
-        //UnpauseGame();
+        UnpauseGame(false);
         SceneManager.LoadScene(0);
-    }
-
-    public void PressLeaderboardButton()
-    {
-        SceneManager.LoadScene(3);
     }
     
     #endregion
@@ -116,7 +105,7 @@ public class PauseHandler : MonoBehaviour
         pauseBackground.DOFade(0.8f, animationTime).SetUpdate(true);
     }
 
-    private void UnpauseGame()
+    private void UnpauseGame(bool animate = true)
     {
         isPaused = false;
         canInteract = false;
@@ -125,8 +114,8 @@ public class PauseHandler : MonoBehaviour
         Time.timeScale = 1f;
 
         //Animate disable pause dialog
-        pausePanel.DOMove(offScreenPosition.position, animationTime).SetEase(animationEaseType).SetUpdate(true);
-        pauseBackground.DOFade(0f, animationTime).SetUpdate(true);
+        if (animate) pausePanel.DOMove(offScreenPosition.position, animationTime).SetEase(animationEaseType).SetUpdate(true);
+        if (animate) pauseBackground.DOFade(0f, animationTime).SetUpdate(true);
 
         EventSystem.current.SetSelectedGameObject(null);
     }
