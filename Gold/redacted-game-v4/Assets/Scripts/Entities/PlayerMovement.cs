@@ -6,6 +6,7 @@ using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -51,9 +52,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Wall Jumps")] 
     [SerializeField] private float wallJumpForce;
     [SerializeField] private float wallJumpDuration;
-    [SerializeField] private float wallJumpArch;
-    [SerializeField] private Transform rightWallPoint, leftWallPoint;
-    [ReadOnly] [SerializeField] private bool mountedRightWall, mountedLeftWall, isWallJumping;
+    [SerializeField] private Transform rightWallPoint;
+    [FormerlySerializedAs("mountedRightWall")] [ReadOnly] [SerializeField] private bool wallMounted;
+    [ReadOnly] [SerializeField] private bool isWallJumping;
     private PlayerClimbingController playerClimbingController;
 
     [Header("Sliding")]
@@ -119,10 +120,9 @@ public class PlayerMovement : MonoBehaviour
     private void PerformChecks()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayers);
-        mountedRightWall = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
-        mountedLeftWall = Physics2D.OverlapPoint(leftWallPoint.position, wallGroundLayer);
+        wallMounted = Physics2D.OverlapPoint(rightWallPoint.position, wallGroundLayer);
 
-        if ((mountedRightWall || mountedLeftWall) && !isGrounded)
+        if ((wallMounted) && !isGrounded)
         {
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
@@ -361,7 +361,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private bool CanWallJump() => !isGrounded && (mountedRightWall || mountedLeftWall);
+    private bool CanWallJump() => !isGrounded && wallMounted;
     
     
 
@@ -375,7 +375,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("is_idle", is_idle);
         }
         
-        bool isMountedNow = mountedLeftWall || mountedRightWall;
+        bool isMountedNow = wallMounted;
         if (is_mounted != isMountedNow)
         {
             is_mounted = isMountedNow;
@@ -418,8 +418,7 @@ public class PlayerMovement : MonoBehaviour
         debugInformations.Add(new DebugInformation(nameof(canJump), canJump));
         //debugInformations.Add(new DebugInformation(nameof(isJumpingThisFrame), isJumpingThisFrame));
         debugInformations.Add(new DebugInformation(nameof(isWallJumping), isWallJumping));
-        debugInformations.Add(new DebugInformation(nameof(mountedLeftWall), mountedLeftWall));
-        debugInformations.Add(new DebugInformation(nameof(mountedRightWall), mountedRightWall));
+        debugInformations.Add(new DebugInformation(nameof(wallMounted), wallMounted));
         // debugInformations.Add(new DebugInformation(nameof(isSliding), isSliding));
         // debugInformations.Add(new DebugInformation(nameof(canGetUp), canGetUp));
         debugInformations.Add(new DebugInformation(nameof(isFacingRight), isFacingRight));
