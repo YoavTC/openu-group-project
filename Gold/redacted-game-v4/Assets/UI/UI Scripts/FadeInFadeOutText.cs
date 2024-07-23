@@ -17,9 +17,11 @@ public class FadeInFadeOutText : MonoBehaviour
         text.color = color;
         text.rectTransform.localScale *= scales.x;
         
-        text.DOFade(1, fadeInDuration);
-        text.rectTransform.DOScale(new Vector2(scales.y, scales.y), fadeInDuration + fadeOutDelayDuration + fadeOutDuration).SetEase(Ease.OutSine);
+        text.DOFade(1, fadeInDuration).SetUpdate(true);
+        text.rectTransform.DOScale(new Vector2(scales.y, scales.y), fadeInDuration + fadeOutDelayDuration + fadeOutDuration).SetEase(Ease.OutSine).SetUpdate(true);
         yield return HelperFunctions.GetWait(fadeInDuration + fadeOutDelayDuration);
-        text.DOFade(0, fadeOutDuration);
+        text.DOFade(0, fadeOutDuration).SetUpdate(true);
+        yield return HelperFunctions.GetWait(fadeOutDuration);
+        Destroy(transform.gameObject);
     }
 }
