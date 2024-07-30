@@ -97,11 +97,8 @@ MonoBehaviour:
   isGrounded: 1
   wallJumpForce: 9
   wallJumpDuration: 0.3
-  wallJumpArch: 0
   rightWallPoint: {fileID: 97199744522446005}
-  leftWallPoint: {fileID: 4472520153321668441}
-  mountedRightWall: 0
-  mountedLeftWall: 0
+  wallMounted: 0
   isWallJumping: 0
   slideBlockPoint: {fileID: 6314410552016944470}
   slideBlockRadius: {x: 2, y: 0.5}
@@ -792,7 +789,7 @@ Transform:
   m_GameObject: {fileID: 6786975292920185546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
