@@ -111,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         HandleHorizontalMovement();
         HandleAcceleration();
         HandleJumping();
-        if (isJumpingThisFrame) HandleWallJumping();
+        if (isJumpingThisFrame && CanWallJump()) HandleWallJumping();
         HandleSliding();
     }
 
@@ -269,26 +269,23 @@ public class PlayerMovement : MonoBehaviour
     
     private void HandleWallJumping()
     {
-        if (CanWallJump())
-        {
-            animator.SetBool("is_mounted", true);
+        animator.SetBool("is_mounted", true);
         
-            rb.velocity = Vector2.zero;
-            isWallJumping = true;
+        rb.velocity = Vector2.zero;
+        isWallJumping = true;
             
-            Vector3 playerPos = transform.position;
-            var (point, isLastPoint) = playerClimbingController.GetNextPoint(playerPos, groundLayers, isFacingRight);
-            if (point == Vector3.zero || isLastPoint)
-            {
-                rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
-                Jump();
-            }
-            else
-            {
-                transform.DOMove(point, wallJumpDuration).SetEase(Ease.OutSine);
-            }
-            Flip();
+        Vector3 playerPos = transform.position;
+        var (point, isLastPoint) = playerClimbingController.GetNextPoint(playerPos, groundLayers, isFacingRight);
+        if (point == Vector3.zero || isLastPoint)
+        {
+            rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
+            Jump();
         }
+        else
+        {
+            transform.DOMove(point, wallJumpDuration).SetEase(Ease.OutSine);
+        }
+        Flip();
     }
     
     private void HandleSliding()
