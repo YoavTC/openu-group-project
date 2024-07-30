@@ -278,7 +278,8 @@ public class PlayerMovement : MonoBehaviour
         var (point, isLastPoint) = playerClimbingController.GetNextPoint(playerPos, groundLayers, isFacingRight);
         if (point == Vector3.zero || isLastPoint)
         {
-            rb.velocity = new Vector2(wallJumpForce + maxSpeed, 0);
+            InGameLogger.Log("isFacingRight: " + isFacingRight, Color.red);
+            rb.velocity = new Vector2((wallJumpForce + maxSpeed) * (isFacingRight * -1), 0);
             Jump();
         }
         else
