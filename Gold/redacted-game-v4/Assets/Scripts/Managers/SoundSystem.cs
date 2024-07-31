@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SoundSystem : Singleton<SoundSystem>
 {
-    private List<GameObject> soundPlayers = new List<GameObject>();
+    [SerializeField] private List<GameObject> soundPlayers = new List<GameObject>();
     
     public void PlaySound(AudioClip clip, bool loop = false, float delay = 0f)
     {

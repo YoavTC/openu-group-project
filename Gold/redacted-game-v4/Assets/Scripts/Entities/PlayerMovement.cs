@@ -339,7 +339,7 @@ public class PlayerMovement : MonoBehaviour
         // Animation
         animator.SetBool("is_sliding", false);
         
-        playerSoundController.OnSlideDeactivate();
+        if (isSliding) playerSoundController.OnSlideDeactivate();
 
         StopCoroutine(slideCoroutine);
         canGetUp = false;
