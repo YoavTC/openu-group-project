@@ -3071,11 +3071,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1206138882360901427, guid: a8f80d75c5ef07042abe8372bca7d1bc, type: 3}
   m_PrefabInstance: {fileID: 243974120}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &245946604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8257447108074523678, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
-  m_PrefabInstance: {fileID: 2079268725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &265221841
 GameObject:
   m_ObjectHideFlags: 0
@@ -8682,18 +8677,18 @@ MonoBehaviour:
   m_SkipFirst: 0
   m_Repeating: 1
   m_OnObjectEnter:
-    m_Action: 2
+    m_Action: 1
     m_Target: {fileID: 794782422}
-    m_BoostAmount: 0
+    m_BoostAmount: 6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
       m_PersistentCalls:
         m_Calls: []
   m_OnObjectExit:
-    m_Action: 2
-    m_Target: {fileID: 245946604}
-    m_BoostAmount: 0
+    m_Action: 1
+    m_Target: {fileID: 794782422}
+    m_BoostAmount: -6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
@@ -8715,7 +8710,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1448497818}
@@ -10663,18 +10658,18 @@ MonoBehaviour:
   m_SkipFirst: 0
   m_Repeating: 1
   m_OnObjectEnter:
-    m_Action: 2
+    m_Action: 1
     m_Target: {fileID: 994630002}
-    m_BoostAmount: 0
+    m_BoostAmount: 6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
       m_PersistentCalls:
         m_Calls: []
   m_OnObjectExit:
-    m_Action: 2
-    m_Target: {fileID: 245946604}
-    m_BoostAmount: 0
+    m_Action: 1
+    m_Target: {fileID: 994630002}
+    m_BoostAmount: -6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
@@ -10696,7 +10691,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1448497818}
@@ -13475,18 +13470,18 @@ MonoBehaviour:
   m_SkipFirst: 0
   m_Repeating: 1
   m_OnObjectEnter:
-    m_Action: 2
+    m_Action: 1
     m_Target: {fileID: 1225525608}
-    m_BoostAmount: 0
+    m_BoostAmount: 6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
       m_PersistentCalls:
         m_Calls: []
   m_OnObjectExit:
-    m_Action: 2
-    m_Target: {fileID: 245946604}
-    m_BoostAmount: 0
+    m_Action: 1
+    m_Target: {fileID: 1225525608}
+    m_BoostAmount: -6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
@@ -13508,7 +13503,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1448497818}
@@ -15013,7 +15008,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1448497818}
@@ -15072,18 +15067,18 @@ MonoBehaviour:
   m_SkipFirst: 0
   m_Repeating: 1
   m_OnObjectEnter:
-    m_Action: 2
+    m_Action: 1
     m_Target: {fileID: 1317270681}
-    m_BoostAmount: 0
+    m_BoostAmount: 6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
       m_PersistentCalls:
         m_Calls: []
   m_OnObjectExit:
-    m_Action: 2
-    m_Target: {fileID: 245946604}
-    m_BoostAmount: 0
+    m_Action: 1
+    m_Target: {fileID: 1317270681}
+    m_BoostAmount: -6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
@@ -15399,18 +15394,18 @@ MonoBehaviour:
   m_SkipFirst: 0
   m_Repeating: 1
   m_OnObjectEnter:
-    m_Action: 2
+    m_Action: 1
     m_Target: {fileID: 1372252772}
-    m_BoostAmount: 0
+    m_BoostAmount: 6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
       m_PersistentCalls:
         m_Calls: []
   m_OnObjectExit:
-    m_Action: 2
-    m_Target: {fileID: 245946604}
-    m_BoostAmount: 0
+    m_Action: 1
+    m_Target: {fileID: 1372252772}
+    m_BoostAmount: -6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
@@ -15432,7 +15427,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1448497818}
@@ -19862,11 +19857,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0695c26d3e5a7d446880d4ab4e3c8186, type: 3}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.1
+      value: 483.6
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.3
+      value: 41.3
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20287,18 +20282,18 @@ MonoBehaviour:
   m_SkipFirst: 0
   m_Repeating: 1
   m_OnObjectEnter:
-    m_Action: 2
+    m_Action: 1
     m_Target: {fileID: 1769448035}
-    m_BoostAmount: 0
+    m_BoostAmount: 6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
       m_PersistentCalls:
         m_Calls: []
   m_OnObjectExit:
-    m_Action: 2
-    m_Target: {fileID: 245946604}
-    m_BoostAmount: 0
+    m_Action: 1
+    m_Target: {fileID: 1769448035}
+    m_BoostAmount: -6
     m_StartTime: 0
     m_Mode: 0
     m_Event:
@@ -20320,7 +20315,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1448497818}
@@ -23609,6 +23604,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e60379dac416c64429066906198f3a4a, type: 2}
     - target: {fileID: 2964868178625290127, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
+      propertyPath: m_IgnoreTimeScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964868178625290127, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_DefaultBlend.m_Time
       value: 1.5
       objectReference: {fileID: 0}
@@ -23634,11 +23633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1000004
+      value: 491.6
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.3
+      value: 42.3
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.z
