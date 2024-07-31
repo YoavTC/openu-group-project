@@ -306,6 +306,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1878d5c0c765f244daa3271030e81caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {fileID: 8300000, guid: 1f147359c9ef8d84cb292a21b3eb3bb2, type: 3}
+  slide: {fileID: 8300000, guid: a759d6484dc658e41be9cca965caea85, type: 3}
+  speedUpgrades:
+  - {fileID: 8300000, guid: edf20fdfa0c69c24f81236f5cf1005a8, type: 3}
+  - {fileID: 8300000, guid: 6218f074a2fe3cd4fa7e843be7229dc9, type: 3}
+  - {fileID: 8300000, guid: 5cf6a94b11bedc84fabebe9a5b615310, type: 3}
+  - {fileID: 8300000, guid: 0695c26d3e5a7d446880d4ab4e3c8186, type: 3}
+  jump3: {fileID: 0}
+  jump4: {fileID: 0}
+  jump5: {fileID: 0}
+  jump6: {fileID: 0}
 --- !u!114 &3213167076362503192
 MonoBehaviour:
   m_ObjectHideFlags: 0
