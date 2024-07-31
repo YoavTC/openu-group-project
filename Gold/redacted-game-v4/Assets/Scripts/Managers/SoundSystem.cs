@@ -28,6 +28,7 @@ public class SoundSystem : Singleton<SoundSystem>
 
     private IEnumerator YieldDestroy(float length, GameObject audioPlayer)
     {
+        soundPlayers.Remove(audioPlayer);
         yield return HelperFunctions.GetWaitRealTime(length);
         Destroy(audioPlayer);
     }

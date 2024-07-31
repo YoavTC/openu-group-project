@@ -256,6 +256,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Jump()
     {
+        playerSoundController.OnJump();
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Force);
     }
     
