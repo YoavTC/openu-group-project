@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerMovement playerController;
     [SerializeField] private CheckpointManager checkpointManager;
     [SerializeField] private PredatorSystem predatorSystem;
+    [SerializeField] private PlayerSettingsScriptableObject playerSettings;
     private Enemy[] enemies;
 
     private void Start()
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
         if (predatorSystem == null) predatorSystem = FindObjectOfType<PredatorSystem>();
 
         enemies = FindObjectsOfType<Enemy>();
+
+        AudioListener.volume = playerSettings.volume;
     }
     
     public void OnPlayerRespawnEvent()
