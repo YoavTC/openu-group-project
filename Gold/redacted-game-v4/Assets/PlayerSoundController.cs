@@ -14,7 +14,7 @@ public class PlayerSoundController : MonoBehaviour
     
     public void OnJump() => SoundSystem.Instance.PlaySound(jump);
     
-    public void OnSlideActivate() => SoundSystem.Instance.PlaySound(slide);
+    public void OnSlideActivate() => SoundSystem.Instance.PlaySound(slide, true, 0.2f);
     public void OnSlideDeactivate() => SoundSystem.Instance.StopSound(slide, 0f);
 
     public void OnSpeedBoostUpgrade(int level)

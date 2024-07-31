@@ -18202,6 +18202,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: slide
+      value: 
+      objectReference: {fileID: 8300000, guid: 268899c2dfa100143bab5b4cf1a259f2, type: 3}
+    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: speedUpgrades.Array.size
       value: 4
       objectReference: {fileID: 0}

@@ -308,6 +308,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Slide()
     {
         InGameLogger.Log("sliding, wow!!1!", Color.green);
+        playerSoundController.OnSlideActivate();
         // Animation
         animator.SetBool("is_sliding", true);
 
@@ -319,7 +320,6 @@ public class PlayerMovement : MonoBehaviour
         canGetUp = true;
 
         yield return new WaitForSeconds(timeDiff);
-        //if (isSliding) GetUpFromSlide();
         if (isSliding) StartCoroutine(GetUpFromSlide());
     }
     
@@ -337,6 +337,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Animation
         animator.SetBool("is_sliding", false);
+        
+        playerSoundController.OnSlideDeactivate();
 
         StopCoroutine(slideCoroutine);
         canGetUp = false;

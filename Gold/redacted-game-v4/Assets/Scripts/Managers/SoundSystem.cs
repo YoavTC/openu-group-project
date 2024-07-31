@@ -7,13 +7,16 @@ public class SoundSystem : Singleton<SoundSystem>
 {
     private List<GameObject> soundPlayers = new List<GameObject>();
     
-    public void PlaySound(AudioClip clip, bool loop = false)
+    public void PlaySound(AudioClip clip, bool loop = false, float delay = 0f)
     {
         GameObject soundPlayer = new GameObject("sfx: " + clip.name);
         AudioSource audioSource = soundPlayer.AddComponent<AudioSource>();
         audioSource.clip = clip;
         audioSource.loop = loop;
-        audioSource.Play();
+        
+        soundPlayers.Add(soundPlayer);
+        if (delay == 0f) audioSource.Play();
+        else audioSource.PlayDelayed(delay);
         if (!loop) StartCoroutine(YieldDestroy(clip.length, soundPlayer));
     }
 
@@ -31,7 +34,8 @@ public class SoundSystem : Singleton<SoundSystem>
 
     private IEnumerator YieldStop(float delay, AudioSource audioSource)
     {
+        soundPlayers.Remove(audioSource.gameObject);
         yield return HelperFunctions.GetWaitRealTime(delay);
-        audioSource.Stop();
+        Destroy(audioSource.gameObject);
     }
 }
