@@ -1,3 +1,4 @@
+using System;
 using Udar.SceneManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,12 +10,11 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Image fade;
-    public void PressMainMenuButton() => SceneManager.LoadScene(0);
+    [SerializeField] private PlayerSettingsScriptableObject playerSettingsScriptableObject;
 
-    public void PressComicButton()
+    private void Start()
     {
-        fade.enabled = true;
-        GoToBlack();
+        AudioListener.volume = playerSettingsScriptableObject.volume;
     }
 
     private void GoToBlack()
@@ -25,6 +25,14 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene(1);
         });
     }
+    
+    public void PressMainMenuButton() => SceneManager.LoadScene(0);
+    public void PressComicButton()
+    {
+        fade.enabled = true;
+        GoToBlack();
+    }
+
     public void PressPlayButton() => SceneManager.LoadScene(2);
     public void PressLeaderboardButton() => SceneManager.LoadScene(3);
     public void PressAboutButton() => SceneManager.LoadScene(4);

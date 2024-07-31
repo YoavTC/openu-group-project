@@ -1685,6 +1685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 1132317523}
+  playerSettingsScriptableObject: {fileID: 11400000, guid: e60379dac416c64429066906198f3a4a, type: 2}
 --- !u!1 &713487973
 GameObject:
   m_ObjectHideFlags: 0

@@ -1541,6 +1541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f17475dd34c748943964c1c904896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade: {fileID: 0}
+  playerSettingsScriptableObject: {fileID: 11400000, guid: e60379dac416c64429066906198f3a4a, type: 2}
 --- !u!114 &1921219747
 MonoBehaviour:
   m_ObjectHideFlags: 0
