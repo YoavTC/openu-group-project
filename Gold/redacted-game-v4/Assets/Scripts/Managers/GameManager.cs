@@ -1,6 +1,7 @@
 using Udar.SceneManager;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,5 +38,10 @@ public class GameManager : MonoBehaviour
         //Make the player & drone move
         playerController.Respawn(playerRespawnPoint);
         predatorSystem.Respawn(droneRespawnPoint);
+    }
+
+    public void OnPlayerFinishEvent()
+    {
+        SceneManager.LoadScene(3);
     }
 }
