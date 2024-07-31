@@ -6278,8 +6278,8 @@ Transform:
   m_GameObject: {fileID: 560074443}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 452, y: 33, z: 0}
-  m_LocalScale: {x: 90, y: 10, z: 1}
+  m_LocalPosition: {x: 452, y: 32.99991, z: 0}
+  m_LocalScale: {x: 90, y: 9.99982, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1436351713}
@@ -19833,52 +19833,24 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: voidDeathLevel.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
+      propertyPath: voidDeathLevel.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1616696504}
-    - target: {fileID: 4615796280959636495, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: playerDied.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPlayerRespawnEvent
-      objectReference: {fileID: 0}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: jump
-      value: 
-      objectReference: {fileID: 8300000, guid: 1f147359c9ef8d84cb292a21b3eb3bb2, type: 3}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: slide
-      value: 
-      objectReference: {fileID: 8300000, guid: a759d6484dc658e41be9cca965caea85, type: 3}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: speedUpgrades.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: speedUpgrades.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: edf20fdfa0c69c24f81236f5cf1005a8, type: 3}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: speedUpgrades.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 6218f074a2fe3cd4fa7e843be7229dc9, type: 3}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: speedUpgrades.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 5cf6a94b11bedc84fabebe9a5b615310, type: 3}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: speedUpgrades.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0695c26d3e5a7d446880d4ab4e3c8186, type: 3}
-    - target: {fileID: 5717560259313688663, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
-      propertyPath: speedUpgrades.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0695c26d3e5a7d446880d4ab4e3c8186, type: 3}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 286.2
+      value: -8.98
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7
+      value: 5.35
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23650,11 +23622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 294.2
+      value: -0.97999954
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.70000005
+      value: 6.35
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.z

@@ -13,7 +13,7 @@ public class Leaderboard : MonoBehaviour
 {
     
     [Header("LootLocker Leaderboard")] 
-    [SerializeField] private int leaderboardID = 23411;
+    [SerializeField] private int leaderboardID = 23988;
     [SerializeField] [ReadOnly] private bool isAuthenticated;
     private Leaderboard leaderboard;
     private readonly int authenticationTimeout = 70;
@@ -102,9 +102,9 @@ public class Leaderboard : MonoBehaviour
                 LootLockerLeaderboardMember[] members = response.items;
                 for (int i = 0; i < members.Length; i++)
                 {
-                    Debug.Log("Added entry: " + i + ", " + members[i].player.name + members[i].score);
+                    Debug.Log("Added entry: " + i + ", " + members[i].metadata + members[i].score);
                     LeaderboardEntry leaderboardEntry = Instantiate(entryPrefab, leaderboardEntriesContainer).GetComponent<LeaderboardEntry>();
-                    leaderboardEntry.SetupEntry(members[i].rank, members[i].player.name, members[i].score);
+                    leaderboardEntry.SetupEntry(members[i].rank, members[i].metadata, members[i].score);
                 }
             }
         });
@@ -152,13 +152,13 @@ public class Leaderboard : MonoBehaviour
     private IEnumerator SubmitTime()
     {
         //Score checking
-        StartCoroutine(IsBetterScore());
-        yield return new WaitUntil(() => !isBetterScoreCheck);
-        if (!isBetterScore)
-        {
-            DisplayMessage("You already have a better score on the leaderboard!", Color.yellow);
-            yield break;
-        }
+        // StartCoroutine(IsBetterScore());
+        // yield return new WaitUntil(() => !isBetterScoreCheck);
+        // if (!isBetterScore)
+        // {
+        //     DisplayMessage("You already have a better score on the leaderboard!", Color.yellow);
+        //     yield break;
+        // }
 
         bool done = false;
         string playerID = PlayerPrefs.GetString("PlayerID");
@@ -171,7 +171,7 @@ public class Leaderboard : MonoBehaviour
             SetName(inputField.text);
 
             // Set Score
-            LootLockerSDKManager.SubmitScore(playerID, timeIntField.intField, leaderboardID.ToString(), response =>
+            LootLockerSDKManager.SubmitScore(playerID, timeIntField.intField, leaderboardID.ToString(), inputField.text, response =>
             {
                 DisplayMessage("Submitting entry...", Color.yellow);
                 if (response.success)

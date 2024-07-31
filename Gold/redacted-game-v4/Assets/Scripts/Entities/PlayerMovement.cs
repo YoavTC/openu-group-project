@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool doVoidDeath;
     [SerializeField] private bool snappyMovement;
     [EnableIf("doVoidDeath")]
-    [SerializeField] private float voidDeathLevel;
+    [SerializeField] private Vector2 voidDeathLevel;
 
     [HorizontalLine]
     [Header("Layers")]
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         HandleFlipping();
         UpdateAnimatorStates();
         
-        if (doVoidDeath && transform.position.y < voidDeathLevel) playerDied?.Invoke();
+        if (doVoidDeath && transform.position.y < voidDeathLevel.y && transform.position.x < voidDeathLevel.x) playerDied?.Invoke();
     }
 
     private void FixedUpdate()
