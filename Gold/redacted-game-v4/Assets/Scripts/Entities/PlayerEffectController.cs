@@ -12,8 +12,12 @@ public class PlayerEffectController : MonoBehaviour
     private CinemachineImpulseSource cinemachineImpulseSource;
     private Coroutine gradientTransitionCoroutine;
 
+    private PlayerSoundController playerSoundController;
+
     private void Start()
     {
+        playerSoundController = GetComponent<PlayerSoundController>();
+        
         trailRenderer = HelperFunctions.GetFirstChildWithComponent<TrailRenderer>(transform);
         if (trailRenderer == null)
         {
@@ -36,6 +40,7 @@ public class PlayerEffectController : MonoBehaviour
         }
 
         gradientTransitionCoroutine = StartCoroutine(TransitionGradient(colorGradients[level]));
+        playerSoundController.OnSpeedBoostUpgrade(level);
         ShakeCamera(level);
     }
 

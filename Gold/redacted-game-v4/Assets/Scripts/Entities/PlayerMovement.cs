@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Animator animator;
+    private PlayerSoundController playerSoundController;
     private Rigidbody2D rb;
 
     [HorizontalLine]
@@ -80,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerClimbingController = GetComponent<PlayerClimbingController>();
+        playerSoundController = GetComponent<PlayerSoundController>();
 
         lastSpeedState = 0;
         originalMaxSpeed = maxSpeed;

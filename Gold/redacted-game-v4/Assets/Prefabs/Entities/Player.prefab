@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4615796280959636495}
   - component: {fileID: 5948588659845791986}
   - component: {fileID: 3181818316900641958}
+  - component: {fileID: 5717560259313688663}
   - component: {fileID: 3213167076362503192}
   m_Layer: 0
   m_Name: Player
@@ -293,6 +294,18 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   shakeForce: 0.5
+--- !u!114 &5717560259313688663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444253028585105649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1878d5c0c765f244daa3271030e81caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3213167076362503192
 MonoBehaviour:
   m_ObjectHideFlags: 0

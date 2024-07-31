@@ -1,43 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SoundSystem : Singleton<SoundSystem>
 {
-    [SerializeField] private AudioSource[] source;
+    private List<GameObject> soundPlayers = new List<GameObject>();
     
-    // Create enum for audio clip names
-    
-    public void Play(int curSource, AudioClip playableSfx, bool loop)
+    public void PlaySound(AudioClip clip, bool loop = false)
     {
-        source[curSource].clip = playableSfx;
-        source[curSource].loop = loop;
-        source[curSource].Play();
+        GameObject soundPlayer = new GameObject("sfx: " + clip.name);
+        AudioSource audioSource = soundPlayer.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.loop = loop;
+        audioSource.Play();
+        if (!loop) StartCoroutine(YieldDestroy(clip.length, soundPlayer));
     }
 
-    public void PlayOneShot(int curSource, AudioClip playableSfx)
+    public void StopSound(AudioClip clip, float delay)
     {
-        source[curSource].PlayOneShot(playableSfx);
+        AudioSource audioSource = soundPlayers.First(i => i.GetComponent<AudioSource>().clip == clip).GetComponent<AudioSource>();
+        StartCoroutine(YieldStop(delay, audioSource));
     }
 
-    public void PlayWithDelay(int curSource, AudioClip playableSfx, float delay)
+    private IEnumerator YieldDestroy(float length, GameObject audioPlayer)
     {
-        source[curSource].clip = playableSfx;
-        source[curSource].PlayDelayed(delay);
+        yield return HelperFunctions.GetWaitRealTime(length);
+        Destroy(audioPlayer);
     }
 
-    public void Pause(int curSource)
+    private IEnumerator YieldStop(float delay, AudioSource audioSource)
     {
-        source[curSource].Pause();
-    }
-
-    public void VolumeChanger(int curSource, float adjVol)
-    {
-        source[curSource].volume = adjVol;
-    }
-
-    public void MuteToggle(int curSource)
-    {
-        source[curSource].mute = !source[curSource].mute;
+        yield return HelperFunctions.GetWaitRealTime(delay);
+        audioSource.Stop();
     }
 }
