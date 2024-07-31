@@ -6767,7 +6767,7 @@ AudioSource:
   Priority: 200
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 70
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -7247,7 +7247,7 @@ GameObject:
   - component: {fileID: 912009814}
   - component: {fileID: 912009813}
   - component: {fileID: 912009815}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Frame_Window2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8059,6 +8059,10 @@ PrefabInstance:
     - target: {fileID: 945400109701102180, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005432608385903242, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
+      propertyPath: MaxDistance
+      value: 42.61078
       objectReference: {fileID: 0}
     - target: {fileID: 4462413441688323063, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
       propertyPath: m_Name
@@ -9273,6 +9277,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 945400109701102180, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005432608385903242, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
+      propertyPath: MaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005432608385903242, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
+      propertyPath: rolloffMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4462413441688323063, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
@@ -15896,6 +15908,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1005432608385903242, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
+      propertyPath: MaxDistance
+      value: 43.183655
+      objectReference: {fileID: 0}
     - target: {fileID: 4462413441688323063, guid: 329d0925c1525b14fa03ec31a31853fd, type: 3}
       propertyPath: m_Name
       value: Fan
@@ -16674,6 +16690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435953224}
     m_Modifications:
+    - target: {fileID: 1717583091755071143, guid: 57b14f563a100fb4fa9cd571b16ad653, type: 3}
+      propertyPath: MaxDistance
+      value: 52.2063
+      objectReference: {fileID: 0}
     - target: {fileID: 2824675090266948276, guid: 57b14f563a100fb4fa9cd571b16ad653, type: 3}
       propertyPath: m_LocalPosition.x
       value: 846.5
@@ -16736,6 +16756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1246571660}
     m_Modifications:
+    - target: {fileID: 1717583091755071143, guid: 57b14f563a100fb4fa9cd571b16ad653, type: 3}
+      propertyPath: MaxDistance
+      value: 36.213684
+      objectReference: {fileID: 0}
     - target: {fileID: 2824675090266948276, guid: 57b14f563a100fb4fa9cd571b16ad653, type: 3}
       propertyPath: m_LocalPosition.x
       value: 44
