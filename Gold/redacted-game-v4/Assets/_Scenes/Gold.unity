@@ -4956,6 +4956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Version
       objectReference: {fileID: 0}
+    - target: {fileID: 1402201372756864517, guid: 5781d608cf19e4f4fa88545392913611, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8504536687077145714, guid: 5781d608cf19e4f4fa88545392913611, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8643,6 +8647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61dc02909a4f1940a3850dac879f9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundPlayers: []
 --- !u!4 &871102686
 Transform:
   m_ObjectHideFlags: 0
@@ -16350,12 +16355,16 @@ PrefabInstance:
       value: Game Manager
       objectReference: {fileID: 0}
     - target: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
+      propertyPath: playerSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: e60379dac416c64429066906198f3a4a, type: 2}
+    - target: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
       propertyPath: gameScene._name
       value: Gold Testing
       objectReference: {fileID: 0}
     - target: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
       propertyPath: gameScene._path
-      value: Assets/_Scenes/Gold Testing.unity
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
       propertyPath: gameScene._sceneOB
@@ -16363,7 +16372,7 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 61807de4e652ef148a389857f41a9f0e, type: 3}
     - target: {fileID: 6141910889140396529, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
       propertyPath: gameScene._buildIndex
-      value: 2
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7903617998380794774, guid: 1ff651287cba6cc46b0cfd54b62a8b0d, type: 3}
@@ -18235,11 +18244,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0695c26d3e5a7d446880d4ab4e3c8186, type: 3}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.1
+      value: 54.3
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8180658501910143928, guid: 8fb72998937fb1a46b9dbc95d3af10e6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21803,11 +21812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9000001
+      value: 62.3
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7162701870807191264, guid: 5cd6f46c3ada92d42aaffbe120b8bc3a, type: 3}
       propertyPath: m_LocalPosition.z
