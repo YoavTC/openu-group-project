@@ -36,7 +36,6 @@ public class PredatorSystem : MonoBehaviour
 
         //Move drone
         droneAI.maxSpeed = (dronePlayerDistance > droneReturnDistance) ? droneReturnSpeed : droneSpeed;
-        Debug.Log("DPD: " + dronePlayerDistance + " DRD: " + droneReturnDistance);
 
         if (currentXProgress < xProgress)
         {

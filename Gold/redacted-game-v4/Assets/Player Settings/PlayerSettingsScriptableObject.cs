@@ -5,7 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerSettings", menuName = "PlayerSettings")]
 public class PlayerSettingsScriptableObject : ScriptableObject
 {
+    public bool isSpeedrun;
     public float volume;
+
+    public void SetSpeedrunMode(bool state)
+    {
+        isSpeedrun = state;
+    }
 
     public void SetVolume(float newVolume)
     {

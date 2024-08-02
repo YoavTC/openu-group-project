@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CheckpointManager checkpointManager;
     [SerializeField] private PredatorSystem predatorSystem;
     [SerializeField] private PlayerSettingsScriptableObject playerSettings;
+    [SerializeField] private SpeedrunTimer speedrunTimer;
     private Enemy[] enemies;
 
     private void Start()
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
         //Make the player & drone move
         playerController.Respawn(playerRespawnPoint);
         predatorSystem.Respawn(droneRespawnPoint);
+        
+        if (playerSettings.isSpeedrun) speedrunTimer.ResetTimer();
     }
 
     public void OnPlayerFinishEvent()

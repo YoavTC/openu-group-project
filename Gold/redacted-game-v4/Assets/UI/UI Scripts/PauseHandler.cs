@@ -28,7 +28,7 @@ public class PauseHandler : MonoBehaviour
     [SerializeField] private float animationTime;
     [SerializeField] private Ease animationEaseType;
     [SerializeField] private Transform offScreenPosition;
-    private Vector3 defaultPosition;
+    [SerializeField] private Vector3 defaultPosition;
     [SerializeField] [ReadOnly] private bool isPaused;
 
     [Header("Events")] 
@@ -39,7 +39,6 @@ public class PauseHandler : MonoBehaviour
     {
         canInteract = false;
         canPause = true;
-        defaultPosition = transform.position;
         transform.position = offScreenPosition.position;
         
         UnpauseGame();
