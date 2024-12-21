@@ -45,6 +45,6 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerFinishEvent()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(0);
     }
 }

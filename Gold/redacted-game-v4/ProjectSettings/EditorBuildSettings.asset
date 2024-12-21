@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Gold.unity
     guid: f619e7249ceb81c4783c7b833d66c905
   - enabled: 1
-    path: Assets/_Scenes/Leaderboard.unity
-    guid: 57235db1bd66a1a41ac76a19d5a931cc
-  - enabled: 1
     path: Assets/_Scenes/About.unity
     guid: b3aeeede7a203464e89ec9c79a25ecf0
   - enabled: 1

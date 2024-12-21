@@ -4798,8 +4798,8 @@ MonoBehaviour:
   leaderboardScene:
     _sceneOB: {fileID: 102900000, guid: 57235db1bd66a1a41ac76a19d5a931cc, type: 3}
     _name: Leaderboard
-    _path: Assets/_Scenes/Leaderboard.unity
-    _buildIndex: 3
+    _path: 
+    _buildIndex: -1
   pauseKeyCode: 9
   pauseCooldown: 0.5
   pausePanel: {fileID: 1366574095}
@@ -11496,7 +11496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3669835426229436076, guid: ad726fee819bdf048b8cac3ee38bcf82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -222.03296
+      value: -205.05
       objectReference: {fileID: 0}
     - target: {fileID: 3669835426229436076, guid: ad726fee819bdf048b8cac3ee38bcf82, type: 3}
       propertyPath: m_LocalPosition.y
