@@ -1,7 +1,9 @@
-![](https://yoavtc.work/projects/bannersv2/redacted.png)
+![](https://yoavtc.work/pages/assets/project_banners/redacted.png)
 
 # 🏃‍♀️‍➡️[REDACTED]
 [REDACTED] is the student game of [Inbar Gal](https://www.linkedin.com/in/inbar-gal-bb1125308/), [Yoav TC](https://www.linkedin.com/in/yoav-trachtman-cohen/), [Ohad Dori](https://www.linkedin.com/in/ohad-dori/) and [Alex Yakovlev](https://www.linkedin.com/in/alex-yakovlev-430124308/) under the game development program of the Open University of Israel, Hasifa. 
+
+[You can check out the project page I made for [REDACTED] on my website](https://yoavtc.work/project/redacted/)
 
 [![itch.io](https://yoavtc.work/widgets/download%20on%20itch.io.svg)](https://yoav-tc.itch.io/redacted)
 
